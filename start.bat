@@ -1,4 +1,6 @@
 @echo off
+title iLuma - Start
+
 set /p platform="Enter platform to start app (e.g., windows, android, linux): "
 if /i "%platform%"=="windows" (
     set /p debug_or_release="Enter debug/release mode to start app (release, debug): "
