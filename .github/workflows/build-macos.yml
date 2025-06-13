@@ -27,12 +27,12 @@ jobs:
         run: brew install cmake
 
       - name: Configure CMake
-        if: ${{ inputs.mode == "c" || inputs.mode == "both"}}
+        if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
         run: |
           cmake -S . -B build/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
 
       - name: Build project
-        if: ${{ inputs.mode == "b" || inputs.mode == "both"}}
+        if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build build/macos --config ${{ inputs.build_type }}
 
       - name: Upload build output
