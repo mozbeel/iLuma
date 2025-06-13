@@ -1,5 +1,7 @@
 @echo off
 
+title iLuma Build for All
+
 :: Move to project root (one level up from scripts/)
 pushd "%~dp0.."
 

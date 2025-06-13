@@ -1,7 +1,8 @@
 @echo off
+title iLuma Build for MacOS
+
 set debug_or_release=%~1
 set mode=%~2
-
 
 if "%mode%"=="c" (
     echo "Configuring CMake (for MacOS)..."
