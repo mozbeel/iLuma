@@ -26,5 +26,8 @@ call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
 echo -> Android
 call "%scripts_dir%build-android.bat" "%debug_or_release%" "%mode%"
 
+echo -> MacOS
+call "%scripts_dir%build-macOS.bat" "%debug_or_release%" "%mode%"
+
 popd
 exit /b 0
