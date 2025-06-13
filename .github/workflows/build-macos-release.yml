@@ -4,12 +4,7 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-      build_type:
-        description: 'Build type (Release or Debug)'
-        required: true
-        default: 'Release'
-
+  
 jobs:
   build-macos:
     runs-on: macos-latest
@@ -23,13 +18,13 @@ jobs:
 
       - name: Configure CMake
         run: |
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=${{ github.event.inputs.build_type }}
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
       - name: Build project
-        run: cmake --build build --config ${{ github.event.inputs.build_type }}
+        run: cmake --build build --config Release
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
-          name: macos-${{ github.event.inputs.build_type }}-build
+          name: macos
           path: build/
