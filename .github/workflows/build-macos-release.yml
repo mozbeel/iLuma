@@ -17,8 +17,7 @@ jobs:
         run: brew install cmake
 
       - name: check directory
-        run: ls vendor
-
+        run: ls vendor/SDL
 
       - name: Configure CMake
         run: |
