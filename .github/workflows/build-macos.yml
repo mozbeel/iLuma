@@ -1,9 +1,16 @@
 name: Build for macOS
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type (Debug or Release)'
+        required: true
+        default: 'Release'
+      mode:
+        description: 'Configure CMake/build application only/both (c/b/both; defaults to b)'
+        required: true
+        default: 'b'
   
 jobs:
   build-macos:
