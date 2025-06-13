@@ -1,4 +1,7 @@
 @echo off
+
+title iLuma Build Script for Android
+
 set debug_or_release=%~1
 set mode=%~2
 

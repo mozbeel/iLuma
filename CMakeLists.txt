@@ -21,7 +21,8 @@ add_library(vendor INTERFACE)
 target_link_libraries(vendor INTERFACE SDL3::SDL3 bgfx bimg bx)
 
 if (ANDROID)
-    target_link_libraries(vendor INTERFACE EGL GLESv2 android)
+    find_library(log-lib log)
+    target_link_libraries(vendor INTERFACE EGL GLESv2 android ${log-lib})
 endif()
 
 # Then use the interface

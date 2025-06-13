@@ -1,4 +1,6 @@
 @echo off
+title iLuma Build for Linux
+
 set debug_or_release=%~1
 set mode=%~2
 

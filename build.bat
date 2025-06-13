@@ -1,4 +1,5 @@
 @echo off
+title iLuma Build Script
 
 set /p platform=Enter platform to build app for (e.g., windows, linux, android, all; defaults to windows): 
 set /p debug_or_release=Enter Debug/Release mode to start app (release/debug; defaults to release): 
