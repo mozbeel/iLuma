@@ -6,7 +6,9 @@
 #include <iostream>
 
 #include <chrono>
-
+#if defined(__APPLE__)
+	#include "TargetConditionals.h"
+#endif
 
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
@@ -35,11 +37,13 @@ int main() {
 	pd.nwh = (void*)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, 0);
 	pd.ndt = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, NULL);
 
-// I cannot test if it works on macOS, so I will comment it out for now.
-// #elif defined(__APPLE__) 
-// 	#include "TargetConditionals.h"
-// 	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
-// 	pd.ndt = NULL;
+// I cannot test if it works on macOS, so I will comment it out for now. UPDATE: I can build, but not run it
+#elif defined(__APPLE__) 
+
+	#if TARGET_OS_OSX
+		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
+		pd.ndt = NULL;
+	#endif
 
 #elif defined(__ANDROID__)
 	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL);
