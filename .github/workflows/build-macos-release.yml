@@ -16,6 +16,10 @@ jobs:
       - name: Install dependencies
         run: brew install cmake
 
+      - name: check directory
+        run: ls
+
+
       - name: Configure CMake
         run: |
           cmake -S . -B build/macos -DCMAKE_BUILD_TYPE=Release
