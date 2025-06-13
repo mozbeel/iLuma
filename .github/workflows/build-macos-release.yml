@@ -29,7 +29,7 @@ jobs:
         run: cmake --build build --config ${{ github.event.inputs.build_type }}
 
       - name: Upload build output
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-${{ github.event.inputs.build_type }}-build
           path: build/
