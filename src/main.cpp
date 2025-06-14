@@ -22,11 +22,16 @@ int main() {
 	SDL_Window* window = SDL_CreateWindow("BGFX + SDL3 Window",
 		SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 
+	
+
 	if (!window) {
 		SDL_Log("Window could not be created! SDL_Error: %s\n", SDL_GetError());
 		SDL_Quit();
 		return 1;
-	}
+	} else {
+		SDL_Log("Window created successfully.");
+	} 
+
 	bgfx::PlatformData pd;
 
 #if defined(_WIN32)
@@ -43,6 +48,7 @@ int main() {
 	#if TARGET_OS_OSX
 		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
 		pd.ndt = NULL;
+		std::cout << "macOS detected, using Cocoa window." << std::endl;
 	#endif
 
 #elif defined(__ANDROID__)
@@ -71,7 +77,9 @@ int main() {
 		std::cout << "Couldn't initialize bgfx" << std::endl;
 		return 1;
 
-
+	} else {
+		std::cout << "bgfx initialized successfully." << std::endl;
+		
 	}
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
