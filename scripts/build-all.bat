@@ -16,20 +16,13 @@ echo.
 echo Building all platforms in %debug_or_release% [%mode%]
 echo.
 
-:: Windows
-echo -> Windows
 call "%scripts_dir%build-windows.bat" "%debug_or_release%" "%mode%"
 
-:: Linux
-echo -> Linux
-call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
+call "%scripts_dir%build-macos.bat" "%debug_or_release%" "%mode%"
 
-:: Android
-echo -> Android
 call "%scripts_dir%build-android.bat" "%debug_or_release%" "%mode%"
 
-echo -> MacOS
-call "%scripts_dir%build-macOS.bat" "%debug_or_release%" "%mode%"
+call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
 
 popd
 exit /b 0
