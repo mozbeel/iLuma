@@ -10,10 +10,15 @@
 	#include "TargetConditionals.h"
 #endif
 
+#ifdef __ANDROID__
+	#include <android_native_app_glue.h>
+#endif
+
+
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
-int main() {
+int AppMain() {
 	if (SDL_Init(SDL_INIT_VIDEO) == false) {
 		SDL_Log("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
 		return 1;
@@ -21,8 +26,6 @@ int main() {
 
 	SDL_Window* window = SDL_CreateWindow("BGFX + SDL3 Window",
 		SCREEN_WIDTH, SCREEN_HEIGHT, 0);
-
-	
 
 	if (!window) {
 		SDL_Log("Window could not be created! SDL_Error: %s\n", SDL_GetError());
@@ -131,5 +134,19 @@ int main() {
 
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+
 	return 0;
 }
+
+#ifndef __ANDROID__
+int main(int argc, char* argv[]) {
+	return AppMain();
+}
+#else
+extern "C" void android_main(struct android_app* app) {
+	SDL_SetMainReady();  // Needed if using SDL
+	// Setup window, context, pass to bgfx if needed
+	AppMain();
+}
+
+#endif

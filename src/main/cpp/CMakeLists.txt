@@ -3,7 +3,6 @@ project(iLuma)
 
 set(SDL3_SHARED OFF)
 set(SDL3_STATIC ON)
-set(ANDROID_NDK )
 
 # Add SDL3 (assumes it's configured as a CMake project)
 add_subdirectory(vendor/SDL)
@@ -12,27 +11,28 @@ add_subdirectory(vendor/bgfx.cmake)
 # Add your main game/app
 if(NOT ANDROID)
 
-add_executable(iLuma src/main.cpp)
+add_executable(iLuma main.cpp)
 else()
-add_library(iLuma SHARED src/main.cpp)
+add_library(iLuma SHARED main.cpp)
 endif()
 
 add_library(vendor INTERFACE)
 target_link_libraries(vendor INTERFACE SDL3::SDL3 bgfx bimg bx)
 
+
 if (ANDROID)
     find_library(log-lib log)
-    target_link_libraries(vendor INTERFACE EGL GLESv2 android ${log-lib})
+    add_library(native_app_glue STATIC "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/29.0.13599879/sources/android/native_app_glue/android_native_app_glue.c")
+    target_include_directories(iLuma PRIVATE "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/29.0.13599879/sources/android/native_app_glue")
+
+    target_link_libraries(vendor INTERFACE EGL GLESv2 android ${log-lib} native_app_glue)
 endif()
 
 # Then use the interface
 target_link_libraries(iLuma PRIVATE vendor)
 
-if(NOT ANDROID)
-    target_compile_definitions(iLuma PRIVATE SDL_MAIN_HANDLED SDL_STATIC)
-else()
-    target_compile_definitions(iLuma PRIVATE SDL_STATIC)
-endif()
+target_compile_definitions(iLuma PRIVATE SDL_STATIC)
+target_compile_definitions(iLuma PRIVATE SDL_STATIC)
 
 if(NOT ANDROID)
     get_target_property(SDL3_TYPE SDL3::SDL3 TYPE)

@@ -75,12 +75,12 @@ if "%mode%"=="c" (
 
     if "%status%"=="completed" (
         echo "Building application completed successfully. Downloading..."
-        goto done_b
+        goto done_both
     ) else if "%conclusion%"=="failure" (
         echo "Building application failed. Please check the logs."
         exit /b 1
     ) else (
-        goto wait-for-completion_b
+        goto wait-for-completion_both
     )
 
 :done_both
