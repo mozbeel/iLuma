@@ -1,6 +1,6 @@
 <p align="center">
-  # iLuma
-  ### A powerful cross-platform game framework
+  iLuma
+  A powerful cross-platform game framework
 </p>
 
 ## About the Project
