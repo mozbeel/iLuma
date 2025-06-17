@@ -1,5 +1,5 @@
 <div align="center">
- <h1>iLuma</h1>
+  <img src="docs/assets/iluma-logo.png"></img>
  
 </div>
 
