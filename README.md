@@ -10,18 +10,30 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
 
 - ✨ Cross-platform support: Build games for desktop (Windows, Linux, macOS) and mobile (iOS, Android; no support yet but soon) from a single codebase.
 - 🚀 Powered by bgfx for advanced rendering and SDL3 for input, audio, and window management.
-- 🎮 Modular architecture: Plug in only the components you need.
 - 📱 Touch and sensor input support for mobile devices (not yet).
 - 🛠️ Easy integration with popular game development tools and workflows.
 - 📂 Open source and actively developed.
 
 ## Supported Platforms
 
-- Windows
-- Linux
-- macOS
+- Deaktop: 
+-- Windows
+-- Linux
+-- macOS
 - iOS (soon)
 - Android (soon)
+- Web (Emscriptensoon)
+
+## Samples
+
+# Flappy Bird
+
+
+# Snake
+
+## Projects built with iLuma
+
+None (yet)
 
 ## Getting Started
 
