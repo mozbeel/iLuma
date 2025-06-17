@@ -51,26 +51,9 @@ None (yet)
 2. Follow the platform-specific setup instructions in the `docs/` folder. (not available yet)
 3. Build and run the sample projects to see iLuma in action.
 
-## Example (soon going to be implemented)
+## Example 
 
-```cpp
-#include <iLuma/Game.h>
-
-class MyGame : public iLuma::Game {
-    void onInit() override {
-        // Initialize your game here
-    }
-    void onUpdate(float dt) override {
-        // Game update logic
-    }
-};
-
-int main() {
-    MyGame game;
-    game.run();
-    return 0;
-}
-```
+(soon going to be implemented)
 
 ## Contributing
 

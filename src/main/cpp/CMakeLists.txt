@@ -4,9 +4,11 @@ project(iLuma)
 set(SDL3_SHARED OFF)
 set(SDL3_STATIC ON)
 
+set(PROJECT_ROOT ../../..)
+
 # Add SDL3 (assumes it's configured as a CMake project)
-add_subdirectory(vendor/SDL)
-add_subdirectory(vendor/bgfx.cmake)
+add_subdirectory(${PROJECT_ROOT}/vendor/SDL ${PROJECT_ROOT}/vendor/SDL)
+add_subdirectory(${PROJECT_ROOT}/vendor/bgfx.cmake ${PROJECT_ROOT}/vendor/bgfx.cmake)
 
 # Add your main game/app
 if(NOT ANDROID)
