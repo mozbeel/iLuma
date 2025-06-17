@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="docs/assets/iluma-logo-ntxt.png" width="150"></img>
+  <img src="docs/assets/iluma-logo-ntxt.png" width="128"></img>
   <h1>iLuma</h1>
- 
+  ![LuaRocks](https://img.shields.io/luarocks/v/luacheck)
 </div>
 
 ## About the Project
