@@ -1,6 +1,9 @@
 @echo off
 title iLuma Build for MacOS
 
+cd src/main/cpp
+
+
 set debug_or_release=%~1
 set mode=%~2
 
