@@ -30,8 +30,11 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
 
 ### Flappy Bird
 
+(not yet)
 
 ### Snake
+
+(not yet)
 
 ## Projects built with iLuma
 
