@@ -16,13 +16,15 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
 
 ## Supported Platforms
 
-- Deaktop: 
--- Windows
--- Linux
--- macOS
-- iOS (soon)
-- Android (soon)
-- Web (Emscriptensoon)
+- Desktop
+  - Windows
+  - Linux
+  - macOS
+- Mobile
+  - iOS (soon)
+  - Android (soon)
+
+- Web (Emscripten, soon)
 
 ## Samples
 
