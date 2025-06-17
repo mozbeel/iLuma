@@ -1,6 +1,6 @@
 ﻿# iLuma
 
-### About the Project:
+# About the Project:
 iLuma is a new game framework built off of bgfx and SDL3
 
 
