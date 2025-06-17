@@ -1,5 +1,5 @@
 <p align="center">
-  iLuma
+  <h1>iLuma</h1>
   A powerful cross-platform game framework
 </p>
 
