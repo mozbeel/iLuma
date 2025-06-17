@@ -4,7 +4,7 @@
 
 ## About the Project
 
-iLuma is a modern, high-performance game framework (3D and 2D) designed for rapid development of games and interactive applications on all major desktop and mobile platforms (very soon). It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. Built on top of bgfx and SDL3, iLuma offers a robust, flexible, and modular foundation for creating games that run seamlessly across Windows, Linux, macOS, iOS (very soon), and Android (very soon).
+iLuma is a modern, high-performance game framework (3D and 2D) designed for rapid development of games and interactive applications on all major desktop and mobile platforms (very soon). It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. Built on top of <a href="https://github.com/bkaradzic/bgfx">bgfx</a> and SDL3, iLuma offers a robust, flexible, and modular foundation for creating games that run seamlessly across Windows, Linux, macOS, iOS (very soon), and Android (very soon).
 
 ## Features
 
