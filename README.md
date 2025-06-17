@@ -1,7 +1,9 @@
-<p align="center">
-  <h1>iLuma</h1>
-  A powerful cross-platform game framework
-</p>
+<div align="center">
+ <a href="https://monogame.net/">
+   <img height="128" alt="MonoGame" src="https://raw.githubusercontent.com/MonoGame/MonoGame.Logo/refs/heads/master/FullColorOnLight/LogoOnly_128px.png">
+ </a>
+ <h1>MonoGame</h1>
+</div>
 
 ## About the Project
 
