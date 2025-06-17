@@ -1,5 +1,6 @@
 <div align="center">
  <h1>iLuma</h1>
+ 
 </div>
 
 ## About the Project
@@ -76,7 +77,7 @@ int main() {
 
 ## Contributing
 
-Contributions are welcome! Please see the CONTRIBUTING.md for guidelines. (not yet)
+Contributions are not wished right now. I want to get the base of the code done, maybe then I'll accept contributions. Reports of issues in early development are needed!
 
 ## License
 
