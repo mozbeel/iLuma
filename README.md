@@ -1,8 +1,14 @@
 <div align="center">
   <img src="docs/assets/iluma-logo-ntxt.png" width="128"></img>
   <h1>iLuma</h1>
-  ![LuaRocks](https://img.shields.io/luarocks/v/luacheck)
+  
+  <img src="https://img.shields.io/badge/supports-Lua-000080?logo=lua&logoColor=white">
+  <img src="https://img.shields.io/badge/written%20in-C++-00599C?logo=c%2B%2B&logoColor=white">
+
+  <h4>A lightweight game framework for Lua and C++</h4>
+
 </div>
+
 
 ## About the Project
 
