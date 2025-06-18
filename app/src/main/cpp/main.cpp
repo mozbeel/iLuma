@@ -12,6 +12,7 @@
 
 #ifdef __ANDROID__
 	#include <android_native_app_glue.h>
+	#include <android/log.h>
 #endif
 
 
@@ -19,10 +20,22 @@
 #define SCREEN_HEIGHT 720
 
 int AppMain() {
+	
+#ifdef __ANDROID__
+	__android_log_print(ANDROID_LOG_INFO, "iLuma", "AppMain() starting...");
+#endif
+
+#ifdef __ANDROID__
+	__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init SDL starting...");
+#endif
 	if (SDL_Init(SDL_INIT_VIDEO) == false) {
+		#ifdef __ANDROID__
+			__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init SDL unsuccessful...");
+		#endif
 		SDL_Log("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
 		return 1;
 	}
+
 
 	SDL_Window* window = SDL_CreateWindow("BGFX + SDL3 Window",
 		SCREEN_WIDTH, SCREEN_HEIGHT, 0);
@@ -34,6 +47,9 @@ int AppMain() {
 	} else {
 		SDL_Log("Window created successfully.");
 	} 
+#ifdef __ANDROID__
+	__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init Window sucessful...");
+#endif
 
 	bgfx::PlatformData pd;
 
@@ -72,8 +88,8 @@ int AppMain() {
 	init.platformData.ndt = pd.ndt;
 	init.resolution.width = SCREEN_WIDTH;
 	init.resolution.height = SCREEN_HEIGHT;
-	init.resolution.reset = BGFX_RESET_VSYNC | BGFX_RESET_MSAA_X4;
-	init.debug = true;  // Enable debug mode
+	// init.resolution.reset = BGFX_RESET_VSYNC | BGFX_RESET_MSAA_X4;
+	// init.debug = true;  // Enable debug mode
 
 
 	if (!bgfx::init(init)) {
@@ -84,6 +100,9 @@ int AppMain() {
 		std::cout << "bgfx initialized successfully." << std::endl;
 		
 	}
+#ifdef __ANDROID__
+	__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init bgfx sucessful...");
+#endif
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x303030FF, 1.0f, 0);
@@ -127,6 +146,7 @@ int AppMain() {
 				frames = 0;
 				lastTime = now;
 		}
+		// SDL_Delay(16);  // Simulate frame delay (60 FPS)
 
 	}
 	bgfx::frame();
@@ -144,8 +164,7 @@ int main(int argc, char* argv[]) {
 }
 #else
 extern "C" void android_main(struct android_app* app) {
-	SDL_SetMainReady();  // Needed if using SDL
-	// Setup window, context, pass to bgfx if needed
+	SDL_SetMainReady();
 	AppMain();
 }
 

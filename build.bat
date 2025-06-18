@@ -3,7 +3,10 @@ title iLuma Build Script
 
 set /p platform=Enter platform to build app for (e.g., windows, linux, android, all; defaults to windows): 
 set /p debug_or_release=Enter Debug/Release mode to start app (release/debug; defaults to release): 
-set /p mode=Configure CMake/build application only/both (c/b/both; defaults to b): 
+
+if not "%platform%"=="android" (
+    set /p mode=Configure CMake/build application only/both (c/b/both; defaults to b)
+)
 
 @REM Set default values if not provided
 if "%platform%"=="" (
