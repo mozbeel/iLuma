@@ -1,0 +1,188 @@
+{
+  "buildFiles": [
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\SDL\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\RelWithDebInfo\\2y2g2n2m\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\RelWithDebInfo\\2y2g2n2m\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "SDL3-static::@5674db00e54576eff556": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL3-static",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3.a"
+    },
+    "SDL3_test::@5674db00e54576eff556": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL3_test",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3_test.a"
+    },
+    "SDL_uclibc::@5674db00e54576eff556": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL_uclibc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL_uclibc.a"
+    },
+    "bgfx::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bgfx",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libbgfx.a"
+    },
+    "bimg::@218ca66639c17ad2085b": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg.a"
+    },
+    "bimg_decode::@218ca66639c17ad2085b": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg_decode",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_decode.a"
+    },
+    "bimg_encode::@218ca66639c17ad2085b": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg_encode",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_encode.a"
+    },
+    "bin2c::@6f52f1d5c45491619055": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bin2c",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\bin2c",
+      "runtimeFiles": []
+    },
+    "bx::@6f52f1d5c45491619055": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bx",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\libbx.a"
+    },
+    "example-common::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "example-common",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libexample-common.a"
+    },
+    "examples::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "examples"
+    },
+    "fcpp::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "fcpp",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libfcpp.a"
+    },
+    "geometryc::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "geometryc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\geometryc",
+      "runtimeFiles": []
+    },
+    "geometryv::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "geometryv",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\geometryv.so",
+      "runtimeFiles": []
+    },
+    "glsl-optimizer::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "glsl-optimizer",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglsl-optimizer.a"
+    },
+    "glslang::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "glslang",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglslang.a"
+    },
+    "native-activity::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native-activity",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\libnative-activity.so",
+      "runtimeFiles": []
+    },
+    "native_app_glue::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native_app_glue",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\RelWithDebInfo\\2y2g2n2m\\x86\\libnative_app_glue.a"
+    },
+    "shaderc::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "shaderc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\shaderc",
+      "runtimeFiles": []
+    },
+    "spirv-cross::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "spirv-cross",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-cross.a"
+    },
+    "spirv-opt::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "spirv-opt",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-opt.a"
+    },
+    "texturec::@218ca66639c17ad2085b": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "texturec",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\texturec",
+      "runtimeFiles": []
+    },
+    "texturev::@6c531a329687a4643e58": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "texturev",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\x86\\texturev.so",
+      "runtimeFiles": []
+    },
+    "tools::@1c8e61afefb2b157bd4e": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "tools"
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cxx",
+    "cpp"
+  ]
+}

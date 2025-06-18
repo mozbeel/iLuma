@@ -1,0 +1,19 @@
+                        -HC:\Users\moz04\Desktop\GameDevelopment\iLuma\app\src\main\cpp
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=x86
+-DCMAKE_ANDROID_ARCH_ABI=x86
+-DANDROID_NDK=C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393
+-DCMAKE_ANDROID_NDK=C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_CXX_FLAGS=-std=c++17
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\moz04\Desktop\GameDevelopment\iLuma\builds\android\intermediates\cxx\RelWithDebInfo\2y2g2n2m\obj\x86
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\Users\moz04\Desktop\GameDevelopment\iLuma\builds\android\intermediates\cxx\RelWithDebInfo\2y2g2n2m\obj\x86
+-DCMAKE_BUILD_TYPE=RelWithDebInfo
+-BC:\Users\moz04\Desktop\GameDevelopment\iLuma\app\.cxx\RelWithDebInfo\2y2g2n2m\x86
+-GNinja
+                        Build command args: []
+                        Version: 2

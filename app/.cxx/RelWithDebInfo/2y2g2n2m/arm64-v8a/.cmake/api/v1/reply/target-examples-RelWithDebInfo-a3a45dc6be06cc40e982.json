@@ -1,0 +1,51 @@
+{
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"include"
+		],
+		"files" : 
+		[
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx/examples.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 266,
+				"parent" : 2
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "bgfx/examples"
+	},
+	"id" : "examples::@6c531a329687a4643e58",
+	"name" : "examples",
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

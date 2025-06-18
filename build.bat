@@ -24,7 +24,7 @@ echo Building the application for platform %platform% in %debug_or_release% mode
 
 if "%platform%"=="windows"  (
     echo Starting build for Windows in %debug_or_release% mode
-    call scripts\build-windows.bat "%debug_or_release%" "%mode%"
+    call scripts\build-windows.bat %debug_or_release% %mode%
     exit /b 0
 ) 
 if "%platform%"=="linux" (
@@ -34,7 +34,7 @@ if "%platform%"=="linux" (
 ) 
 if "%platform%"=="android" (
     echo Starting build for Android in %debug_or_release% mode
-    call scripts\build-android.bat %debug_or_release% %mode%
+    call scripts\build-android.bat %debug_or_release%
     exit /b 0
 ) 
 if "%platform%"=="macos" (

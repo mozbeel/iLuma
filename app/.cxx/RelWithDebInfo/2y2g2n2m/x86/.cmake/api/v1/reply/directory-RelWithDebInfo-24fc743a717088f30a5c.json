@@ -1,0 +1,134 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include"
+		],
+		"files" : 
+		[
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bx/bx.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bx/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bx/bin2c.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 134,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 137,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 39,
+				"parent" : 8
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bx/libbx.a"
+			],
+			"targetId" : "bx::@6f52f1d5c45491619055",
+			"targetIndex" : 8,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bx/include/bx"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include/bx/compat",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bx/include/compat/linux"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "include/bx",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bx/include/tinystl"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/android/intermediates/cxx/RelWithDebInfo/2y2g2n2m/obj/x86/bin2c"
+			],
+			"targetId" : "bin2c::@6f52f1d5c45491619055",
+			"targetIndex" : 7,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bx",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bx"
+	}
+}

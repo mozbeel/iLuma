@@ -1,0 +1,978 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/libglslang.a"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"target_compile_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx/3rdparty/glslang.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 44,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 46,
+				"parent" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 56,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -O2 -g -DNDEBUG -fPIC"
+				},
+				{
+					"fragment" : "-std=c++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "ENABLE_HLSL=1"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "ENABLE_OPT=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/.."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/spirv-tools/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/spirv-tools/source"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				8,
+				10,
+				11,
+				15,
+				17,
+				19,
+				20,
+				23,
+				25,
+				30,
+				31,
+				32,
+				33,
+				35,
+				37,
+				39,
+				41,
+				43,
+				45,
+				64,
+				65,
+				66,
+				68,
+				69,
+				71,
+				72,
+				74,
+				75,
+				77,
+				80,
+				81,
+				82,
+				84,
+				86,
+				89,
+				91,
+				92,
+				94,
+				95,
+				97,
+				100,
+				101,
+				102,
+				104,
+				105,
+				107,
+				109,
+				112,
+				117,
+				118,
+				119
+			],
+			"sysroot" : 
+			{
+				"path" : "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+			}
+		}
+	],
+	"folder" : 
+	{
+		"name" : "bgfx"
+	},
+	"id" : "glslang::@6c531a329687a4643e58",
+	"name" : "glslang",
+	"nameOnDisk" : "libglslang.a",
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/cmake/bgfx"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				8,
+				10,
+				11,
+				15,
+				17,
+				19,
+				20,
+				23,
+				25,
+				30,
+				31,
+				32,
+				33,
+				35,
+				37,
+				39,
+				41,
+				43,
+				45,
+				64,
+				65,
+				66,
+				68,
+				69,
+				71,
+				72,
+				74,
+				75,
+				77,
+				80,
+				81,
+				82,
+				84,
+				86,
+				89,
+				91,
+				92,
+				94,
+				95,
+				97,
+				100,
+				101,
+				102,
+				104,
+				105,
+				107,
+				109,
+				112,
+				117,
+				118,
+				119
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				9,
+				12,
+				13,
+				14,
+				16,
+				18,
+				21,
+				22,
+				24,
+				26,
+				27,
+				28,
+				29,
+				34,
+				36,
+				38,
+				40,
+				42,
+				44,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				67,
+				70,
+				73,
+				76,
+				78,
+				79,
+				83,
+				85,
+				87,
+				88,
+				90,
+				93,
+				96,
+				98,
+				99,
+				103,
+				106,
+				108,
+				110,
+				111,
+				113,
+				114,
+				115,
+				116
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/CInterface/spirv_c_interface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.AMD.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.ARM.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.EXT.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.KHR.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.NV.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.ext.QCOM.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GLSL.std.450.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GlslangToSpv.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/GlslangToSpv.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/InReadableOrder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/Logger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/Logger.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/NonSemanticDebugPrintf.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/NonSemanticShaderDebugInfo100.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SPVRemapper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SPVRemapper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SpvBuilder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SpvBuilder.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SpvPostProcess.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SpvTools.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/SpvTools.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/bitutils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/disassemble.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/disassemble.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/doc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/doc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/hex_float.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/spvIR.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/SPIRV/spvUtil.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/CInterface/glslang_c_interface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/GenericCodeGen/CodeGen.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/GenericCodeGen/Link.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslAttributes.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslAttributes.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslGrammar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslGrammar.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslOpMap.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslOpMap.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslParseHelper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslParseHelper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslParseables.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslParseables.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslScanContext.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslScanContext.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslTokenStream.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslTokenStream.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/hlslTokens.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/HLSL/pch.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/BaseTypes.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/Common.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/ConstantUnion.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/InfoSink.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/InitializeGlobals.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/PoolAlloc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/ResourceLimits.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/ShHandle.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/SpirvIntrinsics.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/Types.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/arrays.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/glslang_c_interface.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/glslang_c_shader_types.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/intermediate.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Include/visibility.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Constant.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/InfoSink.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Initialize.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Initialize.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/IntermTraverse.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Intermediate.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/LiveTraverser.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/ParseContextBase.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/ParseHelper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/ParseHelper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/PoolAlloc.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/RemoveTree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/RemoveTree.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Scan.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Scan.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/ScanContext.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/ShaderLang.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/SpirvIntrinsics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/SymbolTable.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/SymbolTable.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Versions.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/Versions.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/attribute.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/attribute.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/gl_types.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/glslang_tab.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/glslang_tab.cpp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/intermOut.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/iomapper.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/iomapper.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/limits.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/linkValidate.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/localintermediate.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/parseConst.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/parseVersions.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/pch.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/Pp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpAtom.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpContext.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpContext.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpScanner.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpTokens.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpTokens.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/propagateNoContraction.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/propagateNoContraction.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/reflection.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/reflection.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/MachineIndependent/span.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/OSDependent/Unix/ossource.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/OSDependent/osinclude.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public/ResourceLimits.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public/ShaderLang.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/Public/resource_limits_c.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/ResourceLimits/ResourceLimits.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/ResourceLimits/resource_limits_c.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx/3rdparty/glslang/glslang/stub.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

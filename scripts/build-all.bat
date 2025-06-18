@@ -20,7 +20,7 @@ call "%scripts_dir%build-windows.bat" "%debug_or_release%" "%mode%"
 
 call "%scripts_dir%build-macos.bat" "%debug_or_release%" "%mode%"
 
-call "%scripts_dir%build-android.bat" "%debug_or_release%" "%mode%"
+call "%scripts_dir%build-android.bat" "%debug_or_release%"
 
 call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
 

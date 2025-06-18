@@ -28,10 +28,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("key.keystore")
-            storePassword "Mozi0407"
-            keyAlias "key-alias"
-            keyPassword "Mozi0407"
+            storeFile file(KEYSTORE_FILE)
+            storePassword KEYSTORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
         }
     }
 

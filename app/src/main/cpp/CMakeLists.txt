@@ -5,12 +5,12 @@ set(SDL_STATIC ON CACHE BOOL "" FORCE)
 set(SDL_SHARED OFF CACHE BOOL "" FORCE)
 set(SDL3_DISABLE_INSTALL ON CACHE BOOL "" FORCE)
 
-set(PROJECT_ROOT ../../../..)
+set(APP_ROOT ../../..)
 set(BGFX_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 # Add SDL3 (assumes it's configured as a CMake project)
-add_subdirectory(${PROJECT_ROOT}/vendor/SDL ${PROJECT_ROOT}/vendor/SDL EXCLUDE_FROM_ALL)
-add_subdirectory(${PROJECT_ROOT}/vendor/bgfx.cmake ${PROJECT_ROOT}/vendor/bgfx.cmake)
+add_subdirectory(${APP_ROOT}/vendor/SDL ${APP_ROOT}/vendor/SDL EXCLUDE_FROM_ALL)
+add_subdirectory(${APP_ROOT}/vendor/bgfx.cmake ${APP_ROOT}/vendor/bgfx.cmake)
 
 # Add your main game/app
 if(NOT ANDROID)
