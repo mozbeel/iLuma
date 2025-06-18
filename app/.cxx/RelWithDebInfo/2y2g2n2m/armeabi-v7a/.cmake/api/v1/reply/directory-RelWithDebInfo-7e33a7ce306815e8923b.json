@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/SDL",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/SDL"
+	}
+}

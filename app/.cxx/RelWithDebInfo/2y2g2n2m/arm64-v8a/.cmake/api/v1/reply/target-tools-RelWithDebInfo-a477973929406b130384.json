@@ -1,0 +1,182 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"add_dependencies",
+			"include"
+		],
+		"files" : 
+		[
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/geometryc.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/geometryv.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/texturev.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bx/bin2c.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bx/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bimg/texturec.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bimg/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/shaderc.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 105,
+				"parent" : 0
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 19,
+				"parent" : 2
+			},
+			{
+				"file" : 1,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 33,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 20,
+				"parent" : 2
+			},
+			{
+				"file" : 3,
+				"parent" : 6
+			},
+			{
+				"command" : 1,
+				"file" : 3,
+				"line" : 29,
+				"parent" : 7
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 16,
+				"parent" : 2
+			},
+			{
+				"file" : 4,
+				"parent" : 9
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 29,
+				"parent" : 10
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 6,
+				"line" : 14,
+				"parent" : 12
+			},
+			{
+				"file" : 5,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 5,
+				"line" : 28,
+				"parent" : 14
+			},
+			{
+				"file" : 8
+			},
+			{
+				"command" : 2,
+				"file" : 8,
+				"line" : 27,
+				"parent" : 16
+			},
+			{
+				"file" : 7,
+				"parent" : 17
+			},
+			{
+				"command" : 1,
+				"file" : 7,
+				"line" : 28,
+				"parent" : 18
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 29,
+				"parent" : 2
+			},
+			{
+				"file" : 9,
+				"parent" : 20
+			},
+			{
+				"command" : 1,
+				"file" : 9,
+				"line" : 56,
+				"parent" : 21
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "geometryc::@fe81851880f8180cf43b"
+		},
+		{
+			"backtrace" : 8,
+			"id" : "geometryv::@fe81851880f8180cf43b"
+		},
+		{
+			"backtrace" : 11,
+			"id" : "texturev::@fe81851880f8180cf43b"
+		},
+		{
+			"backtrace" : 15,
+			"id" : "bin2c::@42de3a410e716b9b221e"
+		},
+		{
+			"backtrace" : 19,
+			"id" : "texturec::@55879c986d0015b7196d"
+		},
+		{
+			"backtrace" : 22,
+			"id" : "shaderc::@fe81851880f8180cf43b"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "bgfx/tools"
+	},
+	"id" : "tools::@d3e2a4576cd946508bbb",
+	"name" : "tools",
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/bgfx.cmake",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake_install.cmake")
+  include("C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/bgfx.cmake/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

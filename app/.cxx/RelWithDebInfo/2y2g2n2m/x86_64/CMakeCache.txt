@@ -102,7 +102,7 @@ BGFX_CONFIG_SORT_KEY_NUM_BITS_PROGRAM:STRING=
 BGFX_CUSTOM_TARGETS:BOOL=ON
 
 //Location of bgfx.
-BGFX_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bgfx
+BGFX_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bgfx
 
 //Create installation target.
 BGFX_INSTALL:BOOL=ON
@@ -120,7 +120,7 @@ BGFX_OPENGL_VERSION:STRING=
 BGFX_TOOLS_PREFIX:STRING=
 
 //Location of bimg.
-BIMG_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bimg
+BIMG_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bimg
 
 //Amalgamated bx build for faster compilation
 BX_AMALGAMATED:BOOL=OFF
@@ -129,7 +129,7 @@ BX_AMALGAMATED:BOOL=OFF
 BX_CONFIG_DEBUG:BOOL=OFF
 
 //Location of bx.
-BX_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake/bx
+BX_DIR:STRING=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bx
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-addr2line.exe
@@ -438,7 +438,7 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=C:/msys64/ucrt64/bin/pkg-config.exe
 
 //Value Computed by CMake
-SDL3_BINARY_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/SDL
+SDL3_BINARY_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/SDL
 
 SDL3_DISABLE_INSTALL:BOOL=ON
 
@@ -446,7 +446,7 @@ SDL3_DISABLE_INSTALL:BOOL=ON
 SDL3_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-SDL3_SOURCE_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/SDL
+SDL3_SOURCE_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/SDL
 
 //Support the ALSA audio API
 SDL_ALSA:BOOL=OFF
@@ -684,7 +684,7 @@ SDL_WERROR:BOOL=OFF
 SDL_X11:BOOL=OFF
 
 //Value Computed by CMake
-bgfx_BINARY_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake
+bgfx_BINARY_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/bgfx.cmake
 
 //Value Computed by CMake
 bgfx_IS_TOP_LEVEL:STATIC=OFF
@@ -693,7 +693,7 @@ bgfx_IS_TOP_LEVEL:STATIC=OFF
 bgfx_LIB_DEPENDS:STATIC=general;bx;general;bimg;
 
 //Value Computed by CMake
-bgfx_SOURCE_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/vendor/bgfx.cmake
+bgfx_SOURCE_DIR:STATIC=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake
 
 //Dependencies for the target
 bimg_LIB_DEPENDS:STATIC=general;bx;

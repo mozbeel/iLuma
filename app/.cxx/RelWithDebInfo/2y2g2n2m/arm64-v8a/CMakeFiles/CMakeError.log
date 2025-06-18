@@ -1,55 +1,9 @@
-Performing C SOURCE FILE Test SDL_CPU_EMSCRIPTEN failed with the following output:
-Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_52e70 && [1/2] Building C object CMakeFiles/cmTC_52e70.dir/src.c.o
-FAILED: CMakeFiles/cmTC_52e70.dir/src.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DSDL_CPU_EMSCRIPTEN  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -MD -MT CMakeFiles/cmTC_52e70.dir/src.c.o -MF CMakeFiles\cmTC_52e70.dir\src.c.o.d -o CMakeFiles/cmTC_52e70.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
-C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:6:11: error: use of undeclared identifier 'choke'
-          choke
-          ^
-1 error generated.
-ninja: build stopped: subcommand failed.
-
-
-Source file was:
-
-        int main(int argc, char *argv[]) {
-        #if defined(__EMSCRIPTEN__)
-          return 0;
-        #else
-          choke
-        #endif
-        }
-        
-Performing C SOURCE FILE Test SDL_CPU_ARM32 failed with the following output:
-Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
-
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_10f6b && [1/2] Building C object CMakeFiles/cmTC_10f6b.dir/src.c.o
-FAILED: CMakeFiles/cmTC_10f6b.dir/src.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DSDL_CPU_ARM32  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fPIC -MD -MT CMakeFiles/cmTC_10f6b.dir/src.c.o -MF CMakeFiles\cmTC_10f6b.dir\src.c.o.d -o CMakeFiles/cmTC_10f6b.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
-C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:6:11: error: use of undeclared identifier 'choke'
-          choke
-          ^
-1 error generated.
-ninja: build stopped: subcommand failed.
-
-
-Source file was:
-
-        int main(int argc, char *argv[]) {
-        #if defined(__arm__) || defined(_M_ARM)
-          return 0;
-        #else
-          choke
-        #endif
-        }
-        
 Determining if the __GLIBC__ exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5e7ff && [1/2] Building C object CMakeFiles/cmTC_5e7ff.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_5e7ff.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_5e7ff.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_5e7ff.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_5e7ff.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8f30a && [1/2] Building C object CMakeFiles/cmTC_8f30a.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_8f30a.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_8f30a.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_8f30a.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_8f30a.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier '__GLIBC__'
   return ((int*)(&__GLIBC__))[argc];
                   ^
@@ -74,9 +28,9 @@ int main(int argc, char** argv)
 Determining if the fopen64 exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_db5d2 && [1/2] Building C object CMakeFiles/cmTC_db5d2.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_db5d2.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_db5d2.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_db5d2.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_db5d2.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f0838 && [1/2] Building C object CMakeFiles/cmTC_f0838.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_f0838.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_f0838.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_f0838.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f0838.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier 'fopen64'; did you mean 'fopen'?
   return ((int*)(&fopen64))[argc];
                   ^~~~~~~
@@ -123,9 +77,9 @@ int main(int argc, char** argv)
 Determining if the fseeko64 exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5bd46 && [1/2] Building C object CMakeFiles/cmTC_5bd46.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_5bd46.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_5bd46.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_5bd46.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_5bd46.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4846c && [1/2] Building C object CMakeFiles/cmTC_4846c.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_4846c.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_4846c.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_4846c.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_4846c.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier 'fseeko64'; did you mean 'fseeko'?
   return ((int*)(&fseeko64))[argc];
                   ^~~~~~~~
@@ -172,9 +126,9 @@ int main(int argc, char** argv)
 Determining if the _i64toa exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_64bd0 && [1/2] Building C object CMakeFiles/cmTC_64bd0.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_64bd0.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_64bd0.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_64bd0.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_64bd0.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_dd559 && [1/2] Building C object CMakeFiles/cmTC_dd559.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_dd559.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_dd559.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_dd559.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_dd559.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier '_i64toa'
   return ((int*)(&_i64toa))[argc];
                   ^
@@ -217,20 +171,20 @@ int main(int argc, char** argv)
 Determining if the index exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_66d0e && [1/2] Building C object CMakeFiles/cmTC_66d0e.dir/CheckSymbolExists.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_57586 && [1/2] Building C object CMakeFiles/cmTC_57586.dir/CheckSymbolExists.c.o
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: warning: implicitly declaring library function 'index' with type 'char *(const char *, int)' [-Wimplicit-function-declaration]
   return ((int*)(&index))[argc];
                   ^
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: note: include the header <strings.h> or explicitly provide a declaration for 'index'
 1 warning generated.
-[2/2] Linking C executable cmTC_66d0e
-FAILED: cmTC_66d0e 
-cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_66d0e.dir/CheckSymbolExists.c.o -o cmTC_66d0e  -lm  -latomic -lm && cd ."
+[2/2] Linking C executable cmTC_57586
+FAILED: cmTC_57586 
+cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_57586.dir/CheckSymbolExists.c.o -o cmTC_57586  -lm  -latomic -lm && cd ."
 ld: error: undefined symbol: index
 >>> referenced by CheckSymbolExists.c:0
->>>               CMakeFiles/cmTC_66d0e.dir/CheckSymbolExists.c.o:(main)
+>>>               CMakeFiles/cmTC_57586.dir/CheckSymbolExists.c.o:(main)
 >>> referenced by CheckSymbolExists.c:0
->>>               CMakeFiles/cmTC_66d0e.dir/CheckSymbolExists.c.o:(main)
+>>>               CMakeFiles/cmTC_57586.dir/CheckSymbolExists.c.o:(main)
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -270,9 +224,9 @@ int main(int argc, char** argv)
 Determining if the itoa exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_898d2 && [1/2] Building C object CMakeFiles/cmTC_898d2.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_898d2.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_898d2.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_898d2.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_898d2.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3e3bb && [1/2] Building C object CMakeFiles/cmTC_3e3bb.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_3e3bb.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_3e3bb.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_3e3bb.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_3e3bb.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier 'itoa'
   return ((int*)(&itoa))[argc];
                   ^
@@ -315,9 +269,9 @@ int main(int argc, char** argv)
 Determining if the _ltoa exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5bfcb && [1/2] Building C object CMakeFiles/cmTC_5bfcb.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_5bfcb.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_5bfcb.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_5bfcb.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_5bfcb.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4870b && [1/2] Building C object CMakeFiles/cmTC_4870b.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_4870b.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_4870b.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_4870b.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_4870b.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier '_ltoa'
   return ((int*)(&_ltoa))[argc];
                   ^
@@ -360,20 +314,20 @@ int main(int argc, char** argv)
 Determining if the rindex exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_35d10 && [1/2] Building C object CMakeFiles/cmTC_35d10.dir/CheckSymbolExists.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_521d8 && [1/2] Building C object CMakeFiles/cmTC_521d8.dir/CheckSymbolExists.c.o
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: warning: implicitly declaring library function 'rindex' with type 'char *(const char *, int)' [-Wimplicit-function-declaration]
   return ((int*)(&rindex))[argc];
                   ^
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: note: include the header <strings.h> or explicitly provide a declaration for 'rindex'
 1 warning generated.
-[2/2] Linking C executable cmTC_35d10
-FAILED: cmTC_35d10 
-cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_35d10.dir/CheckSymbolExists.c.o -o cmTC_35d10  -lm  -latomic -lm && cd ."
+[2/2] Linking C executable cmTC_521d8
+FAILED: cmTC_521d8 
+cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_521d8.dir/CheckSymbolExists.c.o -o cmTC_521d8  -lm  -latomic -lm && cd ."
 ld: error: undefined symbol: rindex
 >>> referenced by CheckSymbolExists.c:0
->>>               CMakeFiles/cmTC_35d10.dir/CheckSymbolExists.c.o:(main)
+>>>               CMakeFiles/cmTC_521d8.dir/CheckSymbolExists.c.o:(main)
 >>> referenced by CheckSymbolExists.c:0
->>>               CMakeFiles/cmTC_35d10.dir/CheckSymbolExists.c.o:(main)
+>>>               CMakeFiles/cmTC_521d8.dir/CheckSymbolExists.c.o:(main)
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -413,9 +367,9 @@ int main(int argc, char** argv)
 Determining if the sqr exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2b697 && [1/2] Building C object CMakeFiles/cmTC_2b697.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_2b697.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_2b697.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_2b697.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2b697.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a43eb && [1/2] Building C object CMakeFiles/cmTC_a43eb.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_a43eb.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_a43eb.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_a43eb.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_a43eb.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier 'sqr'; did you mean 'sqrt'?
   return ((int*)(&sqr))[argc];
                   ^~~
@@ -462,9 +416,9 @@ int main(int argc, char** argv)
 Determining if the strnstr exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f694f && [1/2] Building C object CMakeFiles/cmTC_f694f.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_f694f.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_f694f.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_f694f.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f694f.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4cd85 && [1/2] Building C object CMakeFiles/cmTC_4cd85.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_4cd85.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_4cd85.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_4cd85.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_4cd85.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:26:19: error: use of undeclared identifier 'strnstr'; did you mean 'strstr'?
   return ((int*)(&strnstr))[argc];
                   ^~~~~~~
@@ -511,9 +465,9 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test LIBC_HAS_ISINFF failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e197e && [1/2] Building C object CMakeFiles/cmTC_e197e.dir/src.c.o
-FAILED: CMakeFiles/cmTC_e197e.dir/src.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLIBC_HAS_ISINFF  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -Wfloat-conversion -Werror -fPIE -MD -MT CMakeFiles/cmTC_e197e.dir/src.c.o -MF CMakeFiles\cmTC_e197e.dir\src.c.o.d -o CMakeFiles/cmTC_e197e.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_25f62 && [1/2] Building C object CMakeFiles/cmTC_25f62.dir/src.c.o
+FAILED: CMakeFiles/cmTC_25f62.dir/src.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DLIBC_HAS_ISINFF  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -Wfloat-conversion -Werror -fPIE -MD -MT CMakeFiles/cmTC_25f62.dir/src.c.o -MF CMakeFiles\cmTC_25f62.dir\src.c.o.d -o CMakeFiles/cmTC_25f62.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:5:16: error: implicit declaration of function 'isinff' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
         return isinff(f);
                ^
@@ -536,9 +490,9 @@ Source file was:
 Determining if the nl_langinfo exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b2b7e && [1/2] Building C object CMakeFiles/cmTC_b2b7e.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_b2b7e.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_b2b7e.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_b2b7e.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b2b7e.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_94529 && [1/2] Building C object CMakeFiles/cmTC_94529.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_94529.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_94529.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_94529.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_94529.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'nl_langinfo'
   return ((int*)(&nl_langinfo))[argc];
                   ^
@@ -563,9 +517,9 @@ int main(int argc, char** argv)
 Determining if the sysctlbyname exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7c7e1 && [1/2] Building C object CMakeFiles/cmTC_7c7e1.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_7c7e1.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_7c7e1.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_7c7e1.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7c7e1.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9febe && [1/2] Building C object CMakeFiles/cmTC_9febe.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_9febe.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_9febe.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_9febe.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_9febe.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: 'sys/sysctl.h' file not found
 #include <sys/sysctl.h>
          ^~~~~~~~~~~~~~
@@ -591,9 +545,9 @@ int main(int argc, char** argv)
 Determining if the elf_aux_info exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2e172 && [1/2] Building C object CMakeFiles/cmTC_2e172.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_2e172.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_2e172.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_2e172.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2e172.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_66081 && [1/2] Building C object CMakeFiles/cmTC_66081.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_66081.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_66081.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_66081.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_66081.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'elf_aux_info'
   return ((int*)(&elf_aux_info))[argc];
                   ^
@@ -618,9 +572,9 @@ int main(int argc, char** argv)
 Determining if the memfd_create exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4b119 && [1/2] Building C object CMakeFiles/cmTC_4b119.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_4b119.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_4b119.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_4b119.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_4b119.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0f9e4 && [1/2] Building C object CMakeFiles/cmTC_0f9e4.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_0f9e4.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_0f9e4.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_0f9e4.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_0f9e4.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'memfd_create'
   return ((int*)(&memfd_create))[argc];
                   ^
@@ -645,9 +599,9 @@ int main(int argc, char** argv)
 Determining if the posix_spawn_file_actions_addchdir exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9d442 && [1/2] Building C object CMakeFiles/cmTC_9d442.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_9d442.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_9d442.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_9d442.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_9d442.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f801f && [1/2] Building C object CMakeFiles/cmTC_f801f.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_f801f.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_f801f.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_f801f.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_f801f.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'posix_spawn_file_actions_addchdir'
   return ((int*)(&posix_spawn_file_actions_addchdir))[argc];
                   ^
@@ -672,9 +626,9 @@ int main(int argc, char** argv)
 Determining if the posix_spawn_file_actions_addchdir_np exist failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0feb8 && [1/2] Building C object CMakeFiles/cmTC_0feb8.dir/CheckSymbolExists.c.o
-FAILED: CMakeFiles/cmTC_0feb8.dir/CheckSymbolExists.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_0feb8.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_0feb8.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_0feb8.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e18d0 && [1/2] Building C object CMakeFiles/cmTC_e18d0.dir/CheckSymbolExists.c.o
+FAILED: CMakeFiles/cmTC_e18d0.dir/CheckSymbolExists.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_e18d0.dir/CheckSymbolExists.c.o -MF CMakeFiles\cmTC_e18d0.dir\CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_e18d0.dir/CheckSymbolExists.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'posix_spawn_file_actions_addchdir_np'
   return ((int*)(&posix_spawn_file_actions_addchdir_np))[argc];
                   ^
@@ -699,17 +653,17 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test ICONV_IN_LIBC failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8a67b && [1/2] Building C object CMakeFiles/cmTC_8a67b.dir/src.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_64ed2 && [1/2] Building C object CMakeFiles/cmTC_64ed2.dir/src.c.o
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:6:21: warning: implicit declaration of function 'iconv_open' is invalid in C99 [-Wimplicit-function-declaration]
             return !iconv_open(NULL,NULL);
                     ^
 1 warning generated.
-[2/2] Linking C executable cmTC_8a67b
-FAILED: cmTC_8a67b 
-cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_8a67b.dir/src.c.o -o cmTC_8a67b  -latomic -lm && cd ."
+[2/2] Linking C executable cmTC_64ed2
+FAILED: cmTC_64ed2 
+cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_64ed2.dir/src.c.o -o cmTC_64ed2  -latomic -lm && cd ."
 ld: error: undefined symbol: iconv_open
 >>> referenced by src.c:6
->>>               CMakeFiles/cmTC_8a67b.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_64ed2.dir/src.c.o:(main)
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
@@ -725,14 +679,14 @@ Source file was:
 Performing C SOURCE FILE Test ICONV_IN_LIBICONV failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b982e && [1/2] Building C object CMakeFiles/cmTC_b982e.dir/src.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c5df8 && [1/2] Building C object CMakeFiles/cmTC_c5df8.dir/src.c.o
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:5:21: warning: implicit declaration of function 'iconv_open' is invalid in C99 [-Wimplicit-function-declaration]
             return !iconv_open(NULL,NULL);
                     ^
 1 warning generated.
-[2/2] Linking C executable cmTC_b982e
-FAILED: cmTC_b982e 
-cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_b982e.dir/src.c.o -o cmTC_b982e  -liconv  -latomic -lm && cd ."
+[2/2] Linking C executable cmTC_c5df8
+FAILED: cmTC_c5df8 
+cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_c5df8.dir/src.c.o -o cmTC_c5df8  -liconv  -latomic -lm && cd ."
 ld: error: unable to find library -liconv
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
@@ -748,9 +702,9 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_ARM_MODE failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f2146 && [1/2] Building C object CMakeFiles/cmTC_f2146.dir/src.c.o
-FAILED: CMakeFiles/cmTC_f2146.dir/src.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_ARM_MODE  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -Werror=unused-command-line-argument -fPIE   -marm -MD -MT CMakeFiles/cmTC_f2146.dir/src.c.o -MF CMakeFiles\cmTC_f2146.dir\src.c.o.d -o CMakeFiles/cmTC_f2146.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_bf7c7 && [1/2] Building C object CMakeFiles/cmTC_bf7c7.dir/src.c.o
+FAILED: CMakeFiles/cmTC_bf7c7.dir/src.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_ARM_MODE  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -Werror=unused-command-line-argument -fPIE   -marm -MD -MT CMakeFiles/cmTC_bf7c7.dir/src.c.o -MF CMakeFiles\cmTC_bf7c7.dir\src.c.o.d -o CMakeFiles/cmTC_bf7c7.dir/src.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c
 clang: error: argument unused during compilation: '-marm' [-Werror,-Wunused-command-line-argument]
 ninja: build stopped: subcommand failed.
 
@@ -760,9 +714,9 @@ int main(void) { return 0; }
 Determining if the include file pthread_np.h exists failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a8791 && [1/2] Building C object CMakeFiles/cmTC_a8791.dir/CheckIncludeFile.c.o
-FAILED: CMakeFiles/cmTC_a8791.dir/CheckIncludeFile.c.o 
-C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_a8791.dir/CheckIncludeFile.c.o -MF CMakeFiles\cmTC_a8791.dir\CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a8791.dir/CheckIncludeFile.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8c1a3 && [1/2] Building C object CMakeFiles/cmTC_8c1a3.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_8c1a3.dir/CheckIncludeFile.c.o 
+C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -fPIE -MD -MT CMakeFiles/cmTC_8c1a3.dir/CheckIncludeFile.c.o -MF CMakeFiles\cmTC_8c1a3.dir\CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8c1a3.dir/CheckIncludeFile.c.o -c C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckIncludeFile.c
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'pthread_np.h' file not found
 #include <pthread_np.h>
          ^~~~~~~~~~~~~~
@@ -774,7 +728,7 @@ ninja: build stopped: subcommand failed.
 Performing C SOURCE FILE Test HAVE_POSIX_SPAWN failed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5bba1 && [1/2] Building C object CMakeFiles/cmTC_5bba1.dir/src.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_120f4 && [1/2] Building C object CMakeFiles/cmTC_120f4.dir/src.c.o
 C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/arm64-v8a/CMakeFiles/CMakeTmp/src.c:22:5: warning: implicit declaration of function 'posix_spawnattr_init' is invalid in C99 [-Wimplicit-function-declaration]
     posix_spawnattr_init(&attr);
     ^
@@ -800,40 +754,40 @@ C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/ar
     posix_spawnattr_destroy(&attr);
     ^
 8 warnings generated.
-[2/2] Linking C executable cmTC_5bba1
-FAILED: cmTC_5bba1 
-cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_5bba1.dir/src.c.o -o cmTC_5bba1  -latomic -lm && cd ."
+[2/2] Linking C executable cmTC_120f4
+FAILED: cmTC_120f4 
+cmd.exe /C "cd . && C:\Users\moz04\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -D_GNU_SOURCE=1 -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_120f4.dir/src.c.o -o cmTC_120f4  -latomic -lm && cd ."
 ld: error: undefined symbol: posix_spawnattr_init
 >>> referenced by src.c:22
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawn_file_actions_init
 >>> referenced by src.c:23
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawn_file_actions_addclose
 >>> referenced by src.c:25
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawn_file_actions_adddup2
 >>> referenced by src.c:26
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawn
 >>> referenced by src.c:28
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawnp
 >>> referenced by src.c:29
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawn_file_actions_destroy
 >>> referenced by src.c:31
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 
 ld: error: undefined symbol: posix_spawnattr_destroy
 >>> referenced by src.c:32
->>>               CMakeFiles/cmTC_5bba1.dir/src.c.o:(main)
+>>>               CMakeFiles/cmTC_120f4.dir/src.c.o:(main)
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 

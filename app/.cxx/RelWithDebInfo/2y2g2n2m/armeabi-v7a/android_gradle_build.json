@@ -1,11 +1,11 @@
 {
   "buildFiles": [
     "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\src\\main\\cpp\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\SDL\\CMakeLists.txt"
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
@@ -22,103 +22,103 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
-    "SDL3-static::@5674db00e54576eff556": {
+    "SDL3-static::@97e6cc2efa84beb4d20a": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "SDL3-static",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL3.a"
     },
-    "SDL3_test::@5674db00e54576eff556": {
+    "SDL3_test::@97e6cc2efa84beb4d20a": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "SDL3_test",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3_test.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL3_test.a"
     },
-    "SDL_uclibc::@5674db00e54576eff556": {
+    "SDL_uclibc::@97e6cc2efa84beb4d20a": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "SDL_uclibc",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL_uclibc.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL_uclibc.a"
     },
-    "bgfx::@6c531a329687a4643e58": {
+    "bgfx::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bgfx",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libbgfx.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libbgfx.a"
     },
-    "bimg::@218ca66639c17ad2085b": {
+    "bimg::@55879c986d0015b7196d": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bimg",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg.a"
     },
-    "bimg_decode::@218ca66639c17ad2085b": {
+    "bimg_decode::@55879c986d0015b7196d": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bimg_decode",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_decode.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_decode.a"
     },
-    "bimg_encode::@218ca66639c17ad2085b": {
+    "bimg_encode::@55879c986d0015b7196d": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bimg_encode",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_encode.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_encode.a"
     },
-    "bin2c::@6f52f1d5c45491619055": {
+    "bin2c::@42de3a410e716b9b221e": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bin2c",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\bin2c",
       "runtimeFiles": []
     },
-    "bx::@6f52f1d5c45491619055": {
+    "bx::@42de3a410e716b9b221e": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "bx",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\libbx.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bx\\libbx.a"
     },
-    "example-common::@6c531a329687a4643e58": {
+    "example-common::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "example-common",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libexample-common.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libexample-common.a"
     },
-    "examples::@6c531a329687a4643e58": {
+    "examples::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "examples"
     },
-    "fcpp::@6c531a329687a4643e58": {
+    "fcpp::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "fcpp",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libfcpp.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libfcpp.a"
     },
-    "geometryc::@6c531a329687a4643e58": {
+    "geometryc::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "geometryc",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryc",
       "runtimeFiles": []
     },
-    "geometryv::@6c531a329687a4643e58": {
+    "geometryv::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "geometryv",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryv.so",
       "runtimeFiles": []
     },
-    "glsl-optimizer::@6c531a329687a4643e58": {
+    "glsl-optimizer::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "glsl-optimizer",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglsl-optimizer.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglsl-optimizer.a"
     },
-    "glslang::@6c531a329687a4643e58": {
+    "glslang::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "glslang",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglslang.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglslang.a"
     },
     "native-activity::@6890427a1f51a3e7e1df": {
       "toolchain": "toolchain",
@@ -133,40 +133,40 @@
       "artifactName": "native_app_glue",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\RelWithDebInfo\\2y2g2n2m\\armeabi-v7a\\libnative_app_glue.a"
     },
-    "shaderc::@6c531a329687a4643e58": {
+    "shaderc::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "shaderc",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\shaderc",
       "runtimeFiles": []
     },
-    "spirv-cross::@6c531a329687a4643e58": {
+    "spirv-cross::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "spirv-cross",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-cross.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-cross.a"
     },
-    "spirv-opt::@6c531a329687a4643e58": {
+    "spirv-opt::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "spirv-opt",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-opt.a"
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-opt.a"
     },
-    "texturec::@218ca66639c17ad2085b": {
+    "texturec::@55879c986d0015b7196d": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "texturec",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\texturec",
       "runtimeFiles": []
     },
-    "texturev::@6c531a329687a4643e58": {
+    "texturev::@fe81851880f8180cf43b": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "texturev",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\texturev.so",
       "runtimeFiles": []
     },
-    "tools::@1c8e61afefb2b157bd4e": {
+    "tools::@d3e2a4576cd946508bbb": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",
       "artifactName": "tools"

@@ -29,13 +29,13 @@ The CXX compiler identification is Clang, found in "C:/Users/moz04/Desktop/GameD
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a5ce8 && [1/2] Building C object CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_01dd5 && [1/2] Building C object CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o
 Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 Target: x86_64-none-linux-android21
 Thread model: posix
 InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
  (in-process)
- "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_a5ce8.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o -x c C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_01dd5.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o -x c C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c
 clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu
 ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
 #include "..." search starts here:
@@ -45,12 +45,12 @@ ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.
  C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android
  C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
 End of search list.
-[2/2] Linking C executable cmTC_a5ce8
+[2/2] Linking C executable cmTC_01dd5
 Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 Target: x86_64-none-linux-android21
 Thread model: posix
 InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
- "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_a5ce8 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o
+ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_01dd5 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o
 
 
 
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.lld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a5ce8 && [1/2] Building C object CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_01dd5 && [1/2] Building C object CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o]
   ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
   ignore line: [Target: x86_64-none-linux-android21]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
   ignore line: [ (in-process)]
-  ignore line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_a5ce8.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o -x c C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
+  ignore line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_01dd5.dir\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o -x c C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
   ignore line: [clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu]
   ignore line: [ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
   ignore line: [#include "..." search starts here:]
@@ -89,12 +89,12 @@ Parsed C implicit link information from above output:
   ignore line: [ C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android]
   ignore line: [ C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
   ignore line: [End of search list.]
-  ignore line: [[2/2] Linking C executable cmTC_a5ce8]
+  ignore line: [[2/2] Linking C executable cmTC_01dd5]
   ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
   ignore line: [Target: x86_64-none-linux-android21]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
-  link line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_a5ce8 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o]
+  link line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_01dd5 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o]
     arg [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld] ==> ignore
     arg [--sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a5ce8] ==> ignore
+    arg [cmTC_01dd5] ==> ignore
     arg [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o] ==> obj [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o]
     arg [-LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64] ==> dir [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64]
     arg [-LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21] ==> dir [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21]
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [--gc-sections] ==> ignore
     arg [--no-undefined] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_a5ce8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_01dd5.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a] ==> lib [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a]
     arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
     arg [-ldl] ==> lib [dl]
@@ -145,13 +145,13 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3d61b && [1/2] Building CXX object CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9baa3 && [1/2] Building CXX object CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o
 Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 Target: x86_64-none-linux-android21
 Thread model: posix
 InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
  (in-process)
- "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_3d61b.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_9baa3.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
 clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu
 ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"
 #include "..." search starts here:
@@ -162,12 +162,12 @@ ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.
  C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android
  C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include
 End of search list.
-[2/2] Linking CXX executable cmTC_3d61b
+[2/2] Linking CXX executable cmTC_9baa3
 Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 Target: x86_64-none-linux-android21
 Thread model: posix
 InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin
- "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3d61b C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o
+ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_9baa3 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o
 
 
 
@@ -192,13 +192,13 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.lld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3d61b && [1/2] Building CXX object CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9baa3 && [1/2] Building CXX object CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
   ignore line: [Target: x86_64-none-linux-android21]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
   ignore line: [ (in-process)]
-  ignore line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_3d61b.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe" -cc1 -triple x86_64-none-linux-android21 -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -target-feature +sse4.2 -target-feature +popcnt -target-feature +cx16 -tune-cpu generic -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -resource-dir C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6 -dependency-file "CMakeFiles\\cmTC_9baa3.dir\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D _FORTIFY_SOURCE=2 -isysroot C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1 -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/include -internal-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/local/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include -internal-externc-isystem C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include -Wformat -std=c++17 -fdeprecated-macro -fdebug-compilation-dir=C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -x c++ C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [clang -cc1 version 14.0.6 based upon LLVM 14.0.6git default target x86_64-w64-windows-gnu]
   ignore line: [ignoring nonexistent directory "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/include"]
   ignore line: [#include "..." search starts here:]
@@ -209,12 +209,12 @@ Parsed CXX implicit link information from above output:
   ignore line: [ C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/x86_64-linux-android]
   ignore line: [ C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include]
   ignore line: [End of search list.]
-  ignore line: [[2/2] Linking CXX executable cmTC_3d61b]
+  ignore line: [[2/2] Linking CXX executable cmTC_9baa3]
   ignore line: [Android (8490178  based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)]
   ignore line: [Target: x86_64-none-linux-android21]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin]
-  link line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_3d61b C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o]
+  link line: [ "C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld" --sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -pie --warn-shared-textrel -z now -z relro --hash-style=both --enable-new-dtags --eh-frame-hdr -m elf_x86_64 -dynamic-linker /system/bin/linker64 -o cmTC_9baa3 C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21 -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android -LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib --build-id=sha1 --no-rosegment --fatal-warnings --gc-sections --no-undefined --gc-sections CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o -Bstatic -lc++ -Bdynamic -lm C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl -lc C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/libclang_rt.builtins-x86_64-android.a -l:libunwind.a -ldl C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtend_android.o]
     arg [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/ld] ==> ignore
     arg [--sysroot=C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot] ==> ignore
     arg [-pie] ==> ignore
@@ -229,7 +229,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/system/bin/linker64] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_3d61b] ==> ignore
+    arg [cmTC_9baa3] ==> ignore
     arg [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o] ==> obj [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21/crtbegin_dynamic.o]
     arg [-LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64] ==> dir [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/14.0.6/lib/linux/x86_64]
     arg [-LC:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21] ==> dir [C:/Users/moz04/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/x86_64-linux-android/21]
@@ -241,7 +241,7 @@ Parsed CXX implicit link information from above output:
     arg [--gc-sections] ==> ignore
     arg [--no-undefined] ==> ignore
     arg [--gc-sections] ==> ignore
-    arg [CMakeFiles/cmTC_3d61b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_9baa3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-Bstatic] ==> search static
     arg [-lc++] ==> lib [c++]
     arg [-Bdynamic] ==> search dynamic
@@ -269,8 +269,8 @@ Parsed CXX implicit link information from above output:
 Performing C SOURCE FILE Test SDL_CPU_X64 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c6cd2 && [1/2] Building C object CMakeFiles/cmTC_c6cd2.dir/src.c.o
-[2/2] Linking C static library libcmTC_c6cd2.a
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_02a45 && [1/2] Building C object CMakeFiles/cmTC_02a45.dir/src.c.o
+[2/2] Linking C static library libcmTC_02a45.a
 
 
 Source file was:
@@ -286,8 +286,8 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_GCC_WALL succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_eef8f && [1/2] Building C object CMakeFiles/cmTC_eef8f.dir/src.c.o
-[2/2] Linking C executable cmTC_eef8f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1263c && [1/2] Building C object CMakeFiles/cmTC_1263c.dir/src.c.o
+[2/2] Linking C executable cmTC_1263c
 
 
 Source file was:
@@ -295,8 +295,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WUNDEF succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3ccbb && [1/2] Building C object CMakeFiles/cmTC_3ccbb.dir/src.c.o
-[2/2] Linking C executable cmTC_3ccbb
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cd82a && [1/2] Building C object CMakeFiles/cmTC_cd82a.dir/src.c.o
+[2/2] Linking C executable cmTC_cd82a
 
 
 Source file was:
@@ -304,8 +304,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WFLOAT_CONVERSION succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_affa0 && [1/2] Building C object CMakeFiles/cmTC_affa0.dir/src.c.o
-[2/2] Linking C executable cmTC_affa0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_080a4 && [1/2] Building C object CMakeFiles/cmTC_080a4.dir/src.c.o
+[2/2] Linking C executable cmTC_080a4
 
 
 Source file was:
@@ -313,8 +313,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_NO_STRICT_ALIASING succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_847b5 && [1/2] Building C object CMakeFiles/cmTC_847b5.dir/src.c.o
-[2/2] Linking C executable cmTC_847b5
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a2e02 && [1/2] Building C object CMakeFiles/cmTC_a2e02.dir/src.c.o
+[2/2] Linking C executable cmTC_a2e02
 
 
 Source file was:
@@ -322,8 +322,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WDOCUMENTATION succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c3390 && [1/2] Building C object CMakeFiles/cmTC_c3390.dir/src.c.o
-[2/2] Linking C executable cmTC_c3390
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8eda0 && [1/2] Building C object CMakeFiles/cmTC_8eda0.dir/src.c.o
+[2/2] Linking C executable cmTC_8eda0
 
 
 Source file was:
@@ -331,8 +331,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WDOCUMENTATION_UNKNOWN_COMMAND succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2e751 && [1/2] Building C object CMakeFiles/cmTC_2e751.dir/src.c.o
-[2/2] Linking C executable cmTC_2e751
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_de658 && [1/2] Building C object CMakeFiles/cmTC_de658.dir/src.c.o
+[2/2] Linking C executable cmTC_de658
 
 
 Source file was:
@@ -340,8 +340,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_COMMENT_BLOCK_COMMANDS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_53898 && [1/2] Building C object CMakeFiles/cmTC_53898.dir/src.c.o
-[2/2] Linking C executable cmTC_53898
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8be0d && [1/2] Building C object CMakeFiles/cmTC_8be0d.dir/src.c.o
+[2/2] Linking C executable cmTC_8be0d
 
 
 Source file was:
@@ -349,8 +349,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WSHADOW succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_dbc38 && [1/2] Building C object CMakeFiles/cmTC_dbc38.dir/src.c.o
-[2/2] Linking C executable cmTC_dbc38
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_62314 && [1/2] Building C object CMakeFiles/cmTC_62314.dir/src.c.o
+[2/2] Linking C executable cmTC_62314
 
 
 Source file was:
@@ -358,8 +358,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WUNUSED_LOCAL_TYPEDEFS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_011c4 && [1/2] Building C object CMakeFiles/cmTC_011c4.dir/src.c.o
-[2/2] Linking C executable cmTC_011c4
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_311df && [1/2] Building C object CMakeFiles/cmTC_311df.dir/src.c.o
+[2/2] Linking C executable cmTC_311df
 
 
 Source file was:
@@ -367,8 +367,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_GCC_WIMPLICIT_FALLTHROUGH succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_64a69 && [1/2] Building C object CMakeFiles/cmTC_64a69.dir/src.c.o
-[2/2] Linking C executable cmTC_64a69
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1e440 && [1/2] Building C object CMakeFiles/cmTC_1e440.dir/src.c.o
+[2/2] Linking C executable cmTC_1e440
 
 
 Source file was:
@@ -376,8 +376,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_FCOLOR_DIAGNOSTICS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c0ba1 && [1/2] Building C object CMakeFiles/cmTC_c0ba1.dir/src.c.o
-[2/2] Linking C executable cmTC_c0ba1
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4af09 && [1/2] Building C object CMakeFiles/cmTC_4af09.dir/src.c.o
+[2/2] Linking C executable cmTC_4af09
 
 
 Source file was:
@@ -385,8 +385,8 @@ int main(void) { return 0; }
 Performing C SOURCE FILE Test LINKER_SUPPORTS_VERSION_SCRIPT succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_981d2 && [1/2] Building C object CMakeFiles/cmTC_981d2.dir/src.c.o
-[2/2] Linking C executable cmTC_981d2
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_edd5b && [1/2] Building C object CMakeFiles/cmTC_edd5b.dir/src.c.o
+[2/2] Linking C executable cmTC_edd5b
 
 
 Source file was:
@@ -394,8 +394,8 @@ int func(void) {return 0;} int main(int argc,char*argv[]){(void)argc;(void)argv;
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_GCC_ATOMICS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8fcfb && [1/2] Building C object CMakeFiles/cmTC_8fcfb.dir/src.c.o
-[2/2] Linking C executable cmTC_8fcfb
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0d22c && [1/2] Building C object CMakeFiles/cmTC_0d22c.dir/src.c.o
+[2/2] Linking C executable cmTC_0d22c
 
 
 Source file was:
@@ -411,8 +411,8 @@ int main(int argc, char **argv) {
 Performing C SOURCE FILE Test HAVE_GCC_FVISIBILITY succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_040f0 && [1/2] Building C object CMakeFiles/cmTC_040f0.dir/src.c.o
-[2/2] Linking C executable cmTC_040f0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_040b8 && [1/2] Building C object CMakeFiles/cmTC_040b8.dir/src.c.o
+[2/2] Linking C executable cmTC_040b8
 
 
 Source file was:
@@ -428,8 +428,8 @@ Source file was:
 Performing C SOURCE FILE Test LINKER_SUPPORTS_WL_NO_UNDEFINED succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_11d2f && [1/2] Building C object CMakeFiles/cmTC_11d2f.dir/src.c.o
-[2/2] Linking C executable cmTC_11d2f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3bd1f && [1/2] Building C object CMakeFiles/cmTC_3bd1f.dir/src.c.o
+[2/2] Linking C executable cmTC_3bd1f
 
 
 Source file was:
@@ -437,8 +437,8 @@ int main() { return 0; }
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_MMX succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_98589 && [1/2] Building C object CMakeFiles/cmTC_98589.dir/src.c.o
-[2/2] Linking C executable cmTC_98589
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cf25c && [1/2] Building C object CMakeFiles/cmTC_cf25c.dir/src.c.o
+[2/2] Linking C executable cmTC_cf25c
 
 
 Source file was:
@@ -456,8 +456,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_SSE succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0c477 && [1/2] Building C object CMakeFiles/cmTC_0c477.dir/src.c.o
-[2/2] Linking C executable cmTC_0c477
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_34aa2 && [1/2] Building C object CMakeFiles/cmTC_34aa2.dir/src.c.o
+[2/2] Linking C executable cmTC_34aa2
 
 
 Source file was:
@@ -475,8 +475,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_SSE2 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_847b7 && [1/2] Building C object CMakeFiles/cmTC_847b7.dir/src.c.o
-[2/2] Linking C executable cmTC_847b7
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_679b9 && [1/2] Building C object CMakeFiles/cmTC_679b9.dir/src.c.o
+[2/2] Linking C executable cmTC_679b9
 
 
 Source file was:
@@ -494,8 +494,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_SSE3 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7f210 && [1/2] Building C object CMakeFiles/cmTC_7f210.dir/src.c.o
-[2/2] Linking C executable cmTC_7f210
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9bcd2 && [1/2] Building C object CMakeFiles/cmTC_9bcd2.dir/src.c.o
+[2/2] Linking C executable cmTC_9bcd2
 
 
 Source file was:
@@ -513,8 +513,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_SSE4_1 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_152d8 && [1/2] Building C object CMakeFiles/cmTC_152d8.dir/src.c.o
-[2/2] Linking C executable cmTC_152d8
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_729f6 && [1/2] Building C object CMakeFiles/cmTC_729f6.dir/src.c.o
+[2/2] Linking C executable cmTC_729f6
 
 
 Source file was:
@@ -532,8 +532,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_SSE4_2 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6f0da && [1/2] Building C object CMakeFiles/cmTC_6f0da.dir/src.c.o
-[2/2] Linking C executable cmTC_6f0da
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cbfd3 && [1/2] Building C object CMakeFiles/cmTC_cbfd3.dir/src.c.o
+[2/2] Linking C executable cmTC_cbfd3
 
 
 Source file was:
@@ -553,8 +553,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_AVX succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_29b4f && [1/2] Building C object CMakeFiles/cmTC_29b4f.dir/src.c.o
-[2/2] Linking C executable cmTC_29b4f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_77f16 && [1/2] Building C object CMakeFiles/cmTC_77f16.dir/src.c.o
+[2/2] Linking C executable cmTC_77f16
 
 
 Source file was:
@@ -572,8 +572,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_AVX2 succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f17fe && [1/2] Building C object CMakeFiles/cmTC_f17fe.dir/src.c.o
-[2/2] Linking C executable cmTC_f17fe
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6758f && [1/2] Building C object CMakeFiles/cmTC_6758f.dir/src.c.o
+[2/2] Linking C executable cmTC_6758f
 
 
 Source file was:
@@ -591,8 +591,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_SUPPORTS_AVX512F succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_efa3d && [1/2] Building C object CMakeFiles/cmTC_efa3d.dir/src.c.o
-[2/2] Linking C executable cmTC_efa3d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f71ea && [1/2] Building C object CMakeFiles/cmTC_f71ea.dir/src.c.o
+[2/2] Linking C executable cmTC_f71ea
 
 
 Source file was:
@@ -610,167 +610,167 @@ Source file was:
 Determining if the include file alloca.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f5d7f && [1/2] Building C object CMakeFiles/cmTC_f5d7f.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_f5d7f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_bc2eb && [1/2] Building C object CMakeFiles/cmTC_bc2eb.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_bc2eb
 
 
 
 Determining if the include file float.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1f8ca && [1/2] Building C object CMakeFiles/cmTC_1f8ca.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_1f8ca
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_95d1e && [1/2] Building C object CMakeFiles/cmTC_95d1e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_95d1e
 
 
 
 Determining if the include file iconv.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d6e20 && [1/2] Building C object CMakeFiles/cmTC_d6e20.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_d6e20
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1ff89 && [1/2] Building C object CMakeFiles/cmTC_1ff89.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_1ff89
 
 
 
 Determining if the include file inttypes.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_56d92 && [1/2] Building C object CMakeFiles/cmTC_56d92.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_56d92
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d5071 && [1/2] Building C object CMakeFiles/cmTC_d5071.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d5071
 
 
 
 Determining if the include file limits.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_883c7 && [1/2] Building C object CMakeFiles/cmTC_883c7.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_883c7
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_108b3 && [1/2] Building C object CMakeFiles/cmTC_108b3.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_108b3
 
 
 
 Determining if the include file malloc.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7659e && [1/2] Building C object CMakeFiles/cmTC_7659e.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_7659e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8c218 && [1/2] Building C object CMakeFiles/cmTC_8c218.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_8c218
 
 
 
 Determining if the include file math.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a2f6f && [1/2] Building C object CMakeFiles/cmTC_a2f6f.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_a2f6f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3bf12 && [1/2] Building C object CMakeFiles/cmTC_3bf12.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_3bf12
 
 
 
 Determining if the include file memory.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b4a24 && [1/2] Building C object CMakeFiles/cmTC_b4a24.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_b4a24
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9e4f3 && [1/2] Building C object CMakeFiles/cmTC_9e4f3.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_9e4f3
 
 
 
 Determining if the include file signal.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4db3e && [1/2] Building C object CMakeFiles/cmTC_4db3e.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_4db3e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_92ae0 && [1/2] Building C object CMakeFiles/cmTC_92ae0.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_92ae0
 
 
 
 Determining if the include file stdarg.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c57e5 && [1/2] Building C object CMakeFiles/cmTC_c57e5.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_c57e5
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_effb5 && [1/2] Building C object CMakeFiles/cmTC_effb5.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_effb5
 
 
 
 Determining if the include file stdbool.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_945bf && [1/2] Building C object CMakeFiles/cmTC_945bf.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_945bf
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_62b1f && [1/2] Building C object CMakeFiles/cmTC_62b1f.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_62b1f
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2bc9d && [1/2] Building C object CMakeFiles/cmTC_2bc9d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_2bc9d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_95390 && [1/2] Building C object CMakeFiles/cmTC_95390.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_95390
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e1b6d && [1/2] Building C object CMakeFiles/cmTC_e1b6d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_e1b6d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5c3da && [1/2] Building C object CMakeFiles/cmTC_5c3da.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_5c3da
 
 
 
 Determining if the include file stdio.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ac42d && [1/2] Building C object CMakeFiles/cmTC_ac42d.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_ac42d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a2cd5 && [1/2] Building C object CMakeFiles/cmTC_a2cd5.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_a2cd5
 
 
 
 Determining if the include file stdlib.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_dace0 && [1/2] Building C object CMakeFiles/cmTC_dace0.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_dace0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2fc54 && [1/2] Building C object CMakeFiles/cmTC_2fc54.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2fc54
 
 
 
 Determining if the include file string.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8dbda && [1/2] Building C object CMakeFiles/cmTC_8dbda.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_8dbda
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d5208 && [1/2] Building C object CMakeFiles/cmTC_d5208.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_d5208
 
 
 
 Determining if the include file strings.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e3442 && [1/2] Building C object CMakeFiles/cmTC_e3442.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_e3442
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_34e3e && [1/2] Building C object CMakeFiles/cmTC_34e3e.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_34e3e
 
 
 
 Determining if the include file sys/types.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9705b && [1/2] Building C object CMakeFiles/cmTC_9705b.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_9705b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cab93 && [1/2] Building C object CMakeFiles/cmTC_cab93.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_cab93
 
 
 
 Determining if the include file time.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cc89c && [1/2] Building C object CMakeFiles/cmTC_cc89c.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_cc89c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4fa76 && [1/2] Building C object CMakeFiles/cmTC_4fa76.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_4fa76
 
 
 
 Determining if the include file wchar.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_19c50 && [1/2] Building C object CMakeFiles/cmTC_19c50.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_19c50
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_443f0 && [1/2] Building C object CMakeFiles/cmTC_443f0.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_443f0
 
 
 
 Determining if the function pow exists in the m passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8bb9b && [1/2] Building C object CMakeFiles/cmTC_8bb9b.dir/CheckFunctionExists.c.o
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ef476 && [1/2] Building C object CMakeFiles/cmTC_ef476.dir/CheckFunctionExists.c.o
 C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
   CHECK_FUNCTION_EXISTS(void);
   ^
@@ -782,15 +782,15 @@ C:/Users/moz04/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/C
 #define CHECK_FUNCTION_EXISTS pow
                               ^
 1 warning generated.
-[2/2] Linking C executable cmTC_8bb9b
+[2/2] Linking C executable cmTC_ef476
 
 
 
 Determining if the abs exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_68780 && [1/2] Building C object CMakeFiles/cmTC_68780.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_68780
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b030f && [1/2] Building C object CMakeFiles/cmTC_b030f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b030f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -828,8 +828,8 @@ int main(int argc, char** argv)
 Determining if the acos exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e5877 && [1/2] Building C object CMakeFiles/cmTC_e5877.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_e5877
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d1ef1 && [1/2] Building C object CMakeFiles/cmTC_d1ef1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d1ef1
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -867,8 +867,8 @@ int main(int argc, char** argv)
 Determining if the acosf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_40a07 && [1/2] Building C object CMakeFiles/cmTC_40a07.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_40a07
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_99e35 && [1/2] Building C object CMakeFiles/cmTC_99e35.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_99e35
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -906,8 +906,8 @@ int main(int argc, char** argv)
 Determining if the asin exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_daee6 && [1/2] Building C object CMakeFiles/cmTC_daee6.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_daee6
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e426b && [1/2] Building C object CMakeFiles/cmTC_e426b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e426b
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -945,8 +945,8 @@ int main(int argc, char** argv)
 Determining if the asinf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a2904 && [1/2] Building C object CMakeFiles/cmTC_a2904.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_a2904
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_07fb2 && [1/2] Building C object CMakeFiles/cmTC_07fb2.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_07fb2
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -984,8 +984,8 @@ int main(int argc, char** argv)
 Determining if the atan exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3d208 && [1/2] Building C object CMakeFiles/cmTC_3d208.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_3d208
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c0cf1 && [1/2] Building C object CMakeFiles/cmTC_c0cf1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_c0cf1
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1023,8 +1023,8 @@ int main(int argc, char** argv)
 Determining if the atan2 exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aa066 && [1/2] Building C object CMakeFiles/cmTC_aa066.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_aa066
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_42827 && [1/2] Building C object CMakeFiles/cmTC_42827.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_42827
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1062,8 +1062,8 @@ int main(int argc, char** argv)
 Determining if the atan2f exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9e4f1 && [1/2] Building C object CMakeFiles/cmTC_9e4f1.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_9e4f1
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ef706 && [1/2] Building C object CMakeFiles/cmTC_ef706.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ef706
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1101,8 +1101,8 @@ int main(int argc, char** argv)
 Determining if the atanf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8305d && [1/2] Building C object CMakeFiles/cmTC_8305d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8305d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0c2f4 && [1/2] Building C object CMakeFiles/cmTC_0c2f4.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0c2f4
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1140,8 +1140,8 @@ int main(int argc, char** argv)
 Determining if the atof exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e966b && [1/2] Building C object CMakeFiles/cmTC_e966b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_e966b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e6e5b && [1/2] Building C object CMakeFiles/cmTC_e6e5b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e6e5b
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1179,8 +1179,8 @@ int main(int argc, char** argv)
 Determining if the atoi exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_fffe4 && [1/2] Building C object CMakeFiles/cmTC_fffe4.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_fffe4
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_bb3d7 && [1/2] Building C object CMakeFiles/cmTC_bb3d7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_bb3d7
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1218,8 +1218,8 @@ int main(int argc, char** argv)
 Determining if the bcopy exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_35344 && [1/2] Building C object CMakeFiles/cmTC_35344.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_35344
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5a2a4 && [1/2] Building C object CMakeFiles/cmTC_5a2a4.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_5a2a4
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1257,8 +1257,8 @@ int main(int argc, char** argv)
 Determining if the ceil exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_487cd && [1/2] Building C object CMakeFiles/cmTC_487cd.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_487cd
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1320c && [1/2] Building C object CMakeFiles/cmTC_1320c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1320c
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1296,8 +1296,8 @@ int main(int argc, char** argv)
 Determining if the ceilf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_71c05 && [1/2] Building C object CMakeFiles/cmTC_71c05.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_71c05
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7006f && [1/2] Building C object CMakeFiles/cmTC_7006f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7006f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1335,8 +1335,8 @@ int main(int argc, char** argv)
 Determining if the copysign exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_04d67 && [1/2] Building C object CMakeFiles/cmTC_04d67.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_04d67
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0282d && [1/2] Building C object CMakeFiles/cmTC_0282d.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0282d
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1374,8 +1374,8 @@ int main(int argc, char** argv)
 Determining if the copysignf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ccde3 && [1/2] Building C object CMakeFiles/cmTC_ccde3.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ccde3
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f0005 && [1/2] Building C object CMakeFiles/cmTC_f0005.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f0005
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1413,8 +1413,8 @@ int main(int argc, char** argv)
 Determining if the cos exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7516d && [1/2] Building C object CMakeFiles/cmTC_7516d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_7516d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cdf24 && [1/2] Building C object CMakeFiles/cmTC_cdf24.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_cdf24
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1452,8 +1452,8 @@ int main(int argc, char** argv)
 Determining if the cosf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_38f9c && [1/2] Building C object CMakeFiles/cmTC_38f9c.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_38f9c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_60753 && [1/2] Building C object CMakeFiles/cmTC_60753.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_60753
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1491,8 +1491,8 @@ int main(int argc, char** argv)
 Determining if the _Exit exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_966ae && [1/2] Building C object CMakeFiles/cmTC_966ae.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_966ae
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_07089 && [1/2] Building C object CMakeFiles/cmTC_07089.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_07089
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1530,8 +1530,8 @@ int main(int argc, char** argv)
 Determining if the exp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7d0be && [1/2] Building C object CMakeFiles/cmTC_7d0be.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_7d0be
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_77b7f && [1/2] Building C object CMakeFiles/cmTC_77b7f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_77b7f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1569,8 +1569,8 @@ int main(int argc, char** argv)
 Determining if the expf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7db45 && [1/2] Building C object CMakeFiles/cmTC_7db45.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_7db45
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_74a50 && [1/2] Building C object CMakeFiles/cmTC_74a50.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_74a50
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1608,8 +1608,8 @@ int main(int argc, char** argv)
 Determining if the fabs exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ed1eb && [1/2] Building C object CMakeFiles/cmTC_ed1eb.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ed1eb
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_12573 && [1/2] Building C object CMakeFiles/cmTC_12573.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_12573
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1647,8 +1647,8 @@ int main(int argc, char** argv)
 Determining if the fabsf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_61b21 && [1/2] Building C object CMakeFiles/cmTC_61b21.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_61b21
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_069b0 && [1/2] Building C object CMakeFiles/cmTC_069b0.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_069b0
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1686,8 +1686,8 @@ int main(int argc, char** argv)
 Determining if the floor exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3a92b && [1/2] Building C object CMakeFiles/cmTC_3a92b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_3a92b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_de884 && [1/2] Building C object CMakeFiles/cmTC_de884.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_de884
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1725,8 +1725,8 @@ int main(int argc, char** argv)
 Determining if the floorf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a8bc9 && [1/2] Building C object CMakeFiles/cmTC_a8bc9.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_a8bc9
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_df527 && [1/2] Building C object CMakeFiles/cmTC_df527.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_df527
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1764,8 +1764,8 @@ int main(int argc, char** argv)
 Determining if the fmod exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8d50c && [1/2] Building C object CMakeFiles/cmTC_8d50c.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8d50c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ebb77 && [1/2] Building C object CMakeFiles/cmTC_ebb77.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ebb77
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1803,8 +1803,8 @@ int main(int argc, char** argv)
 Determining if the fmodf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3fa5f && [1/2] Building C object CMakeFiles/cmTC_3fa5f.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_3fa5f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b7dd1 && [1/2] Building C object CMakeFiles/cmTC_b7dd1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b7dd1
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1842,8 +1842,8 @@ int main(int argc, char** argv)
 Determining if the fseeko exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8eaa3 && [1/2] Building C object CMakeFiles/cmTC_8eaa3.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8eaa3
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8f996 && [1/2] Building C object CMakeFiles/cmTC_8f996.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8f996
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1881,8 +1881,8 @@ int main(int argc, char** argv)
 Determining if the getenv exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_fb219 && [1/2] Building C object CMakeFiles/cmTC_fb219.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_fb219
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4268e && [1/2] Building C object CMakeFiles/cmTC_4268e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4268e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1920,8 +1920,8 @@ int main(int argc, char** argv)
 Determining if the log exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c483c && [1/2] Building C object CMakeFiles/cmTC_c483c.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_c483c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f5325 && [1/2] Building C object CMakeFiles/cmTC_f5325.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f5325
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1959,8 +1959,8 @@ int main(int argc, char** argv)
 Determining if the log10 exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7507f && [1/2] Building C object CMakeFiles/cmTC_7507f.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_7507f
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_fd3ba && [1/2] Building C object CMakeFiles/cmTC_fd3ba.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_fd3ba
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -1998,8 +1998,8 @@ int main(int argc, char** argv)
 Determining if the log10f exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_89523 && [1/2] Building C object CMakeFiles/cmTC_89523.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_89523
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7f8a1 && [1/2] Building C object CMakeFiles/cmTC_7f8a1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7f8a1
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2037,8 +2037,8 @@ int main(int argc, char** argv)
 Determining if the logf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4e7f8 && [1/2] Building C object CMakeFiles/cmTC_4e7f8.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_4e7f8
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_164dc && [1/2] Building C object CMakeFiles/cmTC_164dc.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_164dc
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2076,8 +2076,8 @@ int main(int argc, char** argv)
 Determining if the lround exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5c8e3 && [1/2] Building C object CMakeFiles/cmTC_5c8e3.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_5c8e3
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0d09a && [1/2] Building C object CMakeFiles/cmTC_0d09a.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0d09a
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2115,8 +2115,8 @@ int main(int argc, char** argv)
 Determining if the lroundf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5e14c && [1/2] Building C object CMakeFiles/cmTC_5e14c.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_5e14c
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_457c9 && [1/2] Building C object CMakeFiles/cmTC_457c9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_457c9
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2154,8 +2154,8 @@ int main(int argc, char** argv)
 Determining if the malloc exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_25955 && [1/2] Building C object CMakeFiles/cmTC_25955.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_25955
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ea052 && [1/2] Building C object CMakeFiles/cmTC_ea052.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ea052
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2193,8 +2193,8 @@ int main(int argc, char** argv)
 Determining if the memcmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_83713 && [1/2] Building C object CMakeFiles/cmTC_83713.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_83713
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8d2f6 && [1/2] Building C object CMakeFiles/cmTC_8d2f6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8d2f6
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2232,8 +2232,8 @@ int main(int argc, char** argv)
 Determining if the memcpy exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aa327 && [1/2] Building C object CMakeFiles/cmTC_aa327.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_aa327
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_35fe9 && [1/2] Building C object CMakeFiles/cmTC_35fe9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_35fe9
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2271,8 +2271,8 @@ int main(int argc, char** argv)
 Determining if the memmove exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_18ef3 && [1/2] Building C object CMakeFiles/cmTC_18ef3.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_18ef3
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9eab7 && [1/2] Building C object CMakeFiles/cmTC_9eab7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9eab7
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2310,8 +2310,8 @@ int main(int argc, char** argv)
 Determining if the memset exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_98597 && [1/2] Building C object CMakeFiles/cmTC_98597.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_98597
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9b305 && [1/2] Building C object CMakeFiles/cmTC_9b305.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9b305
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2349,8 +2349,8 @@ int main(int argc, char** argv)
 Determining if the modf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_932c8 && [1/2] Building C object CMakeFiles/cmTC_932c8.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_932c8
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e45a5 && [1/2] Building C object CMakeFiles/cmTC_e45a5.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e45a5
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2388,8 +2388,8 @@ int main(int argc, char** argv)
 Determining if the modff exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8de5a && [1/2] Building C object CMakeFiles/cmTC_8de5a.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8de5a
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_bf435 && [1/2] Building C object CMakeFiles/cmTC_bf435.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_bf435
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2427,8 +2427,8 @@ int main(int argc, char** argv)
 Determining if the pow exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5933d && [1/2] Building C object CMakeFiles/cmTC_5933d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_5933d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0dd86 && [1/2] Building C object CMakeFiles/cmTC_0dd86.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0dd86
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2466,8 +2466,8 @@ int main(int argc, char** argv)
 Determining if the powf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_80574 && [1/2] Building C object CMakeFiles/cmTC_80574.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_80574
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_db9af && [1/2] Building C object CMakeFiles/cmTC_db9af.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_db9af
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2505,8 +2505,8 @@ int main(int argc, char** argv)
 Determining if the putenv exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_44adc && [1/2] Building C object CMakeFiles/cmTC_44adc.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_44adc
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aae44 && [1/2] Building C object CMakeFiles/cmTC_aae44.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_aae44
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2544,8 +2544,8 @@ int main(int argc, char** argv)
 Determining if the round exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9ab8e && [1/2] Building C object CMakeFiles/cmTC_9ab8e.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_9ab8e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d83b5 && [1/2] Building C object CMakeFiles/cmTC_d83b5.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d83b5
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2583,8 +2583,8 @@ int main(int argc, char** argv)
 Determining if the roundf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ad4dd && [1/2] Building C object CMakeFiles/cmTC_ad4dd.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ad4dd
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e64e3 && [1/2] Building C object CMakeFiles/cmTC_e64e3.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e64e3
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2622,8 +2622,8 @@ int main(int argc, char** argv)
 Determining if the scalbn exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_edfcc && [1/2] Building C object CMakeFiles/cmTC_edfcc.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_edfcc
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8bd35 && [1/2] Building C object CMakeFiles/cmTC_8bd35.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8bd35
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2661,8 +2661,8 @@ int main(int argc, char** argv)
 Determining if the scalbnf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_79ee5 && [1/2] Building C object CMakeFiles/cmTC_79ee5.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_79ee5
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6995f && [1/2] Building C object CMakeFiles/cmTC_6995f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_6995f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2700,8 +2700,8 @@ int main(int argc, char** argv)
 Determining if the setenv exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_624f4 && [1/2] Building C object CMakeFiles/cmTC_624f4.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_624f4
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_34667 && [1/2] Building C object CMakeFiles/cmTC_34667.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_34667
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2739,8 +2739,8 @@ int main(int argc, char** argv)
 Determining if the sin exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_96d43 && [1/2] Building C object CMakeFiles/cmTC_96d43.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_96d43
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ab6b3 && [1/2] Building C object CMakeFiles/cmTC_ab6b3.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ab6b3
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2778,8 +2778,8 @@ int main(int argc, char** argv)
 Determining if the sinf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f4607 && [1/2] Building C object CMakeFiles/cmTC_f4607.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_f4607
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a880d && [1/2] Building C object CMakeFiles/cmTC_a880d.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a880d
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2817,8 +2817,8 @@ int main(int argc, char** argv)
 Determining if the sqrt exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_24c1d && [1/2] Building C object CMakeFiles/cmTC_24c1d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_24c1d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_02c00 && [1/2] Building C object CMakeFiles/cmTC_02c00.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_02c00
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2856,8 +2856,8 @@ int main(int argc, char** argv)
 Determining if the sqrtf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ed3bb && [1/2] Building C object CMakeFiles/cmTC_ed3bb.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ed3bb
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1430e && [1/2] Building C object CMakeFiles/cmTC_1430e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1430e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2895,8 +2895,8 @@ int main(int argc, char** argv)
 Determining if the sscanf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0cd78 && [1/2] Building C object CMakeFiles/cmTC_0cd78.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_0cd78
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f0807 && [1/2] Building C object CMakeFiles/cmTC_f0807.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f0807
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2934,8 +2934,8 @@ int main(int argc, char** argv)
 Determining if the strchr exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_61154 && [1/2] Building C object CMakeFiles/cmTC_61154.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_61154
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e2bd1 && [1/2] Building C object CMakeFiles/cmTC_e2bd1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e2bd1
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -2973,8 +2973,8 @@ int main(int argc, char** argv)
 Determining if the strcmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_59f1b && [1/2] Building C object CMakeFiles/cmTC_59f1b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_59f1b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1431f && [1/2] Building C object CMakeFiles/cmTC_1431f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1431f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3012,8 +3012,8 @@ int main(int argc, char** argv)
 Determining if the strlcat exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c0b74 && [1/2] Building C object CMakeFiles/cmTC_c0b74.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_c0b74
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_007ec && [1/2] Building C object CMakeFiles/cmTC_007ec.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_007ec
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3051,8 +3051,8 @@ int main(int argc, char** argv)
 Determining if the strlcpy exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_da067 && [1/2] Building C object CMakeFiles/cmTC_da067.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_da067
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4ba21 && [1/2] Building C object CMakeFiles/cmTC_4ba21.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_4ba21
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3090,8 +3090,8 @@ int main(int argc, char** argv)
 Determining if the strlen exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f4fd6 && [1/2] Building C object CMakeFiles/cmTC_f4fd6.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_f4fd6
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_44803 && [1/2] Building C object CMakeFiles/cmTC_44803.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_44803
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3129,8 +3129,8 @@ int main(int argc, char** argv)
 Determining if the strncmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b2e8e && [1/2] Building C object CMakeFiles/cmTC_b2e8e.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_b2e8e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ada96 && [1/2] Building C object CMakeFiles/cmTC_ada96.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_ada96
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3168,8 +3168,8 @@ int main(int argc, char** argv)
 Determining if the strnlen exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f746b && [1/2] Building C object CMakeFiles/cmTC_f746b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_f746b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_231f5 && [1/2] Building C object CMakeFiles/cmTC_231f5.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_231f5
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3207,8 +3207,8 @@ int main(int argc, char** argv)
 Determining if the strpbrk exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3639d && [1/2] Building C object CMakeFiles/cmTC_3639d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_3639d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9e949 && [1/2] Building C object CMakeFiles/cmTC_9e949.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9e949
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3246,8 +3246,8 @@ int main(int argc, char** argv)
 Determining if the strrchr exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d64af && [1/2] Building C object CMakeFiles/cmTC_d64af.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_d64af
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_53b45 && [1/2] Building C object CMakeFiles/cmTC_53b45.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_53b45
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3285,8 +3285,8 @@ int main(int argc, char** argv)
 Determining if the strstr exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4d5be && [1/2] Building C object CMakeFiles/cmTC_4d5be.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_4d5be
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8996e && [1/2] Building C object CMakeFiles/cmTC_8996e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8996e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3324,8 +3324,8 @@ int main(int argc, char** argv)
 Determining if the strtod exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e6054 && [1/2] Building C object CMakeFiles/cmTC_e6054.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_e6054
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_04b18 && [1/2] Building C object CMakeFiles/cmTC_04b18.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_04b18
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3363,8 +3363,8 @@ int main(int argc, char** argv)
 Determining if the strtok_r exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_70c11 && [1/2] Building C object CMakeFiles/cmTC_70c11.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_70c11
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_be13d && [1/2] Building C object CMakeFiles/cmTC_be13d.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_be13d
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3402,8 +3402,8 @@ int main(int argc, char** argv)
 Determining if the strtol exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_dd40b && [1/2] Building C object CMakeFiles/cmTC_dd40b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_dd40b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0d8f9 && [1/2] Building C object CMakeFiles/cmTC_0d8f9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0d8f9
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3441,8 +3441,8 @@ int main(int argc, char** argv)
 Determining if the strtoll exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c058b && [1/2] Building C object CMakeFiles/cmTC_c058b.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_c058b
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_564b8 && [1/2] Building C object CMakeFiles/cmTC_564b8.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_564b8
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3480,8 +3480,8 @@ int main(int argc, char** argv)
 Determining if the strtoul exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8a2f2 && [1/2] Building C object CMakeFiles/cmTC_8a2f2.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8a2f2
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_80b62 && [1/2] Building C object CMakeFiles/cmTC_80b62.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_80b62
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3519,8 +3519,8 @@ int main(int argc, char** argv)
 Determining if the strtoull exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_34c72 && [1/2] Building C object CMakeFiles/cmTC_34c72.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_34c72
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_81d01 && [1/2] Building C object CMakeFiles/cmTC_81d01.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_81d01
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3558,8 +3558,8 @@ int main(int argc, char** argv)
 Determining if the tan exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a19b5 && [1/2] Building C object CMakeFiles/cmTC_a19b5.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_a19b5
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0556e && [1/2] Building C object CMakeFiles/cmTC_0556e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0556e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3597,8 +3597,8 @@ int main(int argc, char** argv)
 Determining if the tanf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_64d98 && [1/2] Building C object CMakeFiles/cmTC_64d98.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_64d98
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_810b6 && [1/2] Building C object CMakeFiles/cmTC_810b6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_810b6
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3636,8 +3636,8 @@ int main(int argc, char** argv)
 Determining if the trunc exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c83df && [1/2] Building C object CMakeFiles/cmTC_c83df.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_c83df
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f90c4 && [1/2] Building C object CMakeFiles/cmTC_f90c4.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f90c4
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3675,8 +3675,8 @@ int main(int argc, char** argv)
 Determining if the truncf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_40483 && [1/2] Building C object CMakeFiles/cmTC_40483.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_40483
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d1860 && [1/2] Building C object CMakeFiles/cmTC_d1860.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d1860
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3714,8 +3714,8 @@ int main(int argc, char** argv)
 Determining if the unsetenv exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e827a && [1/2] Building C object CMakeFiles/cmTC_e827a.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_e827a
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d2ba5 && [1/2] Building C object CMakeFiles/cmTC_d2ba5.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_d2ba5
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3753,8 +3753,8 @@ int main(int argc, char** argv)
 Determining if the vsnprintf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_31b54 && [1/2] Building C object CMakeFiles/cmTC_31b54.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_31b54
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_333ff && [1/2] Building C object CMakeFiles/cmTC_333ff.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_333ff
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3792,8 +3792,8 @@ int main(int argc, char** argv)
 Determining if the vsscanf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1adc7 && [1/2] Building C object CMakeFiles/cmTC_1adc7.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_1adc7
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5548c && [1/2] Building C object CMakeFiles/cmTC_5548c.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_5548c
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3831,8 +3831,8 @@ int main(int argc, char** argv)
 Determining if the wcsnlen exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_06478 && [1/2] Building C object CMakeFiles/cmTC_06478.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_06478
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_48cd9 && [1/2] Building C object CMakeFiles/cmTC_48cd9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_48cd9
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3870,8 +3870,8 @@ int main(int argc, char** argv)
 Determining if the wcscmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_556a8 && [1/2] Building C object CMakeFiles/cmTC_556a8.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_556a8
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a6583 && [1/2] Building C object CMakeFiles/cmTC_a6583.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a6583
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3909,8 +3909,8 @@ int main(int argc, char** argv)
 Determining if the wcsdup exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7527e && [1/2] Building C object CMakeFiles/cmTC_7527e.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_7527e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0c3ac && [1/2] Building C object CMakeFiles/cmTC_0c3ac.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_0c3ac
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3948,8 +3948,8 @@ int main(int argc, char** argv)
 Determining if the wcslcat exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aeb6d && [1/2] Building C object CMakeFiles/cmTC_aeb6d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_aeb6d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b1cea && [1/2] Building C object CMakeFiles/cmTC_b1cea.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b1cea
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -3987,8 +3987,8 @@ int main(int argc, char** argv)
 Determining if the wcslcpy exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_314b6 && [1/2] Building C object CMakeFiles/cmTC_314b6.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_314b6
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c6893 && [1/2] Building C object CMakeFiles/cmTC_c6893.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_c6893
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4026,8 +4026,8 @@ int main(int argc, char** argv)
 Determining if the wcslen exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_45af2 && [1/2] Building C object CMakeFiles/cmTC_45af2.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_45af2
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f2dcb && [1/2] Building C object CMakeFiles/cmTC_f2dcb.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f2dcb
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4065,8 +4065,8 @@ int main(int argc, char** argv)
 Determining if the wcsncmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2da81 && [1/2] Building C object CMakeFiles/cmTC_2da81.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_2da81
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9f60a && [1/2] Building C object CMakeFiles/cmTC_9f60a.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9f60a
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4104,8 +4104,8 @@ int main(int argc, char** argv)
 Determining if the wcsstr exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_48fbe && [1/2] Building C object CMakeFiles/cmTC_48fbe.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_48fbe
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_fa5f0 && [1/2] Building C object CMakeFiles/cmTC_fa5f0.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_fa5f0
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4143,8 +4143,8 @@ int main(int argc, char** argv)
 Determining if the wcstol exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1ab5d && [1/2] Building C object CMakeFiles/cmTC_1ab5d.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_1ab5d
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8bc9e && [1/2] Building C object CMakeFiles/cmTC_8bc9e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_8bc9e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4182,8 +4182,8 @@ int main(int argc, char** argv)
 Determining if the strcasestr exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b0b89 && [1/2] Building C object CMakeFiles/cmTC_b0b89.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_b0b89
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1555f && [1/2] Building C object CMakeFiles/cmTC_1555f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1555f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4221,8 +4221,8 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test LIBC_HAS_ISINF succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a128e && [1/2] Building C object CMakeFiles/cmTC_a128e.dir/src.c.o
-[2/2] Linking C executable cmTC_a128e
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_42476 && [1/2] Building C object CMakeFiles/cmTC_42476.dir/src.c.o
+[2/2] Linking C executable cmTC_42476
 
 
 Source file was:
@@ -4236,8 +4236,8 @@ Source file was:
 Performing C SOURCE FILE Test LIBC_ISINF_HANDLES_FLOAT succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_4dbcc && [1/2] Building C object CMakeFiles/cmTC_4dbcc.dir/src.c.o
-[2/2] Linking C executable cmTC_4dbcc
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aca37 && [1/2] Building C object CMakeFiles/cmTC_aca37.dir/src.c.o
+[2/2] Linking C executable cmTC_aca37
 
 
 Source file was:
@@ -4251,8 +4251,8 @@ Source file was:
 Performing C SOURCE FILE Test LIBC_HAS_ISNAN succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_89942 && [1/2] Building C object CMakeFiles/cmTC_89942.dir/src.c.o
-[2/2] Linking C executable cmTC_89942
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6d60f && [1/2] Building C object CMakeFiles/cmTC_6d60f.dir/src.c.o
+[2/2] Linking C executable cmTC_6d60f
 
 
 Source file was:
@@ -4266,8 +4266,8 @@ Source file was:
 Performing C SOURCE FILE Test LIBC_ISNAN_HANDLES_FLOAT succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cbb39 && [1/2] Building C object CMakeFiles/cmTC_cbb39.dir/src.c.o
-[2/2] Linking C executable cmTC_cbb39
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_78030 && [1/2] Building C object CMakeFiles/cmTC_78030.dir/src.c.o
+[2/2] Linking C executable cmTC_78030
 
 
 Source file was:
@@ -4281,8 +4281,8 @@ Source file was:
 Performing C SOURCE FILE Test LIBC_HAS_ISNANF succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9ddf0 && [1/2] Building C object CMakeFiles/cmTC_9ddf0.dir/src.c.o
-[2/2] Linking C executable cmTC_9ddf0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e532f && [1/2] Building C object CMakeFiles/cmTC_e532f.dir/src.c.o
+[2/2] Linking C executable cmTC_e532f
 
 
 Source file was:
@@ -4296,8 +4296,8 @@ Source file was:
 Determining if the fdatasync exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d9ea3 && [1/2] Building C object CMakeFiles/cmTC_d9ea3.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_d9ea3
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_a9c5f && [1/2] Building C object CMakeFiles/cmTC_a9c5f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a9c5f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4317,8 +4317,8 @@ int main(int argc, char** argv)
 Determining if the gethostname exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0c7fe && [1/2] Building C object CMakeFiles/cmTC_0c7fe.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_0c7fe
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9325f && [1/2] Building C object CMakeFiles/cmTC_9325f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9325f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4338,8 +4338,8 @@ int main(int argc, char** argv)
 Determining if the getpagesize exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_f71fa && [1/2] Building C object CMakeFiles/cmTC_f71fa.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_f71fa
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b5fb9 && [1/2] Building C object CMakeFiles/cmTC_b5fb9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_b5fb9
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4359,8 +4359,8 @@ int main(int argc, char** argv)
 Determining if the sigaction exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9d5c0 && [1/2] Building C object CMakeFiles/cmTC_9d5c0.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_9d5c0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9b8c7 && [1/2] Building C object CMakeFiles/cmTC_9b8c7.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9b8c7
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4380,8 +4380,8 @@ int main(int argc, char** argv)
 Determining if the setjmp exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_b2804 && [1/2] Building C object CMakeFiles/cmTC_b2804.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_b2804
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_12b51 && [1/2] Building C object CMakeFiles/cmTC_12b51.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_12b51
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4401,8 +4401,8 @@ int main(int argc, char** argv)
 Determining if the nanosleep exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6d5da && [1/2] Building C object CMakeFiles/cmTC_6d5da.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_6d5da
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9f24e && [1/2] Building C object CMakeFiles/cmTC_9f24e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9f24e
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4422,8 +4422,8 @@ int main(int argc, char** argv)
 Determining if the gmtime_r exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ed9d4 && [1/2] Building C object CMakeFiles/cmTC_ed9d4.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_ed9d4
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_753eb && [1/2] Building C object CMakeFiles/cmTC_753eb.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_753eb
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4443,8 +4443,8 @@ int main(int argc, char** argv)
 Determining if the localtime_r exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_e6c74 && [1/2] Building C object CMakeFiles/cmTC_e6c74.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_e6c74
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_52181 && [1/2] Building C object CMakeFiles/cmTC_52181.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_52181
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4464,8 +4464,8 @@ int main(int argc, char** argv)
 Determining if the sysconf exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_cc5aa && [1/2] Building C object CMakeFiles/cmTC_cc5aa.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_cc5aa
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_92c5f && [1/2] Building C object CMakeFiles/cmTC_92c5f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_92c5f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4485,8 +4485,8 @@ int main(int argc, char** argv)
 Determining if the getauxval exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_3c1f7 && [1/2] Building C object CMakeFiles/cmTC_3c1f7.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_3c1f7
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_c088f && [1/2] Building C object CMakeFiles/cmTC_c088f.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_c088f
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4506,8 +4506,8 @@ int main(int argc, char** argv)
 Determining if the poll exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_891b8 && [1/2] Building C object CMakeFiles/cmTC_891b8.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_891b8
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1a1c8 && [1/2] Building C object CMakeFiles/cmTC_1a1c8.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_1a1c8
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4527,8 +4527,8 @@ int main(int argc, char** argv)
 Determining if the posix_fallocate exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_8fedb && [1/2] Building C object CMakeFiles/cmTC_8fedb.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_8fedb
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_9db1d && [1/2] Building C object CMakeFiles/cmTC_9db1d.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_9db1d
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4548,8 +4548,8 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test HAVE_SA_SIGACTION succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_46da4 && [1/2] Building C object CMakeFiles/cmTC_46da4.dir/src.c.o
-[2/2] Linking C executable cmTC_46da4
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d64ac && [1/2] Building C object CMakeFiles/cmTC_d64ac.dir/src.c.o
+[2/2] Linking C executable cmTC_d64ac
 
 
 Source file was:
@@ -4565,8 +4565,8 @@ int main()
 Performing C SOURCE FILE Test HAVE_ST_MTIM succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0f212 && [1/2] Building C object CMakeFiles/cmTC_0f212.dir/src.c.o
-[2/2] Linking C executable cmTC_0f212
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7e3dc && [1/2] Building C object CMakeFiles/cmTC_7e3dc.dir/src.c.o
+[2/2] Linking C executable cmTC_7e3dc
 
 
 Source file was:
@@ -4582,8 +4582,8 @@ int main()
 Determining if the dlopen exist passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_52159 && [1/2] Building C object CMakeFiles/cmTC_52159.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_52159
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_04e7b && [1/2] Building C object CMakeFiles/cmTC_04e7b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_04e7b
 
 
 File C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
@@ -4603,8 +4603,8 @@ int main(int argc, char** argv)
 Performing C SOURCE FILE Test HAVE_O_CLOEXEC succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_1a114 && [1/2] Building C object CMakeFiles/cmTC_1a114.dir/src.c.o
-[2/2] Linking C executable cmTC_1a114
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6551e && [1/2] Building C object CMakeFiles/cmTC_6551e.dir/src.c.o
+[2/2] Linking C executable cmTC_6551e
 
 
 Source file was:
@@ -4615,8 +4615,8 @@ Source file was:
 Performing C SOURCE FILE Test VULKAN_PASSED_ANDROID_CHECKS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_83f11 && [1/2] Building C object CMakeFiles/cmTC_83f11.dir/src.c.o
-[2/2] Linking C executable cmTC_83f11
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_5dab8 && [1/2] Building C object CMakeFiles/cmTC_5dab8.dir/src.c.o
+[2/2] Linking C executable cmTC_5dab8
 
 
 Source file was:
@@ -4629,8 +4629,8 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_PTHREADS succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_7c0ac && [1/2] Building C object CMakeFiles/cmTC_7c0ac.dir/src.c.o
-[2/2] Linking C executable cmTC_7c0ac
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_93d4d && [1/2] Building C object CMakeFiles/cmTC_93d4d.dir/src.c.o
+[2/2] Linking C executable cmTC_93d4d
 
 
 Source file was:
@@ -4644,8 +4644,8 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_RECURSIVE_MUTEXES succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d3654 && [1/2] Building C object CMakeFiles/cmTC_d3654.dir/src.c.o
-[2/2] Linking C executable cmTC_d3654
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_ac9c1 && [1/2] Building C object CMakeFiles/cmTC_ac9c1.dir/src.c.o
+[2/2] Linking C executable cmTC_ac9c1
 
 
 Source file was:
@@ -4659,8 +4659,8 @@ Source file was:
 Performing C SOURCE FILE Test HAVE_PTHREADS_SEM succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0b265 && [1/2] Building C object CMakeFiles/cmTC_0b265.dir/src.c.o
-[2/2] Linking C executable cmTC_0b265
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_798db && [1/2] Building C object CMakeFiles/cmTC_798db.dir/src.c.o
+[2/2] Linking C executable cmTC_798db
 
 
 Source file was:
@@ -4670,8 +4670,8 @@ Source file was:
 Performing C SOURCE FILE Test COMPILER_HAS_SEM_TIMEDWAIT succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_534d2 && [1/2] Building C object CMakeFiles/cmTC_534d2.dir/src.c.o
-[2/2] Linking C executable cmTC_534d2
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_d3b48 && [1/2] Building C object CMakeFiles/cmTC_d3b48.dir/src.c.o
+[2/2] Linking C executable cmTC_d3b48
 
 
 Source file was:
@@ -4685,16 +4685,16 @@ Source file was:
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_21db2 && [1/2] Building C object CMakeFiles/cmTC_21db2.dir/CheckIncludeFile.c.o
-[2/2] Linking C executable cmTC_21db2
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_2893c && [1/2] Building C object CMakeFiles/cmTC_2893c.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_2893c
 
 
 
 Performing C SOURCE FILE Test HAVE_PTHREAD_SETNAME_NP succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_aec85 && [1/2] Building C object CMakeFiles/cmTC_aec85.dir/src.c.o
-[2/2] Linking C executable cmTC_aec85
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_94ad9 && [1/2] Building C object CMakeFiles/cmTC_94ad9.dir/src.c.o
+[2/2] Linking C executable cmTC_94ad9
 
 
 Source file was:
@@ -4711,8 +4711,8 @@ Source file was:
 Performing C++ SOURCE FILE Test flag_supported succeeded with the following output:
 Change Dir: C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/2y2g2n2m/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_0d1d0 && [1/2] Building CXX object CMakeFiles/cmTC_0d1d0.dir/src.cxx.o
-[2/2] Linking CXX executable cmTC_0d1d0
+Run Build Command(s):C:\Users\moz04\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_52491 && [1/2] Building CXX object CMakeFiles/cmTC_52491.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_52491
 
 
 Source file was:

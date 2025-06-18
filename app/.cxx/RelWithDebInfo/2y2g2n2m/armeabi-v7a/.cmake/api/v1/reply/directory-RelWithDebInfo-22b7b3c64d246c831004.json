@@ -1,0 +1,206 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include"
+		],
+		"files" : 
+		[
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/bgfx.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/CMakeLists.txt",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/texturev.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/geometryc.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/geometryv.cmake",
+			"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx/shaderc.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 216,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 226,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 229,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 6
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 41,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"file" : 3,
+				"parent" : 9
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 42,
+				"parent" : 10
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"file" : 4,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 4,
+				"line" : 41,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"file" : 5,
+				"parent" : 15
+			},
+			{
+				"command" : 0,
+				"file" : 5,
+				"line" : 67,
+				"parent" : 16
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/bgfx.cmake/cmake/bgfx/libbgfx.a"
+			],
+			"targetId" : "bgfx::@fe81851880f8180cf43b",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bgfx/include/bgfx"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "include/bgfx",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bgfx/src/bgfx_shader.sh",
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/bgfx/src/bgfx_compute.sh"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/android/intermediates/cxx/RelWithDebInfo/2y2g2n2m/obj/armeabi-v7a/texturev.so"
+			],
+			"targetId" : "texturev::@fe81851880f8180cf43b",
+			"targetIndex" : 22,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/android/intermediates/cxx/RelWithDebInfo/2y2g2n2m/obj/armeabi-v7a/geometryc"
+			],
+			"targetId" : "geometryc::@fe81851880f8180cf43b",
+			"targetIndex" : 12,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/android/intermediates/cxx/RelWithDebInfo/2y2g2n2m/obj/armeabi-v7a/geometryv.so"
+			],
+			"targetId" : "geometryv::@fe81851880f8180cf43b",
+			"targetIndex" : 13,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/android/intermediates/cxx/RelWithDebInfo/2y2g2n2m/obj/armeabi-v7a/shaderc"
+			],
+			"targetId" : "shaderc::@fe81851880f8180cf43b",
+			"targetIndex" : 18,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/vendor/bgfx.cmake/cmake/bgfx",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx"
+	}
+}

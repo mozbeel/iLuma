@@ -1,11 +1,11 @@
 {
   "buildFiles": [
     "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\src\\main\\cpp\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\bgfx.cmake\\CMakeLists.txt",
-    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\vendor\\SDL\\CMakeLists.txt"
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
@@ -22,93 +22,57 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
-    "example-common::@6c531a329687a4643e58": {
-      "artifactName": "example-common",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libexample-common.a",
-      "runtimeFiles": []
-    },
-    "geometryv::@6c531a329687a4643e58": {
-      "artifactName": "geometryv",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryv.so",
-      "runtimeFiles": []
-    },
-    "bimg_encode::@218ca66639c17ad2085b": {
-      "artifactName": "bimg_encode",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_encode.a",
-      "runtimeFiles": []
-    },
-    "spirv-opt::@6c531a329687a4643e58": {
-      "artifactName": "spirv-opt",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-opt.a",
-      "runtimeFiles": []
-    },
-    "tools::@1c8e61afefb2b157bd4e": {
-      "artifactName": "tools",
-      "abi": "armeabi-v7a",
-      "runtimeFiles": []
-    },
-    "SDL3_test::@5674db00e54576eff556": {
-      "artifactName": "SDL3_test",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3_test.a",
-      "runtimeFiles": []
-    },
-    "bgfx::@6c531a329687a4643e58": {
+    "bgfx::@fe81851880f8180cf43b": {
       "artifactName": "bgfx",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libbgfx.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libbgfx.a",
       "runtimeFiles": []
     },
-    "texturec::@218ca66639c17ad2085b": {
+    "texturec::@55879c986d0015b7196d": {
       "artifactName": "texturec",
       "abi": "armeabi-v7a",
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\texturec",
       "runtimeFiles": []
     },
-    "spirv-cross::@6c531a329687a4643e58": {
-      "artifactName": "spirv-cross",
+    "geometryv::@fe81851880f8180cf43b": {
+      "artifactName": "geometryv",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-cross.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryv.so",
       "runtimeFiles": []
     },
-    "bimg::@218ca66639c17ad2085b": {
-      "artifactName": "bimg",
+    "bx::@42de3a410e716b9b221e": {
+      "artifactName": "bx",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bx\\libbx.a",
       "runtimeFiles": []
     },
-    "fcpp::@6c531a329687a4643e58": {
-      "artifactName": "fcpp",
+    "geometryc::@fe81851880f8180cf43b": {
+      "artifactName": "geometryc",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libfcpp.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryc",
       "runtimeFiles": []
     },
-    "SDL_uclibc::@5674db00e54576eff556": {
-      "artifactName": "SDL_uclibc",
+    "tools::@d3e2a4576cd946508bbb": {
+      "artifactName": "tools",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL_uclibc.a",
       "runtimeFiles": []
     },
-    "bin2c::@6f52f1d5c45491619055": {
-      "artifactName": "bin2c",
+    "shaderc::@fe81851880f8180cf43b": {
+      "artifactName": "shaderc",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\bin2c",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\shaderc",
       "runtimeFiles": []
     },
-    "texturev::@6c531a329687a4643e58": {
-      "artifactName": "texturev",
+    "spirv-opt::@fe81851880f8180cf43b": {
+      "artifactName": "spirv-opt",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\texturev.so",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-opt.a",
       "runtimeFiles": []
     },
-    "glslang::@6c531a329687a4643e58": {
-      "artifactName": "glslang",
+    "SDL3-static::@97e6cc2efa84beb4d20a": {
+      "artifactName": "SDL3-static",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglslang.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL3.a",
       "runtimeFiles": []
     },
     "native_app_glue::@6890427a1f51a3e7e1df": {
@@ -117,39 +81,75 @@
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\RelWithDebInfo\\2y2g2n2m\\armeabi-v7a\\libnative_app_glue.a",
       "runtimeFiles": []
     },
-    "geometryc::@6c531a329687a4643e58": {
-      "artifactName": "geometryc",
+    "texturev::@fe81851880f8180cf43b": {
+      "artifactName": "texturev",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\geometryc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\texturev.so",
       "runtimeFiles": []
     },
-    "SDL3-static::@5674db00e54576eff556": {
-      "artifactName": "SDL3-static",
+    "bin2c::@42de3a410e716b9b221e": {
+      "artifactName": "bin2c",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\libSDL3.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\bin2c",
       "runtimeFiles": []
     },
-    "bimg_decode::@218ca66639c17ad2085b": {
+    "glslang::@fe81851880f8180cf43b": {
+      "artifactName": "glslang",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglslang.a",
+      "runtimeFiles": []
+    },
+    "SDL3_test::@97e6cc2efa84beb4d20a": {
+      "artifactName": "SDL3_test",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL3_test.a",
+      "runtimeFiles": []
+    },
+    "glsl-optimizer::@fe81851880f8180cf43b": {
+      "artifactName": "glsl-optimizer",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglsl-optimizer.a",
+      "runtimeFiles": []
+    },
+    "spirv-cross::@fe81851880f8180cf43b": {
+      "artifactName": "spirv-cross",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libspirv-cross.a",
+      "runtimeFiles": []
+    },
+    "SDL_uclibc::@97e6cc2efa84beb4d20a": {
+      "artifactName": "SDL_uclibc",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\SDL\\libSDL_uclibc.a",
+      "runtimeFiles": []
+    },
+    "bimg::@55879c986d0015b7196d": {
+      "artifactName": "bimg",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg.a",
+      "runtimeFiles": []
+    },
+    "bimg_decode::@55879c986d0015b7196d": {
       "artifactName": "bimg_decode",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_decode.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_decode.a",
       "runtimeFiles": []
     },
-    "shaderc::@6c531a329687a4643e58": {
-      "artifactName": "shaderc",
+    "example-common::@fe81851880f8180cf43b": {
+      "artifactName": "example-common",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\shaderc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libexample-common.a",
       "runtimeFiles": []
     },
-    "examples::@6c531a329687a4643e58": {
+    "fcpp::@fe81851880f8180cf43b": {
+      "artifactName": "fcpp",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bgfx\\libfcpp.a",
+      "runtimeFiles": []
+    },
+    "examples::@fe81851880f8180cf43b": {
       "artifactName": "examples",
       "abi": "armeabi-v7a",
-      "runtimeFiles": []
-    },
-    "bx::@6f52f1d5c45491619055": {
-      "artifactName": "bx",
-      "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\libbx.a",
       "runtimeFiles": []
     },
     "native-activity::@6890427a1f51a3e7e1df": {
@@ -158,10 +158,10 @@
       "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\RelWithDebInfo\\2y2g2n2m\\obj\\armeabi-v7a\\libnative-activity.so",
       "runtimeFiles": []
     },
-    "glsl-optimizer::@6c531a329687a4643e58": {
-      "artifactName": "glsl-optimizer",
+    "bimg_encode::@55879c986d0015b7196d": {
+      "artifactName": "bimg_encode",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\libglsl-optimizer.a",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\vendor\\bgfx.cmake\\cmake\\bimg\\libbimg_encode.a",
       "runtimeFiles": []
     }
   }

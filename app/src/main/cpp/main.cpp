@@ -88,7 +88,7 @@ int AppMain() {
 	init.platformData.ndt = pd.ndt;
 	init.resolution.width = SCREEN_WIDTH;
 	init.resolution.height = SCREEN_HEIGHT;
-	// init.resolution.reset = BGFX_RESET_VSYNC | BGFX_RESET_MSAA_X4;
+	init.resolution.reset = BGFX_RESET_VSYNC;
 	// init.debug = true;  // Enable debug mode
 
 
