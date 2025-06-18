@@ -1,6 +1,0 @@
-[submodule "app/vendor/bgfx.cmake"]
-	path = app/vendor/bgfx.cmake
-	url = https://github.com/bkaradzic/bgfx.git
-[submodule "app/vendor/SDL"]
-	path = app/vendor/SDL
-	url = https://github.com/libsdl-org/SDL.git
