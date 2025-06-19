@@ -2,4 +2,5 @@
 /.gradle/
 /gradle.properties
 /.gradle/
-/app/.cxx/key.keystore
+/app/.cxx/
+/app/key.keystore

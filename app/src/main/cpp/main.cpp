@@ -10,7 +10,6 @@
 	#include "TargetConditionals.h"
 #endif
 
-#define ANDROID 1
 
 #ifdef __ANDROID__
 	#include <android_native_app_glue.h>
