@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "bgfx-build/cmake/bimg",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bimg"
+	}
+}

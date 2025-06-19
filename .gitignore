@@ -1,3 +1,5 @@
 /builds/
 /.gradle/
-grade.properties
+/gradle.properties
+/.gradle/
+/app/.cxx/key.keystore

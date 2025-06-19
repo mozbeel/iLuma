@@ -10,6 +10,8 @@
 	#include "TargetConditionals.h"
 #endif
 
+#define ANDROID 1
+
 #ifdef __ANDROID__
 	#include <android_native_app_glue.h>
 	#include <android/log.h>
@@ -28,13 +30,19 @@ int AppMain() {
 #ifdef __ANDROID__
 	__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init SDL starting...");
 #endif
+
 	if (SDL_Init(SDL_INIT_VIDEO) == false) {
-		#ifdef __ANDROID__
-			__android_log_print(ANDROID_LOG_INFO, "iLuma", "Init SDL unsuccessful...");
-		#endif
-		SDL_Log("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
-		return 1;
+			SDL_Log("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
+			#ifdef __ANDROID__
+			__android_log_print(ANDROID_LOG_INFO, "iLuma", "SDL initialized successfully...");
+			#endif
+			return 1;
 	}
+
+#ifdef __ANDROID__
+	__android_log_print(ANDROID_LOG_INFO, "iLuma", "SDL initialized successfully...");
+#endif
+
 
 
 	SDL_Window* window = SDL_CreateWindow("BGFX + SDL3 Window",
@@ -163,9 +171,30 @@ int main(int argc, char* argv[]) {
 	return AppMain();
 }
 #else
+
 extern "C" void android_main(struct android_app* app) {
-	SDL_SetMainReady();
-	AppMain();
+    __android_log_print(ANDROID_LOG_INFO, "iLuma", "android_main entered!");
+    SDL_SetMainReady();
+
+    // Wait until native window is ready
+    int events;
+    struct android_poll_source* source;
+    while (true) {
+        while (ALooper_pollOnce(-1, NULL, &events, (void**)&source) >= 0) {
+            if (source != NULL) {
+                source->process(app, source);
+            }
+            if (app->destroyRequested) {
+                return;
+            }
+        }
+        if (app->window != nullptr) {
+            break; // native window ready
+        }
+    }
+
+    // SDL should already be initialized by SDL glue; do NOT call SDL_Init again here
+    AppMain();
 }
 
 #endif

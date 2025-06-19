@@ -1,0 +1,105 @@
+{
+  "buildFiles": [
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bgfx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bimg\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\cmake\\bx\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\bgfx.cmake\\CMakeLists.txt",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\vendor\\SDL\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Program Files\\ninja\\ninja.exe",
+      "-C",
+      "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Program Files\\ninja\\ninja.exe",
+    "-C",
+    "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "SDL3-static::@2bd7167a0623071b9c0f": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL3-static",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\SDL-build\\libSDL3.a"
+    },
+    "SDL3_test::@2bd7167a0623071b9c0f": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL3_test",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\SDL-build\\libSDL3_test.a"
+    },
+    "SDL_uclibc::@2bd7167a0623071b9c0f": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "SDL_uclibc",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\SDL-build\\libSDL_uclibc.a"
+    },
+    "bgfx::@5aa88272306442b9d2cc": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bgfx",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\bgfx-build\\cmake\\bgfx\\libbgfx.a"
+    },
+    "bimg::@e9ac94580cc995df05f0": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\bgfx-build\\cmake\\bimg\\libbimg.a"
+    },
+    "bimg_decode::@e9ac94580cc995df05f0": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg_decode",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\bgfx-build\\cmake\\bimg\\libbimg_decode.a"
+    },
+    "bimg_encode::@e9ac94580cc995df05f0": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bimg_encode",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\bgfx-build\\cmake\\bimg\\libbimg_encode.a"
+    },
+    "bx::@f0e75e64dfa3b2595bb9": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "bx",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\bgfx-build\\cmake\\bx\\libbx.a"
+    },
+    "examples::@5aa88272306442b9d2cc": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "examples"
+    },
+    "native-activity::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native-activity",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\builds\\android\\intermediates\\cxx\\Debug\\2de4w2t6\\obj\\x86\\libnative-activity.so",
+      "runtimeFiles": []
+    },
+    "native_app_glue::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native_app_glue",
+      "output": "C:\\Users\\moz04\\Desktop\\GameDevelopment\\iLuma\\app\\.cxx\\Debug\\2de4w2t6\\x86\\libnative_app_glue.a"
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\ndk\\29.0.13599879\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\moz04\\AppData\\Local\\Android\\Sdk\\ndk\\29.0.13599879\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": [
+    "cxx",
+    "cpp"
+  ]
+}

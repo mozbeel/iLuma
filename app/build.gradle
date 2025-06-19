@@ -7,6 +7,7 @@ buildDir = '../builds/android'
 android {
     namespace 'com.example.iluma'
     compileSdk 33
+    ndkVersion "29.0.13599879"
 
     defaultConfig {
         applicationId "com.example.iluma"
@@ -18,11 +19,13 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++17"
+                targets "native-activity"
+                arguments "-DCMAKE_MAKE_PROGRAM=C:/Program Files/ninja/ninja.exe"
             }
         }
 
         ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            abiFilters "x86", "armeabi-v7a", "arm64-v8a"
         }
     }
 
@@ -47,7 +50,7 @@ android {
     externalNativeBuild {
         cmake {
             path "src/main/cpp/CMakeLists.txt"
-            version "3.22.1"
+            version "3.30.4"
         }
     }
 }

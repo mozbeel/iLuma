@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						9,
+						10
+					]
+				},
+				{
+					"build" : "SDL-build",
+					"jsonFile" : "directory-SDL-build-RelWithDebInfo-babada45ec9763ddaa59.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/SDL",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "bgfx-build",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-bgfx-build-RelWithDebInfo-d4c3097bd676c8efffb9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake"
+				},
+				{
+					"build" : "bgfx-build/cmake/bx",
+					"jsonFile" : "directory-bgfx-build.cmake.bx-RelWithDebInfo-daa30d7b16ce46f9c0d9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bx",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "bgfx-build/cmake/bimg",
+					"jsonFile" : "directory-bgfx-build.cmake.bimg-RelWithDebInfo-e0ff44f03473eb477226.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bimg",
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "bgfx-build/cmake/bgfx",
+					"jsonFile" : "directory-bgfx-build.cmake.bgfx-RelWithDebInfo-09a0de49a59f3b3ef2c1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/vendor/bgfx.cmake/cmake/bgfx",
+					"targetIndexes" : 
+					[
+						3,
+						8
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "iLuma",
+					"targetIndexes" : 
+					[
+						9,
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "SDL3",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "bgfx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3-static::@2bd7167a0623071b9c0f",
+					"jsonFile" : "target-SDL3-static-RelWithDebInfo-7a5bc923e1558a88a84e.json",
+					"name" : "SDL3-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL3_test::@2bd7167a0623071b9c0f",
+					"jsonFile" : "target-SDL3_test-RelWithDebInfo-4811f91509724abd2d28.json",
+					"name" : "SDL3_test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SDL_uclibc::@2bd7167a0623071b9c0f",
+					"jsonFile" : "target-SDL_uclibc-RelWithDebInfo-1aaca414c097709811b8.json",
+					"name" : "SDL_uclibc",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "bgfx::@5aa88272306442b9d2cc",
+					"jsonFile" : "target-bgfx-RelWithDebInfo-57bbebbbdd938911568a.json",
+					"name" : "bgfx",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "bimg::@e9ac94580cc995df05f0",
+					"jsonFile" : "target-bimg-RelWithDebInfo-25d58bbce8aabcdca8ba.json",
+					"name" : "bimg",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "bimg_decode::@e9ac94580cc995df05f0",
+					"jsonFile" : "target-bimg_decode-RelWithDebInfo-1404cf8b3485e32d7064.json",
+					"name" : "bimg_decode",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "bimg_encode::@e9ac94580cc995df05f0",
+					"jsonFile" : "target-bimg_encode-RelWithDebInfo-de64da5618f75500792e.json",
+					"name" : "bimg_encode",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "bx::@f0e75e64dfa3b2595bb9",
+					"jsonFile" : "target-bx-RelWithDebInfo-a34c954c4a8b9c160b7d.json",
+					"name" : "bx",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "examples::@5aa88272306442b9d2cc",
+					"jsonFile" : "target-examples-RelWithDebInfo-7480287515c6932a8b70.json",
+					"name" : "examples",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "native-activity::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-native-activity-RelWithDebInfo-8b9a8fea2bbbf2ed398f.json",
+					"name" : "native-activity",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "native_app_glue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-native_app_glue-RelWithDebInfo-ee0e08ed64f4947c2347.json",
+					"name" : "native_app_glue",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/.cxx/RelWithDebInfo/6y55m4p3/armeabi-v7a",
+		"source" : "C:/Users/moz04/Desktop/GameDevelopment/iLuma/app/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
