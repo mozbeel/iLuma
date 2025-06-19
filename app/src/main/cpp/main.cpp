@@ -41,9 +41,9 @@ int AppMain() {
 #ifdef __ANDROID__
 	__android_log_print(ANDROID_LOG_INFO, "iLuma", "SDL initialized successfully...");
 #endif
+	
 
-
-
+	
 	SDL_Window* window = SDL_CreateWindow("BGFX + SDL3 Window",
 		SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 
@@ -173,27 +173,32 @@ int main(int argc, char* argv[]) {
 
 extern "C" void android_main(struct android_app* app) {
     __android_log_print(ANDROID_LOG_INFO, "iLuma", "android_main entered!");
+
     SDL_SetMainReady();
 
-    // Wait until native window is ready
     int events;
     struct android_poll_source* source;
+
     while (true) {
         while (ALooper_pollOnce(-1, NULL, &events, (void**)&source) >= 0) {
             if (source != NULL) {
                 source->process(app, source);
             }
             if (app->destroyRequested) {
+                __android_log_print(ANDROID_LOG_INFO, "iLuma", "App destroy requested. Exiting.");
                 return;
             }
         }
         if (app->window != nullptr) {
-            break; // native window ready
+            __android_log_print(ANDROID_LOG_INFO, "iLuma", "Window is ready, starting AppMain");
+            break;
         }
     }
 
-    // SDL should already be initialized by SDL glue; do NOT call SDL_Init again here
-    AppMain();
+    int ret = AppMain();
+    __android_log_print(ANDROID_LOG_INFO, "iLuma", "AppMain() returned with %d", ret);
 }
 
+
+// END_INCLUDE(all)
 #endif

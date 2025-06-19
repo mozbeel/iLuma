@@ -4,6 +4,9 @@ plugins {
 
 buildDir = '../builds/android'
 
+println "KEYSTORE_FILE = ${KEYSTORE_FILE}"
+println "KEY_ALIAS = ${KEY_ALIAS}"
+
 android {
     namespace 'com.example.iluma'
     compileSdk 33
