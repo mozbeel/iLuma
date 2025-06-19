@@ -1,6 +1,0 @@
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\src\main\cpp\CMakeLists.txt
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\vendor\bgfx.cmake\cmake\bgfx\CMakeLists.txt
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\vendor\bgfx.cmake\cmake\bimg\CMakeLists.txt
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\vendor\bgfx.cmake\cmake\bx\CMakeLists.txt
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\vendor\bgfx.cmake\CMakeLists.txt
-C:\Users\moz04\Desktop\GameDevelopment\iLuma\app\vendor\SDL\CMakeLists.txt
