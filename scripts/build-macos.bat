@@ -33,6 +33,9 @@ if "%mode%"=="c" (
     )
 
 :done_c
+    if exist ../../../../builds/macos (
+        rmdir /s /q ../../../../builds/macos
+    )
     gh run download %RUN_ID% --name macos --dir ../../../../builds/macos
 
     exit /b 0
@@ -61,6 +64,9 @@ if "%mode%"=="c" (
     )
 
 :done_b
+    if exist ../../../../builds/macos (
+        rmdir /s /q ../../../../builds/macos
+    )
     gh run download %RUN_ID% --name macos --dir ../../../../builds/macos
 
     exit /b 0
@@ -89,6 +95,9 @@ if "%mode%"=="c" (
     )
 
 :done_both
+    if exist ../../../../builds/macos (
+        rmdir /s /q ../../../../builds/macos
+    )
     gh run download %RUN_ID% --name macos --dir ../../../../builds/macos
 
     exit /b 0

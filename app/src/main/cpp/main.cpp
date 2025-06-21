@@ -41,28 +41,33 @@ int main(int argc, char *argv[])
 	bgfx::PlatformData pd;
 
 #if defined(__ANDROID__)
-	pd.nwh = app->window; // Use the native window from the Android app
-	pd.ndt = NULL;
+	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window)SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL); // Use the native window from the Android app
+	pd.ndt = nullptr;
 #elif defined(_WIN32)
 
-	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_WIN32_HWND_POINTER, NULL);
-	pd.ndt = NULL;
+	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_WIN32_HWND_POINTER, nullptr);
+	pd.ndt = nullptr;
 #elif defined(__linux__)
-	pd.nwh = (void *)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, 0);
-	pd.ndt = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, NULL);
+	pd.nwh = (void *)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, nullptr);
+	pd.ndt = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, nullptr);
 
 // I cannot test if it works on macOS, so I will comment it out for now. UPDATE: I can build, but not run it
 #elif defined(__APPLE__)
 
-#if TARGET_OS_OSX
-	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
-	pd.ndt = NULL;
-#endif
+	#if TARGET_OS_OSX
+		pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, nullptr);
+		pd.ndt = nullptr;
+	#elif TARGET_OS_IPHONE
+		// iOS does not use bgfx in the same way, so we don't set nwh or ndt here.
+		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER, nullptr);
+		pd.ndt = nullptr; // No native display type in iOS
+
+	#endif
 
 #elif defined(__EMSCRIPTEN__)
 	// Emscripten uses a different approach, so we don't set nwh or ndt here.
 	pd.nwh = (void*)"canvas"; // No native window handle in Emscripten
-	pd.ndt = NULL; // No native display type in Emscripten
+	pd.ndt = nullptr; // No native display type in Emscripten
 
 #else
 	SDL_Log("Unsupported platform for bgfx initialization.");
