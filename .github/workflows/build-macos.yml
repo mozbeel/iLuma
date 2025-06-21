@@ -31,7 +31,7 @@ jobs:
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
         run: |
-          cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} ${{ inputs.build_type == 'Debug' && '-DMACOS_DEBUG' || '' }}
+          cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} ${{ inputs.build_type == 'Debug' && '-DMACOS_DEBUG=1' || '' }}
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
