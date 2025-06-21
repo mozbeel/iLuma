@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	SDL_Log("SDL_Init succeded");
 
 	SDL_Window *window = SDL_CreateWindow("BGFX + SDL3 Window",
-																				SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+																				SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_METAL);
 	if (!window)
 	{
 		SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
