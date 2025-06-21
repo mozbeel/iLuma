@@ -48,7 +48,7 @@ if "%platform%"=="android" (
 )
 if "%platform%"=="ios" (
     echo Starting build for iOS in %debug_or_release% mode
-    call scripts\build-ios.bat %debug_or_release%
+    call scripts\build-ios.bat %debug_or_release% %mode%
     exit /b 0
 )
 if "%platform%"=="web" (
