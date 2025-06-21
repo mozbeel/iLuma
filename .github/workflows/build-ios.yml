@@ -30,13 +30,8 @@ jobs:
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
         run: |
-          cmake -S app/src/main/cpp -B builds/ios \
-            -DIOS=ON \
-            -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
-            -G Ninja \
-            -DCMAKE_OSX_SYSROOT=iphoneos \
-            -DCMAKE_OSX_ARCHITECTURES=arm64 \
-            -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
+          cmake -S app/src/main/cpp -B builds/ios -DIOS=ON 
+            -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} -G Ninja -DCMAKE_OSX_SYSROOT=iphoneos -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both' }}
