@@ -136,6 +136,7 @@ int main(int argc, char *argv[])
 			lastTime = now;
 		}
 		SDL_Delay(16);  // Simulate frame delay (60 FPS)
+		SDL_Log("Frame rendered: %.2f FPS", fps);
 	}
 	bgfx::frame();
 	bgfx::shutdown();
