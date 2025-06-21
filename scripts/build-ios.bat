@@ -4,6 +4,9 @@ title iLuma Build for iOS
 set debug_or_release=%~1
 set mode=%~2
 
+git add .
+git commit -m "Updating Repository for iOS build" --allow-empty
+git push origin main
 
 cd app/src/main/cpp
 
@@ -34,7 +37,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/iOS (
         rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
+    gh run download --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 
@@ -65,7 +68,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/iOS (
         rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
+    gh run download --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 
@@ -96,7 +99,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/iOS (
         rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
+    gh run download --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 )

@@ -4,6 +4,10 @@ title iLuma Build for MacOS
 set debug_or_release=%~1
 set mode=%~2
 
+git add .
+git commit -m "Updating Repository for macOS build" --allow-empty
+git push origin main
+
 cd app/src/main/cpp
 
 if "%mode%"=="c" (
@@ -33,7 +37,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/macOS (
         rmdir /s /q ../../../../builds/macOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download--name macOS --dir ../../../../builds/macOS
 
     exit /b 0
 
@@ -64,7 +68,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/macOS (
         rmdir /s /q ../../../../builds/macOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download --name macOS --dir ../../../../builds/macOS
 
     exit /b 0
 
@@ -95,7 +99,7 @@ if "%mode%"=="c" (
     if exist ../../../../builds/macOS (
         rmdir /s /q ../../../../builds/macOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download --name macOS --dir ../../../../builds/macOS
 
     exit /b 0
 )
