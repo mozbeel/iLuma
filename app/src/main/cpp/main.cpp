@@ -59,6 +59,11 @@ int main(int argc, char *argv[])
 	pd.ndt = NULL;
 #endif
 
+#elif defined(__EMSCRIPTEN__)
+	// Emscripten uses a different approach, so we don't set nwh or ndt here.
+	pd.nwh = (void*)"canvas"; // No native window handle in Emscripten
+	pd.ndt = NULL; // No native display type in Emscripten
+
 #else
 	SDL_Log("Unsupported platform for bgfx initialization.");
 	SDL_DestroyWindow(window);
@@ -87,6 +92,7 @@ int main(int argc, char *argv[])
 	}
 
 	SDL_Log("bgfx::init succeded");
+	SDL_Log("Setting up bgfx debug and clear view...");
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x303030FF, 1.0f, 0);

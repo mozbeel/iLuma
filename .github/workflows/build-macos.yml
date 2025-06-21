@@ -28,13 +28,9 @@ jobs:
           brew install cmake
 
       - name: Configure CMake
-        if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
+        if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
         run: |
-          if [ "${{ inputs.build_type }}" = "debug" ]; then
-            cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS="-DMACOS_DEBUG"
-          else
-            cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
-          fi
+          cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
