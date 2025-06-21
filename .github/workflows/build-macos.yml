@@ -29,16 +29,19 @@ jobs:
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
         run: |
+          cd app/src/main/cpp
           cmake -S . -B build/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build build/macos --config ${{ inputs.build_type }}
-        
+      
+
       - name: Run tests / execute built app
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: |
-          ./build/macos/iLuma
+          cd ../../../../build/macos
+          .iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
