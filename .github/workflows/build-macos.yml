@@ -33,7 +33,7 @@ jobs:
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
-        run: cmake --buildbuilds/macos --config ${{ inputs.build_type }}
+        run: cmake --build builds/macos --config ${{ inputs.build_type }}
       
       - name: Run tests / execute built app
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
