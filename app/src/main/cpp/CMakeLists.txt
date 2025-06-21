@@ -15,6 +15,18 @@ option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
     # set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
 # endif()
 
+if (CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
+    message(STATUS "Configuring for Emscripten/WebAssembly")
+
+  # Tell bx/bgfx that threading is not supported
+    set(BX_CONFIG_SUPPORTS_THREADING       OFF CACHE BOOL "" FORCE)
+    set(BGFX_CONFIG_MULTITHREADED         OFF CACHE BOOL "" FORCE)  # disable bgfx’s worker thread :contentReference[oaicite:0]{index=0}
+    set(BGFX_CONFIG_RENDERER_THREAD       OFF CACHE BOOL "" FORCE)
+
+    # Use bgfx.cmake’s custom‐targets mode to avoid examples/tools
+    set(BGFX_CUSTOM_TARGETS               ON  CACHE BOOL "" FORCE)
+endif()
+
 
 if (NOT ANDROID)
     set(SDL_DISABLE_INSTALL ON CACHE BOOL "" FORCE)
@@ -54,12 +66,21 @@ else()
 endif()
 
 # Add your main game/app
+file(GLOB SOURCES "*.cpp")
+file(GLOB HEADERS "headers/*.h" "headers/*.hpp")
+
+
 if(ANDROID)
-    add_library(iLuma SHARED main.cpp)
+    add_library(iLuma SHARED ${SOURCES} ${HEADERS})
 else()
-    add_executable(iLuma main.cpp)
+    add_executable(iLuma ${SOURCES} ${HEADERS})
 
 endif()
+
+target_include_directories(iLuma
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/headers"
+)
 
 if (ANDROID)
     target_link_libraries(iLuma PRIVATE
@@ -88,9 +109,17 @@ else()
     )
 endif()
 
-# set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+
 
 if(EMSCRIPTEN)
     # Create a html webpage
+    target_link_options(iLuma PRIVATE
+        "-sINITIAL_MEMORY=67108864"
+        "-sALLOW_MEMORY_GROWTH=1"
+        "-sNO_EXIT_RUNTIME=1"
+        "-sASSERTIONS=0"
+        "--shell-file=${CMAKE_CURRENT_SOURCE_DIR}/web/base.html"
+    )   
     set_property(TARGET iLuma PROPERTY SUFFIX ".html")
 endif()
