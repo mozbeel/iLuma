@@ -36,15 +36,12 @@ jobs:
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build builds/macos --config ${{ inputs.build_type }}
-      
-      - name: Check gtimeout path
-        run: which gtimeout
 
       - name: Run tests / execute built app
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: |
           cd builds/macos
-          gtimeout 20s ./iLuma
+          gtimeout -k 5s 20s ./iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
