@@ -42,6 +42,11 @@ if "%platform%"=="macos" (
     call scripts\build-macos.bat %debug_or_release% %mode%
     exit /b 0
 ) 
+if "%platform%"=="web" (
+    echo Starting build for web in %debug_or_release% mode
+    call scripts\build-web.bat %debug_or_release% %mode%
+    exit /b 0
+)   
 if "%platform%"=="all" (
     echo Starting build for all platforms in %debug_or_release% mode
     call scripts\build-all.bat %debug_or_release% %mode%
