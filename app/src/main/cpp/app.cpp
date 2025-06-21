@@ -30,25 +30,25 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 
 #if defined(__ANDROID__)
 	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window)SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL); // Use the native window from the Android app
-	pd.ndt = nullptr;
+	pd.ndt = NULL;
 #elif defined(_WIN32)
 
-	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_WIN32_HWND_POINTER, nullptr);
-	pd.ndt = nullptr;
+	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_WIN32_HWND_POINTER, NULL);
+	pd.ndt = NULL;
 #elif defined(__linux__)
-	pd.nwh = (void *)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, nullptr);
-	pd.ndt = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, nullptr);
+	pd.nwh = (void *)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, NULL);
+	pd.ndt = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, NULL);
 
 // I cannot test if it works on macOS, so I will comment it out for now. UPDATE: I can build, but not run it
 #elif defined(__APPLE__)
 
 	#if TARGET_OS_OSX
-		pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, nullptr);
-		pd.ndt = nullptr;
+		pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
+		pd.ndt = NULL;
 	#elif TARGET_OS_IPHONE
 		// iOS does not use bgfx in the same way, so we don't set nwh or ndt here.
-		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER, nullptr);
-		pd.ndt = nullptr; // No native display type in iOS
+		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER, NULL);
+		pd.ndt = NULL; // No native display type in iOS
 
 	#endif
 
@@ -56,7 +56,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	const char* canvasSelector = SDL_GetStringProperty(
       SDL_GetWindowProperties(window),
       SDL_PROP_WINDOW_EMSCRIPTEN_CANVAS_ID_STRING,
-      nullptr
+      NULL
   );
   
   if (!canvasSelector) {
@@ -66,7 +66,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
   SDL_Log("Canvas selector: %s", canvasSelector);
 
   pd.nwh = (void*)canvasSelector;
-  pd.ndt = nullptr;
+  pd.ndt = NULL;
 
 
 #else
@@ -151,8 +151,6 @@ bool App::mainLoop() {
   return running;
 	
 }
-
-
 
 void App::shutdown() {
 	bgfx::frame();

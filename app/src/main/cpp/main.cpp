@@ -1,7 +1,6 @@
 #include <SDL3/SDL_main.h>
 #include <app.hpp>
 
-
 App app;
 
 #ifdef __EMSCRIPTEN__
