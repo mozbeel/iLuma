@@ -102,9 +102,8 @@ int main(int argc, char *argv[])
 
 	const char *renderBackendStr = bgfx::getRendererName(renderBackend);
 
-	#ifdef MACOS_DEBUG
-		auto start = std::chrono::steady_clock::now();
-	#endif
+	auto start = std::chrono::steady_clock::now();
+	SDL_Log("Main loop incomig, render backend: %s", renderBackendStr);
 
 	while (running)
 	{
@@ -139,13 +138,10 @@ int main(int argc, char *argv[])
 			lastTime = now;
 		}
 		SDL_Delay(16);  // Simulate frame delay (60 FPS)
-		SDL_Log("Frame rendered: %.2f FPS", fps);
 
-		#ifdef MACOS_DEBUG
-			if (std::chrono::duration_cast<std::chrono::seconds>(now - start).count() > 20) {
-				running = false; // Stop after 20 seconds for upload
-			}
-		#endif
+		if (std::chrono::duration_cast<std::chrono::seconds>(now - start).count() > 20) {
+			running = false; // Stop after 20 seconds for upload
+		}
 	}
 	bgfx::frame();
 	bgfx::shutdown();
