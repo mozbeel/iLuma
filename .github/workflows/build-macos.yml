@@ -41,7 +41,7 @@ jobs:
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: |
           cd builds/macos
-          timeout 20s ./iLuma
+          gtimeout 20s ./iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
