@@ -50,6 +50,7 @@ if "%platform%"=="ios" (
 )
 if "%platform%"=="web" (
     echo Starting build for web in %debug_or_release% mode
+    emsdk activate
     call scripts\build-web.bat %debug_or_release% %mode%
     exit /b 0
 )   

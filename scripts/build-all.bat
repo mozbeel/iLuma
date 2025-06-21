@@ -24,6 +24,7 @@ call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
 @REM call "%scripts_dir%build-android.bat" "%debug_or_release%" NOT_SUPPORTED
 call "%scripts_dir%build-ios.bat" "%debug_or_release%" "%mode%"
 
+emsdk activate
 call "%scripts_dir%build-web.bat" "%debug_or_release%" "%mode%"
 
 popd

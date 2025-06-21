@@ -101,7 +101,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	SDL_Log("Setting up bgfx debug and clear view...");
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
-	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x303030FF, 1.0f, 0);
+	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x87CEFAFF, 1.0f, 0);
 
   lastTime = std::chrono::steady_clock::now();
 	int frames = 0;
