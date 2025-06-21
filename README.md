@@ -12,11 +12,11 @@
 
 ## About the Project
 
-iLuma is a modern, high-performance game framework (3D and 2D) built by passion and designed for fun development of games and interactive applications on all major desktop and mobile platforms (very soon). It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. Built on top of <a href="https://github.com/bkaradzic/bgfx">bgfx</a> and <a href="https://github.com/libsdl-org/SDL"> SDL3</a>, iLuma offers a robust, flexible, and modular foundation for creating games that run seamlessly across Windows, Linux, macOS, iOS (very soon), and Android (very soon). iLuma is in the very early stages of development. 
+iLuma is a modern, high-performance game framework (3D and 2D) built by passion and designed for fun development of games and interactive applications on all major desktop and mobile platforms. It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. Built on top of <a href="https://github.com/bkaradzic/bgfx">bgfx</a> and <a href="https://github.com/libsdl-org/SDL"> SDL3</a>, iLuma offers a robust, flexible, and modular foundation for creating games that run seamlessly across Windows, Linux, macOS, iOS , and Android. iLuma is in the very early stages of development. 
 
 ## Features
 
-- ✨ Cross-platform support: Build games for desktop (Windows, Linux, macOS) and mobile (iOS, Android; no support yet but soon) from a single codebase.
+- ✨ Cross-platform support: Build games for desktop (Windows, Linux, macOS) and mobile (iOS, Android) from a single codebase.
 - 🚀 Powered by bgfx for advanced rendering and SDL3 for input, audio, and window management.
 - 📱 Touch and sensor input support for mobile devices (not yet).
 - 🛠️ Easy integration with popular game development tools and workflows.
