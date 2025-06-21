@@ -50,16 +50,16 @@ set(BGFX_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
 
 if(DOWNLOAD_DEPENDENCIES)
-    # FetchContent downloads and configures dependencies
     include(FetchContent)
-    FetchContent_Declare(
-        SDL3
-        GIT_REPOSITORY "https://github.com/libsdl-org/SDL.git"
-        GIT_TAG "main"
-        EXCLUDE_FROM_ALL
-    )
-    FetchContent_MakeAvailable(SDL3)
-
+    if (NOT ANDROID) 
+        FetchContent_Declare(
+            SDL3
+            GIT_REPOSITORY "https://github.com/libsdl-org/SDL.git"
+            GIT_TAG "main"
+            EXCLUDE_FROM_ALL
+        )
+        FetchContent_MakeAvailable(SDL3)
+    endif()
     FetchContent_Declare(
         bgfx.cmake
         GIT_REPOSITORY "https://github.com/bkaradzic/bgfx.cmake.git"
@@ -71,8 +71,14 @@ else()
     # find_package looks for already-installed system packages.
     # Configure with `-DCMAKE_PREFIX_PATH="/path/to/package1;/path/to/package2"`
     # to add search paths.
-    find_package(SDL3 CONFIG REQUIRED)
     find_package(bgfx.cmake CONFIG REQUIRED)
+    if (NOT ANDROID)
+        find_package(SDL3 CONFIG REQUIRED)
+    endif()
+endif()
+
+if (ANDROID)
+    find_package(SDL3 CONFIG REQUIRED)
 endif()
 
 # Add your main game/app
@@ -98,6 +104,7 @@ if (ANDROID)
         bimg
         bx
         SDL3::SDL3
+
         android
         log
         GLESv2

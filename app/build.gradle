@@ -32,6 +32,10 @@ android {
         release {
             minifyEnabled false
         }
+        debug {
+            debuggable true
+            jniDebuggable true
+        }
     }
     buildFeatures {
         prefab true
