@@ -15,6 +15,7 @@ if /i "%platform%"=="windows" (
 ) else if /i "%platform%"=="android" (
     echo This is not yet supported.
 ) else if "%platform%"=="web"  (
+    emsdk activate
     emrun --port 8080 ./builds/web/iLuma.html
 ) else (
     echo Unsupported platform: %platform%

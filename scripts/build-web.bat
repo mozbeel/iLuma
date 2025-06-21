@@ -8,6 +8,8 @@ echo Building the application for platform windows in %debug_or_release%
 
 echo "Starting build for Web in %debug_or_release% %mode%"
 
+emsdk activate
+
 if "%mode%"=="c" (
     echo "Configuring CMake (for Web)..."
     emcmake cmake -S app/src/main/cpp -B builds/web

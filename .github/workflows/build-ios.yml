@@ -35,6 +35,7 @@ jobs:
         run: |
           cmake -S app/src/main/cpp -B builds/ios \
             -G Xcode \
+            -DCMAKE_SYSTEM_NAME=iOS \
             -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
             -DIOS=ON \
             -DDOWNLOAD_DEPENDENCIES=ON \
