@@ -1,63 +1,73 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.12)
+project(iLuma)
 
-if(ANDROID)
-    project(native-activity)
+option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
 
-    set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
-    set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
-    set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
-    set(BGFX_BUILD_SHADERC OFF CACHE BOOL "" FORCE)
-    set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
+# if(ANDROID)
 
-    set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
-else()
-    project(iLuma)
+    # set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
+    # set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
+    # set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
+    # set(BGFX_BUILD_SHADERC OFF CACHE BOOL "" FORCE)
+    # set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
+    # set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
+
+    # set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
+# endif()
+
+
+if (NOT ANDROID)
+    set(SDL_DISABLE_INSTALL ON CACHE BOOL "" FORCE)
+    set(SDL3_TEST OFF CACHE BOOL "" FORCE)
+    set(SDL_STATIC ON CACHE BOOL "" FORCE)
+    set(SDL_SHARED OFF CACHE BOOL "" FORCE)
 endif()
 
-
-set(SDL_DISABLE_INSTALL ON CACHE BOOL "" FORCE)
-set(SDL3_TEST OFF CACHE BOOL "" FORCE)
-set(SDL_STATIC ON CACHE BOOL "" FORCE)
-set(SDL_SHARED OFF CACHE BOOL "" FORCE)
-
-
-set(APP_ROOT ../../..)
 set(BGFX_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(BGFX_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
-set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
 
-# Add SDL3 (assumes it's configured as a CMake project)
-add_subdirectory(${APP_ROOT}/vendor/SDL ${CMAKE_BINARY_DIR}/SDL-build EXCLUDE_FROM_ALL)
-add_subdirectory(${APP_ROOT}/vendor/bgfx.cmake ${CMAKE_BINARY_DIR}/bgfx-build EXCLUDE_FROM_ALL)
+if(DOWNLOAD_DEPENDENCIES)
+    # FetchContent downloads and configures dependencies
+    include(FetchContent)
+    FetchContent_Declare(
+        SDL3
+        GIT_REPOSITORY "https://github.com/libsdl-org/SDL.git"
+        GIT_TAG "main"
+        EXCLUDE_FROM_ALL
+    )
+    FetchContent_MakeAvailable(SDL3)
+
+    FetchContent_Declare(
+        bgfx.cmake
+        GIT_REPOSITORY "https://github.com/bkaradzic/bgfx.cmake.git"
+        GIT_TAG "master"
+        EXCLUDE_FROM_ALL
+    )
+    FetchContent_MakeAvailable(bgfx.cmake)
+else()
+    # find_package looks for already-installed system packages.
+    # Configure with `-DCMAKE_PREFIX_PATH="/path/to/package1;/path/to/package2"`
+    # to add search paths.
+    find_package(SDL3 CONFIG REQUIRED)
+    find_package(bgfx.cmake CONFIG REQUIRED)
+endif()
 
 # Add your main game/app
-if(NOT ANDROID)
-
-add_executable(iLuma main.cpp)
+if(ANDROID)
+    add_library(iLuma SHARED main.cpp)
 else()
-add_library(native-activity SHARED main.cpp)
+    add_executable(iLuma main.cpp)
+
 endif()
 
 if (ANDROID)
-    target_compile_definitions(native-activity PRIVATE SDL_STATIC SDL_MAIN_HANDLED)
-else()
-    target_compile_definitions(iLuma PRIVATE SDL_STATIC SDL_MAIN_HANDLED)
-endif()
-
-if (ANDROID)
-    target_compile_definitions(native-activity PRIVATE SDL_STATIC SDL_MAIN_HANDLED)
-    add_library(native_app_glue STATIC "${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c")
-    target_include_directories(native-activity PRIVATE
-        ${APP_ROOT}/vendor/SDL/include
-        ${ANDROID_NDK}/sources/android/native_app_glue
-    )
-    target_link_libraries(native-activity
-    PRIVATE
+    target_link_libraries(iLuma PRIVATE
         bgfx
         bimg
         bx
         SDL3::SDL3
+        SDL3::SDL3main
         native_app_glue
         android
         log
@@ -68,7 +78,7 @@ if (ANDROID)
         atomic
     )
 else()
-    target_compile_definitions(iLuma PRIVATE SDL_STATIC SDL_MAIN_HANDLED)
+    target_compile_definitions(iLuma PRIVATE SDL_STATIC)
     target_link_libraries(iLuma
         PRIVATE
             SDL3::SDL3
@@ -78,10 +88,9 @@ else()
     )
 endif()
 
-if (ANDROID)
-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
-endif()
+set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
 
-get_target_property(SDL3_TYPE SDL3::SDL3 TYPE)
-message(STATUS "SDL3 is being built as: ${SDL3_TYPE}")
-message(STATUS "SDL3 CPU target: ${SDL3CPU}")
+if(EMSCRIPTEN)
+    # Create a html webpage
+    set_property(TARGET iLuma PROPERTY SUFFIX ".html")
+endif()

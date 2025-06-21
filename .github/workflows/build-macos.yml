@@ -34,6 +34,11 @@ jobs:
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build build/macos --config ${{ inputs.build_type }}
+        
+      - name: Run tests / execute built app
+        if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
+        run: |
+          ./build/macos/iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
