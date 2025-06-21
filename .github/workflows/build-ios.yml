@@ -48,7 +48,12 @@ jobs:
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both' }}
         env:
           SDKROOT: ${{ steps.set-sdk.outputs.sdk_path }}
-        run: cmake --build builds/ios --config ${{ inputs.build_type }} -- -sdk iphoneos
+        run: |
+          cmake --build builds/ios --config ${{ inputs.build_type }} -- \
+            -sdk iphoneos \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
