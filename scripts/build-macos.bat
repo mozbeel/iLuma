@@ -4,9 +4,6 @@ title iLuma Build for MacOS
 set debug_or_release=%~1
 set mode=%~2
 
-git add .
-git commit -m "Update CMakeLists.txt and source files for MacOS build" --allow-empty
-git push origin main
 cd app/src/main/cpp
 
 if "%mode%"=="c" (

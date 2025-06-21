@@ -21,6 +21,9 @@ if "%mode%"=="" (
 
 echo Building the application for platform %platform% in %debug_or_release% mode
 
+git add .
+git commit -m "Updating Repository for build" --allow-empty
+git push origin main
 
 if "%platform%"=="windows"  (
     echo Starting build for Windows in %debug_or_release% mode
