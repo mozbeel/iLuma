@@ -58,7 +58,6 @@ int main(int argc, char *argv[])
 #if TARGET_OS_OSX
 	pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
 	pd.ndt = NULL;
-	std::cout << "macOS detected, using Cocoa window." << std::endl;
 #endif
 
 #else
@@ -68,7 +67,9 @@ int main(int argc, char *argv[])
 	return 1;
 #endif
 
+	SDL_Log("Setting PlatformData for bgfx...");
 	bgfx::setPlatformData(pd);
+	SDL_Log("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
 
 	bgfx::Init init;
 	init.type = bgfx::RendererType::Count;
@@ -78,12 +79,14 @@ int main(int argc, char *argv[])
 	init.resolution.height = SCREEN_HEIGHT;
 	init.resolution.reset = BGFX_RESET_VSYNC;
 	// init.debug = true;  // Enable debug mode
+	SDL_Log("Initializing bgfx succeded...");
 
 	if (!bgfx::init(init))
 	{
-		std::cout << "Couldn't initialize bgfx" << std::endl;
+		SDL_Log("bgfx::init unsuccessful: %s");
 		return 1;
 	}
+
 	SDL_Log("bgfx::init succeded");
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
