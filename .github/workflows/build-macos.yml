@@ -24,7 +24,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
-        run: brew install cmake
+        run: |
+          brew install cmake
+          brew install coreutils
 
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
