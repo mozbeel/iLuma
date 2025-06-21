@@ -33,15 +33,15 @@ jobs:
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
         run: |
-          cmake -S app/src/main/cpp -B builds/ios
-          -G Xcode
-          -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
-          -DIOS=ON
-          -DDOWNLOAD_DEPENDENCIES=ON
-          -DCMAKE_OSX_SYSROOT=${{ steps.set-sdk.outputs.sdk_path }}
-          -DCMAKE_OSX_ARCHITECTURES=arm64
-          -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
-          -Wdev -Wdeprecated -Werror
+          cmake -S app/src/main/cpp -B builds/ios \
+            -G Xcode \
+            -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
+            -DIOS=ON \
+            -DDOWNLOAD_DEPENDENCIES=ON \
+            -DCMAKE_OSX_SYSROOT=${{ steps.set-sdk.outputs.sdk_path }} \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 \
+            -Wdev -Wdeprecated -Werror
 
 
       - name: Build project
