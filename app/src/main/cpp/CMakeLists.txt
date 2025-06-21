@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 project(iLuma)
 
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
+option(IOS "Build for iOS" OFF)
 
 # if(ANDROID)
 
@@ -116,7 +117,9 @@ else()
     )
 endif()
 
-set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+if(WIN32)
+    set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+endif()
 
 
 if(EMSCRIPTEN)
