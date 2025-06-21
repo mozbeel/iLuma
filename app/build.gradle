@@ -33,11 +33,15 @@ android {
             minifyEnabled false
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildFeatures {
         prefab true
     }
 }
 
 dependencies {
-    implementation files('libs/SDL3-3.2.16.aar')
+    implementation files('libs/SDL3-3.2.0.aar')
 }
