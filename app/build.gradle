@@ -28,6 +28,15 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            storeFile file(KEYSTORE_FILE)  // Replace with your keystore path
+            storePassword KEYSTORE_PASSWORD         // Replace with your store password
+            keyAlias KEY_ALIAS                 // Replace with your key alias
+            keyPassword KEY_PASSWORD            // Replace with your key password
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false

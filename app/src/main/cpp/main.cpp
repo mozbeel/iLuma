@@ -5,12 +5,12 @@ App* app;
 
 #ifdef __EMSCRIPTEN__
   void emscriptenMainLoop() {
-    if (!app.running) {
+    if (!app->running) {
       emscripten_cancel_main_loop();
-      app.shutdown();
+      app->shutdown();
       return;
     }
-    app.mainLoop();
+    app->mainLoop();
   } 
 #endif
 
