@@ -12,6 +12,17 @@
 #include <emscripten.h>
 #endif
 
+#ifdef __ANDROID__
+#define LOG_TAG "iLuma"
+#include <android/log.h>
+
+#define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,   LOG_TAG, __VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,    LOG_TAG, __VA_ARGS__)
+#define LOGW(...) __android_log_print(ANDROID_LOG_WARN,    LOG_TAG, __VA_ARGS__)
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,   LOG_TAG, __VA_ARGS__)
+#endif
+
 class App {
   SDL_Window *window = nullptr; // Pointer to the SDL window
   SDL_Event event;

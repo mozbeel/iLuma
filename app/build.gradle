@@ -15,7 +15,7 @@ android {
 
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_STL=c++_shared', '-DDOWNLOAD_DEPENDENCIES=OFF'
+                arguments '-DANDROID_STL=c++_shared', '-DDOWNLOAD_DEPENDENCIES=ON'
                 abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
                 // abiFilters 'arm64-v8a'
             }
@@ -32,10 +32,6 @@ android {
         release {
             minifyEnabled false
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
         prefab true

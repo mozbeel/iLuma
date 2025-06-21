@@ -4,17 +4,19 @@ project(iLuma)
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
 option(IOS "Build for iOS" OFF)
 
-# if(ANDROID)
+if(ANDROID)
 
-    # set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
-    # set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
-    # set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
-    # set(BGFX_BUILD_SHADERC OFF CACHE BOOL "" FORCE)
-    # set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
-    # set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
+    set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
+    set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
+    set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
+    set(BGFX_BUILD_SHADERC OFF CACHE BOOL "" FORCE)
+    set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
+    set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
 
-    # set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
-# endif()
+    set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../../builds/android)
+
+endif()
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
     message(STATUS "Configuring for Emscripten/WebAssembly")
@@ -96,7 +98,6 @@ if (ANDROID)
         bimg
         bx
         SDL3::SDL3
-        native_app_glue
         android
         log
         GLESv2

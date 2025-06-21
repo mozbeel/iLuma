@@ -1,7 +1,7 @@
 #include <SDL3/SDL_main.h>
 #include <app.hpp>
 
-App app;
+App* app;
 
 #ifdef __EMSCRIPTEN__
   void emscriptenMainLoop() {
@@ -16,8 +16,12 @@ App app;
 
 int main(int argc, char *argv[])
 {
-	app = App();
-	if (!app.initialize())
+#ifdef __ANDROID__
+	LOGI("Entered main");
+#endif
+
+	app = new App();
+	if (!app->initialize())
 	{
 		SDL_Log("App initialization failed");
 		return 1;
@@ -26,12 +30,13 @@ int main(int argc, char *argv[])
 #ifdef __EMSCRIPTEN__
 	emscripten_set_main_loop(emscriptenMainLoop, 0, 1);
 #else
-	while (app.running)
+	while (app->running)
 	{
-		app.mainLoop();
+		app->mainLoop();
 	}
 #endif
-	app.shutdown();
+	app->shutdown();
+	delete app;
 
 	return 0;
 }

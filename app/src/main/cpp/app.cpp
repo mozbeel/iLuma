@@ -12,24 +12,36 @@ bool App::initialize() {
 if (SDL_Init(SDL_INIT_VIDEO) == false)
 	{
 		SDL_Log("SDL_Init failed: %s", SDL_GetError());
+#ifdef __ANDROID__
+		LOGI("SDL_Init failed: %s", SDL_GetError());
+#endif
 		return false;
 	}
 	SDL_Log("SDL_Init succeded");
+#ifdef __ANDROID__
+	LOGI("SDL_Init succeded");
+#endif
 
 	SDL_Window *window = SDL_CreateWindow("BGFX + SDL3 Window",
 																				SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 	if (!window)
 	{
 		SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
+#ifdef __ANDROID__
+		LOGI("SDL_CreateWindow failed: %s", SDL_GetError());
+#endif
 		SDL_Quit();
 		return false;
 	}
 	SDL_Log("SDL_CreateWindow succeded");
+#ifdef __ANDROID__
+	LOGI("SDL_CreateWindow succeded");
+#endif
 
 	bgfx::PlatformData pd;
 
 #if defined(__ANDROID__)
-	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window)SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL); // Use the native window from the Android app
+	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL); // Use the native window from the Android app
 	pd.ndt = NULL;
 #elif defined(_WIN32)
 
@@ -61,24 +73,38 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
   
   if (!canvasSelector) {
       SDL_Log("Failed to get canvas ID: %s", SDL_GetError());
+#ifdef __ANDROID__
+      LOGI("Failed to get canvas ID: %s", SDL_GetError());
+#endif
       return false;
   }
   SDL_Log("Canvas selector: %s", canvasSelector);
+#ifdef __ANDROID__
+  LOGI("Canvas selector: %s", canvasSelector);
+#endif
 
   pd.nwh = (void*)canvasSelector;
   pd.ndt = NULL;
 
-
 #else
 	SDL_Log("Unsupported platform for bgfx initialization.");
+#ifdef __ANDROID__
+	LOGI("Unsupported platform for bgfx initialization.");
+#endif
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 	return false;
 #endif
 
 	SDL_Log("Setting PlatformData for bgfx...");
+#ifdef __ANDROID__
+	LOGI("Setting PlatformData for bgfx...");
+#endif
 	bgfx::setPlatformData(pd);
 	SDL_Log("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
+#ifdef __ANDROID__
+	LOGI("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
+#endif
   
 	bgfx::Init init;
 	init.type = bgfx::RendererType::Count;
@@ -90,15 +116,27 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	init.debug = true;  // Enable debug mode
 
 	SDL_Log("Initializing bgfx succeded...");
+#ifdef __ANDROID__
+	LOGI("Initializing bgfx succeded...");
+#endif
 
 	if (!bgfx::init(init))
 	{
 		SDL_Log("bgfx::init unsuccessful");
+#ifdef __ANDROID__
+		LOGI("bgfx::init unsuccessful");
+#endif
 		return false;
 	}
 
 	SDL_Log("bgfx::init succeded");
+#ifdef __ANDROID__
+	LOGI("bgfx::init succeded");
+#endif
 	SDL_Log("Setting up bgfx debug and clear view...");
+#ifdef __ANDROID__
+	LOGI("Setting up bgfx debug and clear view...");
+#endif
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x87CEFAFF, 1.0f, 0);
@@ -112,6 +150,9 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	renderBackendStr = bgfx::getRendererName(renderBackend);
   
   SDL_Log("Main loop incomig, render backend: %s", renderBackendStr);
+#ifdef __ANDROID__
+  LOGI("Main loop incomig, render backend: %s", renderBackendStr);
+#endif
   return true;
 }
 
@@ -160,4 +201,7 @@ void App::shutdown() {
 	SDL_Quit();
 
 	SDL_Log("shutdown succeded");
+#ifdef __ANDROID__
+	LOGI("shutdown succeded");
+#endif
 }
