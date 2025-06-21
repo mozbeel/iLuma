@@ -18,7 +18,6 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
-
 int main(int argc, char *argv[])
 {
 
@@ -83,7 +82,7 @@ int main(int argc, char *argv[])
 
 	if (!bgfx::init(init))
 	{
-		SDL_Log("bgfx::init unsuccessful: %s");
+		SDL_Log("bgfx::init unsuccessful");
 		return 1;
 	}
 
@@ -102,6 +101,10 @@ int main(int argc, char *argv[])
 	bgfx::RendererType::Enum renderBackend = bgfx::getRendererType();
 
 	const char *renderBackendStr = bgfx::getRendererName(renderBackend);
+
+	#ifdef MACOS_DEBUG
+		auto start = std::chrono::steady_clock::now();
+	#endif
 
 	while (running)
 	{
@@ -137,6 +140,12 @@ int main(int argc, char *argv[])
 		}
 		SDL_Delay(16);  // Simulate frame delay (60 FPS)
 		SDL_Log("Frame rendered: %.2f FPS", fps);
+		
+		#ifdef MACOS_DEBUG
+			if (std::chrono::duration_cast<std::chrono::seconds>(now - start).count() > 20) {
+				break; // Exit after 20 seconds
+			}
+		#endif
 	}
 	bgfx::frame();
 	bgfx::shutdown();

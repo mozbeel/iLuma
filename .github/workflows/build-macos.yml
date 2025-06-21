@@ -31,17 +31,17 @@ jobs:
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}
         run: |
-          cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
+          cmake -S app/src/main/cpp -B builds/macos -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} ${{ inputs.build_type == 'Debug' && '-DMACOS_DEBUG' || '' }}
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build builds/macos --config ${{ inputs.build_type }}
 
       - name: Run tests / execute built app
-        if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
+        if: ${{( inputs.mode == 'b' || inputs.mode == 'both') && inputs.build_type == 'Debug'}}
         run: |
           cd builds/macos
-          gtimeout -k 5s 20s ./iLuma
+          ./iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
