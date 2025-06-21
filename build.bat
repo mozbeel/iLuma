@@ -32,16 +32,22 @@ if "%platform%"=="linux" (
     call scripts\build-linux.bat %debug_or_release% %mode%
     exit /b 0
 ) 
-if "%platform%"=="android" (
-    echo Starting build for Android in %debug_or_release% mode
-    call scripts\build-android.bat %debug_or_release%
-    exit /b 0
-) 
 if "%platform%"=="macos" (
     echo Starting build for MacOS in %debug_or_release% mode
     call scripts\build-macos.bat %debug_or_release% %mode%
     exit /b 0
 ) 
+
+if "%platform%"=="android" (
+    echo Starting build for Android in %debug_or_release% mode
+    call scripts\build-android.bat %debug_or_release%
+    exit /b 0
+)
+if "%platform%"=="ios" (
+    echo Starting build for iOS in %debug_or_release% mode
+    call scripts\build-ios.bat %debug_or_release%
+    exit /b 0
+)
 if "%platform%"=="web" (
     echo Starting build for web in %debug_or_release% mode
     call scripts\build-web.bat %debug_or_release% %mode%

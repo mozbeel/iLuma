@@ -1,104 +1,69 @@
 @echo off
-title iLuma Build for MacOS
+title iLuma Build for iOS via GitHub Actions
 
-set debug_or_release=%~1
-set mode=%~2
+setlocal enabledelayedexpansion
+
+set "debug_or_release=%~1"
+set "mode=%~2"
 
 git add .
 git commit -m "Update for iOS build" --allow-empty
 git push origin main
 cd app/src/main/cpp
 
-if "%mode%"=="c" (
-    echo "Configuring CMake (for iOS)..."
-    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=c
+if "%mode%"=="c" goto configure
+if "%mode%"=="b" goto build_only
+if "%mode%"=="both" goto build_both
 
-    timeout /t 10 /nobreak >nul
-    for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
+echo Invalid mode: %mode%
+exit /b 1
 
-    gh run view %RUN_ID% --web
+:configure
+echo === Configuring only (CMake) ===
+gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=c
+goto wait
 
-:wait-for-completion_c
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".status"') do set status=%%s
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".conclusion"') do set conclusion=%%s
+:build_only
+echo === Building only ===
+gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=b
+goto wait
 
-    if "%status%"=="completed" (
-        echo "CMake configuration completed successfully."
-        goto done_c
-    ) else if "%conclusion%"=="failure" (
-        echo "CMake configuration failed. Please check the logs."
-        exit /b 1
+:build_both
+echo === Configuring and Building ===
+gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=both
+goto wait
+
+:wait
+timeout /t 10 /nobreak >nul
+for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
+
+echo Waiting for workflow completion...
+gh run view %RUN_ID% --web
+
+:poll_status
+for /f %%s in ('gh run view %RUN_ID% --json status --jq ".status"') do set status=%%s
+for /f %%c in ('gh run view %RUN_ID% --json conclusion --jq ".conclusion"') do set conclusion=%%c
+
+echo Status: %status%, Conclusion: %conclusion%
+
+if /i "%status%"=="completed" (
+    if /i "%conclusion%"=="success" (
+        echo ✅ Workflow succeeded. Downloading artifacts...
+        goto download
     ) else (
-        goto wait-for-completion_c
-    )
-
-:done_c
-    if exist ../../../../builds/iOS (
-        rmdir /s /q ../../../../builds/iOS
-    )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
-
-    exit /b 0
-
-) else if "%mode%"=="b" (
-    echo "Building the application only (for iOS)..."
-    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=b
-
-    timeout /t 10 /nobreak >nul
-    for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
-
-    gh run view %RUN_ID% --web
-
-:wait-for-completion_b
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".status"') do set status=%%s
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".conclusion"') do set conclusion=%%s
-
-    if "%status%"=="completed" (
-        echo "Building application completed successfully. Downloading..."
-        goto done_b
-    ) else if "%conclusion%"=="failure" (
-        echo "Building application failed. Please check the logs."
+        echo ❌ Workflow failed. Check the logs.
         exit /b 1
-    ) else (
-        goto wait-for-completion_b
     )
-
-:done_b
-    if exist ../../../../builds/iOS (
-        rmdir /s /q ../../../../builds/iOS
-    )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
-
-    exit /b 0
-
-) else if "%mode%"=="both" (
-    echo "Configuring CMake and building the application (for iOS)..."
-    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=both
-
+) else (
     timeout /t 10 /nobreak >nul
-    for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
-
-    gh run view %RUN_ID% --web
-
-:wait-for-completion_both
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".status"') do set status=%%s
-    for /f %%s in ('gh run view %RUN_ID% --json status --jq ".conclusion"') do set conclusion=%%s
-
-    if "%status%"=="completed" (
-        echo "Building application completed successfully. Downloading..."
-        goto done_both
-    ) else if "%conclusion%"=="failure" (
-        echo "Building application failed. Please check the logs."
-        exit /b 1
-    ) else (
-        goto wait-for-completion_both
-    )
-
-:done_both
-    if exist ../../../../builds/iOS (
-        rmdir /s /q ../../../../builds/iOS
-    )
-    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
-
-    exit /b 0
+    goto poll_status
 )
+
+:download
+if exist ../../../../builds/iOS (
+    rmdir /s /q ../../../../builds/iOS
+)
+gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
+
+echo ✅ Download complete.
+exit /b 0
