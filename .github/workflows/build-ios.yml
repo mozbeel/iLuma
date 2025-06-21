@@ -24,18 +24,29 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
-        run: |
-          brew install cmake ninja
+        run: brew install cmake ninja
+
+      - name: Set SDK Path
+        id: set-sdk
+        run: echo "sdk_path=$(xcrun --sdk iphoneos --show-sdk-path)" >> $GITHUB_OUTPUT
 
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
-        run: cmake -S app/src/main/cpp -B builds/ios -DIOS=ON -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} -G Ninja -DCMAKE_OSX_SYSROOT=$(xcrun --sdk iphoneos --show-sdk-path) -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
+        run: >
+          cmake -S app/src/main/cpp -B builds/ios
+          -DIOS=ON
+          -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
+          -G Ninja
+          -DCMAKE_OSX_SYSROOT=${{ steps.set-sdk.outputs.sdk_path }}
+          -DCMAKE_OSX_ARCHITECTURES=arm64
+          -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both' }}
+        env:
+          SDKROOT: ${{ steps.set-sdk.outputs.sdk_path }}
         run: cmake --build builds/ios --config ${{ inputs.build_type }}
 
-      # Optional: Upload artifacts for later use or testing
       - name: Upload build output
         uses: actions/upload-artifact@v4
         with:
