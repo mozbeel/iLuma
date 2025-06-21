@@ -37,6 +37,9 @@ jobs:
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: cmake --build builds/macos --config ${{ inputs.build_type }}
       
+      - name: Check gtimeout path
+        run: which gtimeout
+
       - name: Run tests / execute built app
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: |
