@@ -16,13 +16,15 @@ echo.
 echo Building all platforms in %debug_or_release% [%mode%]
 echo.
 
+
 call "%scripts_dir%build-windows.bat" "%debug_or_release%" "%mode%"
-
 call "%scripts_dir%build-macos.bat" "%debug_or_release%" "%mode%"
-
-call "%scripts_dir%build-android.bat" "%debug_or_release%"
-
 call "%scripts_dir%build-linux.bat" "%debug_or_release%" "%mode%"
+
+@REM call "%scripts_dir%build-android.bat" "%debug_or_release%" NOT_SUPPORTED
+call "%scripts_dir%build-ios.bat" "%debug_or_release%" "%mode%"
+
+call "%scripts_dir%build-web.bat" "%debug_or_release%" "%mode%"
 
 popd
 exit /b 0

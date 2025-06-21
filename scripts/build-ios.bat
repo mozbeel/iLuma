@@ -5,13 +5,13 @@ set debug_or_release=%~1
 set mode=%~2
 
 git add .
-git commit -m "Update CMakeLists.txt and source files for MacOS build" --allow-empty
+git commit -m "Update for iOS build" --allow-empty
 git push origin main
 cd app/src/main/cpp
 
 if "%mode%"=="c" (
-    echo "Configuring CMake (for MacOS)..."
-    gh workflow run "Build for macOS" -f build_type=%debug_or_release% -f mode=c
+    echo "Configuring CMake (for iOS)..."
+    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=c
 
     timeout /t 10 /nobreak >nul
     for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
@@ -33,16 +33,16 @@ if "%mode%"=="c" (
     )
 
 :done_c
-    if exist ../../../../builds/macOS (
-        rmdir /s /q ../../../../builds/macOS
+    if exist ../../../../builds/iOS (
+        rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 
 ) else if "%mode%"=="b" (
-    echo "Building the application only (for MacOS)..."
-    gh workflow run "Build for macOS" -f build_type=%debug_or_release% -f mode=b
+    echo "Building the application only (for iOS)..."
+    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=b
 
     timeout /t 10 /nobreak >nul
     for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
@@ -64,16 +64,16 @@ if "%mode%"=="c" (
     )
 
 :done_b
-    if exist ../../../../builds/macOS (
-        rmdir /s /q ../../../../builds/macOS
+    if exist ../../../../builds/iOS (
+        rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 
 ) else if "%mode%"=="both" (
-    echo "Configuring CMake and building the application (for MacOS)..."
-    gh workflow run "Build for macOS" -f build_type=%debug_or_release% -f mode=both
+    echo "Configuring CMake and building the application (for iOS)..."
+    gh workflow run "Build for iOS" -f build_type=%debug_or_release% -f mode=both
 
     timeout /t 10 /nobreak >nul
     for /f %%i in ('gh run list --limit 1 --json databaseId --jq ".[0].databaseId"') do set RUN_ID=%%i
@@ -95,10 +95,10 @@ if "%mode%"=="c" (
     )
 
 :done_both
-    if exist ../../../../builds/macOS (
-        rmdir /s /q ../../../../builds/macOS
+    if exist ../../../../builds/iOS (
+        rmdir /s /q ../../../../builds/iOS
     )
-    gh run download %RUN_ID% --name macOS --dir ../../../../builds/macOS
+    gh run download %RUN_ID% --name iOS --dir ../../../../builds/iOS
 
     exit /b 0
 )
