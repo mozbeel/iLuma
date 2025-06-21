@@ -96,7 +96,6 @@ if (ANDROID)
         bimg
         bx
         SDL3::SDL3
-        SDL3::SDL3main
         native_app_glue
         android
         log
@@ -117,10 +116,10 @@ else()
     )
 endif()
 
-if(WIN32)
+if (WIN32)
     set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
-endif()
 
+endif()
 
 if(EMSCRIPTEN)
     # Create a html webpage

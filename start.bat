@@ -14,6 +14,8 @@ if /i "%platform%"=="windows" (
     wsl -e ./builds/linux/iLuma
 ) else if /i "%platform%"=="android" (
     echo This is not yet supported.
+) else if "%platform%"=="web"  (
+    emrun --port 8080 ./builds/web/iLuma.html
 ) else (
     echo Unsupported platform: %platform%
     exit /b 1
