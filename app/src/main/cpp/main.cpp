@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	SDL_Log("SDL_Init succeded");
 
 	SDL_Window *window = SDL_CreateWindow("BGFX + SDL3 Window",
-																				SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_METAL);
+																				SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 	if (!window)
 	{
 		SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
@@ -87,7 +87,8 @@ int main(int argc, char *argv[])
 	init.resolution.width = SCREEN_WIDTH;
 	init.resolution.height = SCREEN_HEIGHT;
 	init.resolution.reset = BGFX_RESET_VSYNC;
-	// init.debug = true;  // Enable debug mode
+	init.debug = true;  // Enable debug mode
+	
 	SDL_Log("Initializing bgfx succeded...");
 
 	if (!bgfx::init(init))
