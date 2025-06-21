@@ -88,7 +88,7 @@ else()
     )
 endif()
 
-set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+# set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
 
 if(EMSCRIPTEN)
     # Create a html webpage

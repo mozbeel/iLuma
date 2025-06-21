@@ -27,14 +27,17 @@ int main(int argc, char *argv[])
 		SDL_Log("SDL_Init failed: %s", SDL_GetError());
 		return 1;
 	}
+	SDL_Log("SDL_Init succeded");
 
 	SDL_Window *window = SDL_CreateWindow("BGFX + SDL3 Window",
 																				SCREEN_WIDTH, SCREEN_HEIGHT, 0);
 	if (!window)
 	{
+		SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
 		SDL_Quit();
 		return 1;
 	}
+	SDL_Log("SDL_CreateWindow succeded");
 
 	bgfx::PlatformData pd;
 
@@ -81,10 +84,7 @@ int main(int argc, char *argv[])
 		std::cout << "Couldn't initialize bgfx" << std::endl;
 		return 1;
 	}
-	else
-	{
-		std::cout << "bgfx initialized successfully." << std::endl;
-	}
+	SDL_Log("bgfx::init succeded");
 
 	bgfx::setDebug(BGFX_DEBUG_TEXT);
 	bgfx::setViewClear(0, BGFX_CLEAR_COLOR | BGFX_CLEAR_DEPTH, 0x303030FF, 1.0f, 0);
@@ -139,6 +139,8 @@ int main(int argc, char *argv[])
 
 	SDL_DestroyWindow(window);
 	SDL_Quit();
+
+	SDL_Log("shutdown succeded");
 
 	return 0;
 }
