@@ -32,7 +32,7 @@ jobs:
 
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
-        run: >
+        run: |
           cmake -S app/src/main/cpp -B builds/ios
           -G Xcode
           -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
