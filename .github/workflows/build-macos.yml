@@ -26,7 +26,6 @@ jobs:
       - name: Install dependencies
         run: |
           brew install cmake
-          brew install coreutils
 
       - name: Configure CMake
         if: ${{ inputs.mode == 'c' || inputs.mode == 'both'}}

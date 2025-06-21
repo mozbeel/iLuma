@@ -140,10 +140,10 @@ int main(int argc, char *argv[])
 		}
 		SDL_Delay(16);  // Simulate frame delay (60 FPS)
 		SDL_Log("Frame rendered: %.2f FPS", fps);
-		
+
 		#ifdef MACOS_DEBUG
 			if (std::chrono::duration_cast<std::chrono::seconds>(now - start).count() > 20) {
-				break; // Exit after 20 seconds
+				running = false; // Stop after 20 seconds for upload
 			}
 		#endif
 	}
