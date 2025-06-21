@@ -41,7 +41,7 @@ jobs:
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
         run: |
           cd ../../../../build/macos
-          .iLuma
+          ./iLuma
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
