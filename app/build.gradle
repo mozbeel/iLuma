@@ -2,58 +2,42 @@ plugins {
     id 'com.android.application'
 }
 
-buildDir = '../builds/android'
-
-println "KEYSTORE_FILE = ${KEYSTORE_FILE}"
-println "KEY_ALIAS = ${KEY_ALIAS}"
-
 android {
-    namespace 'com.example.iluma'
-    compileSdk 33
-    ndkVersion "29.0.13599879"
+    namespace "com.example.iluma"
+    compileSdk 35
 
     defaultConfig {
-        applicationId "com.example.iluma"
+        applicationId 'com.example.iluma'
         minSdk 21
-        targetSdk 33
+        targetSdk 35
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
 
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++17"
-                targets "native-activity"
-                arguments "-DCMAKE_MAKE_PROGRAM=C:/Program Files/ninja/ninja.exe"
+                arguments '-DANDROID_STL=c++_shared', '-DDOWNLOAD_DEPENDENCIES=OFF'
+                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+                // abiFilters 'arm64-v8a'
             }
-        }
-
-        ndk {
-            abiFilters "x86", "armeabi-v7a", "arm64-v8a"
-        }
-    }
-
-    signingConfigs {
-        release {
-            storeFile file(KEYSTORE_FILE)
-            storePassword KEYSTORE_PASSWORD
-            keyAlias KEY_ALIAS
-            keyPassword KEY_PASSWORD
-        }
-    }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.release
-            minifyEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
     externalNativeBuild {
         cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.30.4"
+            path 'src/main/cpp/CMakeLists.txt'
         }
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    buildFeatures {
+        prefab true
+    }
+}
+
+dependencies {
+    implementation files('libs/SDL3-3.2.16.aar')
 }

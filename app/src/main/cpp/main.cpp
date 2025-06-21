@@ -10,11 +10,6 @@
 #include "TargetConditionals.h"
 #endif
 
-#ifdef __ANDROID__
-#include <android_native_app_glue.h>
-#include <android/log.h>
-#endif
-
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEIGHT 720
 
@@ -81,14 +76,14 @@ int main(int argc, char *argv[])
 	SDL_Log("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
 
 	bgfx::Init init;
-	init.type = bgfx::RendererType::Metal;
+	init.type = bgfx::RendererType::Count;
 	init.platformData.nwh = pd.nwh;
 	init.platformData.ndt = pd.ndt;
 	init.resolution.width = SCREEN_WIDTH;
 	init.resolution.height = SCREEN_HEIGHT;
 	init.resolution.reset = BGFX_RESET_VSYNC;
 	init.debug = true;  // Enable debug mode
-	
+
 	SDL_Log("Initializing bgfx succeded...");
 
 	if (!bgfx::init(init))
