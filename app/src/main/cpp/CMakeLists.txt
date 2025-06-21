@@ -35,6 +35,17 @@ if (NOT ANDROID)
     set(SDL_SHARED OFF CACHE BOOL "" FORCE)
 endif()
 
+if(APPLE AND IOS)
+    # Tell CMake we are targeting iOS device (not simulator)
+    set(CMAKE_OSX_SYSROOT iphoneos CACHE STRING "" FORCE)
+    
+    # Target only arm64 (modern iOS devices)
+    set(CMAKE_OSX_ARCHITECTURES arm64 CACHE STRING "" FORCE)
+    
+    # Minimum iOS version
+    set(CMAKE_OSX_DEPLOYMENT_TARGET 12.0 CACHE STRING "" FORCE)
+endif()
+
 set(BGFX_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(BGFX_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)

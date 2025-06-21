@@ -1,0 +1,50 @@
+name: Build for iOS
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type (Debug or Release)'
+        required: true
+        default: 'Release'
+      mode:
+        description: 'Configure CMake/build application only/both (c/b/both; defaults to b)'
+        required: true
+        default: 'b'
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: |
+          brew install cmake ninja
+
+      - name: Configure CMake
+        if: ${{ inputs.mode == 'c' || inputs.mode == 'both' }}
+        run: |
+          cmake -S app/src/main/cpp -B builds/ios \
+            -DIOS=ON \
+            -DCMAKE_BUILD_TYPE=${{ inputs.build_type }} \
+            -G Ninja \
+            -DCMAKE_OSX_SYSROOT=iphoneos \
+            -DCMAKE_OSX_ARCHITECTURES=arm64 \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0
+
+      - name: Build project
+        if: ${{ inputs.mode == 'b' || inputs.mode == 'both' }}
+        run: cmake --build builds/ios --config ${{ inputs.build_type }}
+
+      # Optional: Upload artifacts for later use or testing
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios
+          path: builds/ios
