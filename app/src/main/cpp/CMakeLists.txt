@@ -36,13 +36,9 @@ if (NOT ANDROID)
 endif()
 
 if(APPLE AND IOS)
-    # Tell CMake we are targeting iOS device (not simulator)
+    message(STATUS "Configuring for iOS (device build)")
     set(CMAKE_OSX_SYSROOT iphoneos CACHE STRING "" FORCE)
-    
-    # Target only arm64 (modern iOS devices)
     set(CMAKE_OSX_ARCHITECTURES arm64 CACHE STRING "" FORCE)
-    
-    # Minimum iOS version
     set(CMAKE_OSX_DEPLOYMENT_TARGET 12.0 CACHE STRING "" FORCE)
 endif()
 
