@@ -6,20 +6,20 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
 option(IOS "Build for iOS" OFF)
+option(PREBUILT_SHADERS "Use prebuilt shaders" ON)
 
-if(ANDROID)
+# if(ANDROID)
 
-    set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
-    set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
-    set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
-    set(BGFX_BUILD_SHADERC OFF CACHE BOOL "" FORCE)
-    set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
-    set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
+#     set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
+#     set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
+#     set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
+#     set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
+#     set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
 
-    set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
-    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../../builds/android)
+#     set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
+#     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../../builds/android)
 
-endif()
+# endif()
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
     message(STATUS "Configuring for Emscripten/WebAssembly")
@@ -94,22 +94,27 @@ set(SHADER_PLATFORM windows)
 set(SHADER_PROFILE s_5_0)
 elseif(ANDROID)
 set(SHADER_PLATFORM android)
-set(SHADER_PROFILE 100_es)
+set(SHADER_PROFILE 200_es)
 elseif(APPLE)
 set(SHADER_PLATFORM osx)
-set(SHADER_PROFILE 120)
+set(SHADER_PROFILE metal)
 elseif(EMSCRIPTEN)
 set(SHADER_PLATFORM asm.js)
-set(SHADER_PROFILE 100_es)
+set(SHADER_PROFILE 300_es)
 elseif(UNIX)
 set(SHADER_PLATFORM linux)
-set(SHADER_PROFILE 120)
+set(SHADER_PROFILE spirv)
 else()
 message(FATAL_ERROR "Unknown platform. Cannot generate shaders.")
 endif()
 
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
-set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
+
+set(SHADERC_EXECUTABLE shaderc)
+
+if(NOT SHADERC_EXECUTABLE)
+    set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
+endif()
 
 if(NOT SHADERC_EXECUTABLE)
     message(FATAL_ERROR "shaderc executable not found!")
@@ -117,43 +122,43 @@ endif()
 
 # Compile vertex shader .sc -> binary blob
 add_custom_command(
-    OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin
     COMMAND ${SHADERC_EXECUTABLE}
-        -f ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc
+        -f ${CMAKE_CURRENT_SOURCE_DIR}/shaders/vs_shader.sc
         --type vertex
         --platform ${SHADER_PLATFORM}
         --profile ${SHADER_PROFILE}
-        -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
-    DEPENDS ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc
+        -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin
+    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/shaders/vs_shader.sc
     VERBATIM
 )
 
 # Convert binary blob -> C array using xxd, then rename variables with sed
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
-    COMMAND xxd -i -n vs_shader ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv > ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
-    DEPENDS ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
+    COMMAND xxd -i -n vs_shader ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin > ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
+    DEPENDS ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin
     VERBATIM
 )
 
 # Compile fragment shader .sc -> binary blob
 add_custom_command(
-    OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.bin
     COMMAND ${SHADERC_EXECUTABLE}
-        -f ${CMAKE_SOURCE_DIR}/shaders/fs_shader.sc
+        -f ${CMAKE_CURRENT_SOURCE_DIR}/shaders/fs_shader.sc
         --type fragment
         --platform ${SHADER_PLATFORM}
         --profile ${SHADER_PROFILE}
-        -o ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
-    DEPENDS ${CMAKE_SOURCE_DIR}/shaders/fs_shader.sc
+        -o ${CMAKE_BINARY_DIR}/shaders/fs_shader.bin
+    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/shaders/fs_shader.sc
     VERBATIM
 )
 
 # Convert fragment binary blob -> C array using xxd, then rename variables with sed
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
-    COMMAND xxd -i -n fs_shader ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv > ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
-    DEPENDS ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
+    COMMAND xxd -i -n fs_shader ${CMAKE_BINARY_DIR}/shaders/fs_shader.bin > ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
+    DEPENDS ${CMAKE_BINARY_DIR}/shaders/fs_shader.bin
     VERBATIM
 )
 
@@ -223,4 +228,3 @@ if(EMSCRIPTEN)
     )   
     set_property(TARGET iLuma PROPERTY SUFFIX ".html")
 endif()
-

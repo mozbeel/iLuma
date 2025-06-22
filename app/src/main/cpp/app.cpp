@@ -51,6 +51,12 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	pd.nwh = (void *)(uintptr_t)SDL_GetNumberProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_WINDOW_NUMBER, NULL);
 	pd.ndt = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_X11_DISPLAY_POINTER, NULL);
 
+	// Validate values before using them
+	if (!pd.nwh || !pd.ndt) {
+			SDL_Log("Invalid X11 window handle or display pointer");
+			return false;
+	}
+
 // I cannot test if it works on macOS, so I will comment it out for now. UPDATE: I can build, but not run it
 #elif defined(__APPLE__)
 
@@ -162,6 +168,15 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	bgfx::ShaderHandle fragmentShader = bgfx::createShader(bgfx::makeRef(fs_shader, fs_shader_len));
 	SDL_Log("creating Shaders succeded");
 	program = bgfx::createProgram(vertexShader, fragmentShader, true);
+	SDL_Log("after creating bgfx::program");
+
+	if (!bgfx::isValid(vbh)) {
+    SDL_LogError(SDL_PROGRESS_STATE_ERROR, "VertexBufferHandle is invalid!");
+}
+
+	if (!bgfx::isValid(program)) {
+		SDL_LogError(SDL_PROGRESS_STATE_ERROR, "Program is invalid!");
+	}
 
 #ifdef __ANDROID__
   LOGI("Main loop incomig, render backend: %s", renderBackendStr);
@@ -190,7 +205,7 @@ bool App::mainLoop() {
 	bgfx::dbgTextPrintf(0, 2, 0x2f, "Render Backend: %s", renderBackendStr);
 
 	bgfx::setVertexBuffer(0, vbh);
-	bgfx::setState(BGFX_STATE_DEFAULT);
+	// bgfx::setState(BGFX_STATE_DEFAULT);
 	bgfx::submit(0, program);
 
 	bgfx::frame();
