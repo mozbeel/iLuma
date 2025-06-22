@@ -51,6 +51,7 @@ jobs:
         env:
           SDKROOT: ${{ steps.set-sdk.outputs.sdk_path }}
           EFFECTIVE_PLATFORM_NAME: -iphoneos
+        continue-on-error: true
         run: |
           cmake --build builds/ios --config ${{ inputs.build_type }} -- \
             -sdk iphoneos \

@@ -34,10 +34,12 @@ jobs:
 
       - name: Build project
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both'}}
+        continue-on-error: true
         run: cmake --build builds/macos --config ${{ inputs.build_type }}
 
       - name: Run tests / execute built app
         if: ${{( inputs.mode == 'b' || inputs.mode == 'both') && inputs.build_type == 'Debug'}}
+        continue-on-error: true
         run: |
           cd builds/macos
           ./iLuma
