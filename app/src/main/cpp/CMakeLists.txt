@@ -122,6 +122,8 @@ file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
 if(ANDROID OR EMSCRIPTEN)
     set(SHADERC_EXECUTABLE shaderc)
     set(SHELL_WRAPPER cmd /C)
+elseif(IOS)
+    set(SHADERC_EXECUTABLE "${bgfx_BINARY_DIR}/cmake/bgfx/Debug-iphoneos/shaderc.app/shaderc")
 else()
     set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
     if(NOT SHADERC_EXECUTABLE)
@@ -130,7 +132,6 @@ else()
     set(SHELL_WRAPPER "")
     message(STATUS "Shaderc executable target file: $<TARGET_FILE:shaderc>")
 endif()
-
 message(STATUS "Running shaderc with: ${SHADERC_EXECUTABLE} -f ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc --type vertex --platform ${SHADER_PLATFORM} --profile ${SHADER_PROFILE} -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin")
 
 
