@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
-option(IOS "Build for iOS" OFF)
+# option(IOS "Build for iOS" OFF)
 # option(PREBUILT_SHADERS "Use prebuilt shaders" ON)
 
 # if(ANDROID)
@@ -108,22 +108,31 @@ else()
     message(FATAL_ERROR "Unknown platform. Cannot generate shaders.")
 endif()
 
+message(STATUS "Shader platform: ${SHADER_PLATFORM}, profile: ${SHADER_PROFILE}")
+
+
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
 
-if(ANDROID)
+if(ANDROID OR EMSCRIPTEN)
     set(SHADERC_EXECUTABLE shaderc)
+    set(SHELL_WRAPPER cmd /C)
 else()
     set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
-
     if(NOT SHADERC_EXECUTABLE)
         message(FATAL_ERROR "shaderc executable not found!")
     endif()
+    set(SHELL_WRAPPER "")
 endif()
+
+message(STATUS "Running shaderc with: ${SHADERC_EXECUTABLE} -f ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc --type vertex --platform ${SHADER_PLATFORM} --profile ${SHADER_PROFILE} -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin")
+
+
 # Compile vertex shader .sc -> binary blob
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin
-    COMMAND ${SHADERC_EXECUTABLE}
-        -f ${CMAKE_CURRENT_SOURCE_DIR}/shaders/vs_shader.sc
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/shaders
+    COMMAND ${SHELL_WRAPPER} ${SHADERC_EXECUTABLE}
+        -f vs_shader.sc
         --type vertex
         --platform ${SHADER_PLATFORM}
         --profile ${SHADER_PROFILE}
@@ -143,8 +152,9 @@ add_custom_command(
 # Compile fragment shader .sc -> binary blob
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.bin
-    COMMAND ${SHADERC_EXECUTABLE}
-        -f ${CMAKE_CURRENT_SOURCE_DIR}/shaders/fs_shader.sc
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/shaders
+    COMMAND ${SHELL_WRAPPER} ${SHADERC_EXECUTABLE}
+        -f fs_shader.sc
         --type fragment
         --platform ${SHADER_PLATFORM}
         --profile ${SHADER_PROFILE}
