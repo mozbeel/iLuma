@@ -112,33 +112,34 @@ file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
 
 if(ANDROID)
     set(SHADERC_EXECUTABLE shaderc)
-endif()
-
-if(WIN32)
-    set(SHADERC_EXECUTABLE_NAME "shaderc.exe")
 else()
-    set(SHADERC_EXECUTABLE_NAME "shaderc")
-endif()
-
-if(NOT SHADERC_EXECUTABLE)
-    find_program(SHADERC_EXECUTABLE ${SHADERC_EXECUTABLE_NAME})
-endif()
-
-if(NOT SHADERC_EXECUTABLE)
-    set(DEFAULT_SHADERC_PATH "${CMAKE_BINARY_DIR}/_deps/bgfx.cmake-build/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
-    if(EXISTS ${DEFAULT_SHADERC_PATH})
-        set(SHADERC_EXECUTABLE ${DEFAULT_SHADERC_PATH})
+    if(WIN32)
+        set(SHADERC_EXECUTABLE_NAME "shaderc.exe")
+    else()
+        set(SHADERC_EXECUTABLE_NAME "shaderc")
     endif()
-endif()
 
-message(STATUS "Shaderc executable: ${SHADERC_EXECUTABLE}")
+    if(NOT SHADERC_EXECUTABLE)
+        find_program(SHADERC_EXECUTABLE ${SHADERC_EXECUTABLE_NAME})
+    endif()
 
-if(NOT EXISTS ${SHADERC_EXECUTABLE})
-    message(FATAL_ERROR "shaderc executable not found at ${SHADERC_EXECUTABLE}. Please build bgfx.cmake or install shaderc.")
-endif()
+    if(NOT SHADERC_EXECUTABLE)
+        set(DEFAULT_SHADERC_PATH "${CMAKE_BINARY_DIR}/_deps/bgfx.cmake-build/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
+        if(EXISTS ${DEFAULT_SHADERC_PATH})
+            set(SHADERC_EXECUTABLE ${DEFAULT_SHADERC_PATH})
+        endif()
+    endif()
 
-if(NOT SHADERC_EXECUTABLE)
-    message("Shaderc not found!")
+    message(STATUS "Shaderc executable: ${SHADERC_EXECUTABLE}")
+
+    if(NOT EXISTS ${SHADERC_EXECUTABLE})
+        message(FATAL_ERROR "shaderc executable not found at ${SHADERC_EXECUTABLE}. Please build bgfx.cmake or install shaderc.")
+    endif()
+
+    if(NOT SHADERC_EXECUTABLE)
+        message("Shaderc not found!")
+    endif()
+
 endif()
 
 # Compile vertex shader .sc -> binary blob
