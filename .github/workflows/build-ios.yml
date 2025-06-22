@@ -50,6 +50,7 @@ jobs:
         if: ${{ inputs.mode == 'b' || inputs.mode == 'both' }}
         env:
           SDKROOT: ${{ steps.set-sdk.outputs.sdk_path }}
+          EFFECTIVE_PLATFORM_NAME: -iphoneos
         run: |
           cmake --build builds/ios --config ${{ inputs.build_type }} -- \
             -sdk iphoneos \
