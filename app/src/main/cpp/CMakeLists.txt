@@ -122,6 +122,7 @@ else()
         message(FATAL_ERROR "shaderc executable not found!")
     endif()
     set(SHELL_WRAPPER "")
+    message(STATUS "Shaderc executable target file: $<TARGET_FILE:shaderc>")
 endif()
 
 message(STATUS "Running shaderc with: ${SHADERC_EXECUTABLE} -f ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc --type vertex --platform ${SHADER_PLATFORM} --profile ${SHADER_PROFILE} -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin")
