@@ -23,6 +23,17 @@
 #define LOG_TAG "iLuma"
 #include <android/log.h>
 
+#if defined(__APPLE__) && defined(__MACH__)
+#  include <TargetConditionals.h>
+#  if TARGET_IPHONE_SIMULATOR == 1 || TARGET_OS_IPHONE == 1
+#    undef  BX_PLATFORM_OSX
+#    define BX_PLATFORM_IOS 1
+#  elif TARGET_OS_MAC == 1
+#    undef  BX_PLATFORM_IOS
+#    define BX_PLATFORM_OSX 1
+#  endif
+#endif
+
 
 #define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,   LOG_TAG, __VA_ARGS__)
