@@ -199,11 +199,11 @@ else()
     add_executable(iLuma ${SOURCES} ${HEADERS} ${SHADER_CPP_FILES})
 endif()
 
-add_custom_target(shaders_generated ALL
-  DEPENDS
-    ${SHADER_CPP_FILES}
-    shaderc            # <-- make sure bgfx’s shaderc target is built first
-)
+# add_custom_target(shaders_generated ALL
+#   DEPENDS
+#     ${SHADER_CPP_FILES}
+#     shaderc            # <-- make sure bgfx’s shaderc target is built first
+# )
 
 add_dependencies(shaders_generated shaderc)
 add_dependencies(iLuma shaders_generated)
