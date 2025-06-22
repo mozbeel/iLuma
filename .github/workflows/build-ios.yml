@@ -41,7 +41,7 @@ jobs:
             -DDOWNLOAD_DEPENDENCIES=ON \
             -DCMAKE_OSX_SYSROOT=${{ steps.set-sdk.outputs.sdk_path }} \
             -DCMAKE_OSX_ARCHITECTURES=arm64 \
-            -DCMAKE_OSX_DEPLOYMENT_TARGET=12.0 \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=14.0 \
             -DEFFECTIVE_PLATFORM_NAME=-iphoneos \
             -Wdev -Wdeprecated -Werror
 
