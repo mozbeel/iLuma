@@ -71,7 +71,7 @@ struct PosColorVertex {
 };
 
 static PosColorVertex s_triangleVertices[] = {
-  {  0.0f,  0.5f, 0.0f, 0xff0000ff }, // Top (red)
+  {  0.5f,  0.5f, 0.0f, 0xff0000ff }, // Top (red)
   { -0.5f, -0.5f, 0.0f, 0xff00ff00 }, // Left (green)
   {  0.5f, -0.5f, 0.0f, 0xffff0000 }, // Right (blue)
 };
