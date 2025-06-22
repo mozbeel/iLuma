@@ -94,7 +94,7 @@ if(WIN32)
     set(SHADER_PROFILE s_5_0)
 elseif(ANDROID)
     set(SHADER_PLATFORM android)
-    set(SHADER_PROFILE 200_es)
+    set(SHADER_PROFILE 300_es)
 elseif(APPLE)
     set(SHADER_PLATFORM osx)
     set(SHADER_PROFILE metal)
@@ -110,14 +110,21 @@ endif()
 
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
 
-set(SHADERC_EXECUTABLE shaderc)
+if(ANDROID)
+    set(SHADERC_EXECUTABLE shaderc)
+endif()
+
+set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
 
 if(NOT SHADERC_EXECUTABLE)
-    set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
+    find_program(SHADERC_EXECUTABLE shaderc PATHS
+    ${CMAKE_BINARY_DIR}/path/to/shaderc/binary
+    NO_DEFAULT_PATH
+)
 endif()
 
 if(NOT SHADERC_EXECUTABLE)
-    message(FATAL_ERROR "shaderc executable not found!")
+    message("Shaderc not found!")
 endif()
 
 # Compile vertex shader .sc -> binary blob
@@ -212,10 +219,10 @@ else()
     )
 endif()
 
-# if (WIN32)
-#     set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+if (WIN32)
+    set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
 
-# endif()
+endif()
 
 if(EMSCRIPTEN)
     # Create a html webpage

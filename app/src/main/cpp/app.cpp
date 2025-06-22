@@ -171,11 +171,11 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	SDL_Log("after creating bgfx::program");
 
 	if (!bgfx::isValid(vbh)) {
-    SDL_LogError(SDL_PROGRESS_STATE_ERROR, "VertexBufferHandle is invalid!");
+    SDL_Log("VertexBufferHandle is invalid!");
 }
 
 	if (!bgfx::isValid(program)) {
-		SDL_LogError(SDL_PROGRESS_STATE_ERROR, "Program is invalid!");
+		SDL_Log("Program is invalid!");
 	}
 
 #ifdef __ANDROID__
