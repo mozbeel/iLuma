@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 project(iLuma)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
 option(IOS "Build for iOS" OFF)
 
@@ -46,7 +49,6 @@ if(APPLE AND IOS)
 endif()
 
 set(BGFX_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(BGFX_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
 
 if(DOWNLOAD_DEPENDENCIES)
@@ -140,3 +142,9 @@ if(EMSCRIPTEN)
     )   
     set_property(TARGET iLuma PROPERTY SUFFIX ".html")
 endif()
+
+add_custom_command(TARGET iLuma POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_SOURCE_DIR}/shaders"
+    $<TARGET_FILE_DIR:iLuma>/shaders
+)

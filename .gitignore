@@ -6,3 +6,4 @@
 /app/key.keystore
 /app/libs/SDL3-3.2.0.aar
 /build/
+/app/src/main/cpp/shaders/spirv/

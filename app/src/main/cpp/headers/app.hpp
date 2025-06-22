@@ -3,7 +3,13 @@
 #include <bgfx/bgfx.h>
 #include <bgfx/platform.h>
 
+#include <fstream>
+#include <vector>
 #include <chrono>
+#include <cassert>
+
+#include <bx/math.h>
+
 #if defined(__APPLE__)
 #include "TargetConditionals.h"
 #endif
@@ -15,6 +21,7 @@
 #ifdef __ANDROID__
 #define LOG_TAG "iLuma"
 #include <android/log.h>
+
 
 #define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG,   LOG_TAG, __VA_ARGS__)
@@ -32,6 +39,9 @@ class App {
   float fps = 0.0f; // Frames per second
   
   const char* renderBackendStr = nullptr; // String representation of the rendering backend
+  bgfx::VertexLayout m_layout;
+  bgfx::VertexBufferHandle vbh;
+  bgfx::ProgramHandle program;
   public:
   // Constructor
   App();
@@ -41,4 +51,15 @@ class App {
     bool mainLoop();
     void shutdown();
 
+};
+
+struct PosColorVertex {
+  float x, y, z;
+  uint32_t abgr;
+};
+
+static PosColorVertex s_triangleVertices[] = {
+  {  0.0f,  0.5f, 0.0f, 0xff0000ff }, // Top (red)
+  { -0.5f, -0.5f, 0.0f, 0xff00ff00 }, // Left (green)
+  {  0.5f, -0.5f, 0.0f, 0xffff0000 }, // Right (blue)
 };

@@ -8,6 +8,22 @@ App::App() {
   return;
 }
 
+void* loadShader(const char* filepath, uint32_t& size)
+{
+    std::ifstream file(filepath, std::ios::binary | std::ios::ate);
+    if (!file.is_open())
+        return nullptr;
+
+    size = (uint32_t)file.tellg();
+    file.seekg(0, std::ios::beg);
+
+    char* data = new char[size];
+    file.read(data, size);
+    file.close();
+
+    return data;
+}
+
 bool App::initialize() {
 if (SDL_Init(SDL_INIT_VIDEO) == false)
 	{
@@ -128,7 +144,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 #endif
 		return false;
 	}
-
+	
 	SDL_Log("bgfx::init succeded");
 #ifdef __ANDROID__
 	LOGI("bgfx::init succeded");
@@ -150,11 +166,34 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	renderBackendStr = bgfx::getRendererName(renderBackend);
   
   SDL_Log("Main loop incomig, render backend: %s", renderBackendStr);
+
+	m_layout.begin()
+		.add(bgfx::Attrib::Position, 3, bgfx::AttribType::Float)
+		.add(bgfx::Attrib::Color0, 4, bgfx::AttribType::Uint8, true)
+		.end();
+
+	vbh = bgfx::createVertexBuffer(bgfx::makeRef(s_triangleVertices, sizeof(s_triangleVertices)), m_layout);
+
+	uint32_t vsSize = 0;
+	void* vsData = loadShader("shaders/vs_triangle.bin", vsSize);
+	assert(vsData != nullptr && "Failed to load vertex shader data");
+	bgfx::ShaderHandle vsh = bgfx::createShader(bgfx::makeRef(vsData, vsSize));
+
+	uint32_t fsSize = 0;
+	void* fsData = loadShader("shaders/fs_triangle.bin", fsSize);
+	assert(vsData != nullptr && "Failed to load vertex shader data");
+	bgfx::ShaderHandle fsh = bgfx::createShader(bgfx::makeRef(fsData, fsSize));
+	program = bgfx::createProgram(vsh, fsh, true);
+
+	delete[] static_cast<char*>(vsData);
+	delete[] static_cast<char*>(fsData);
+
 #ifdef __ANDROID__
   LOGI("Main loop incomig, render backend: %s", renderBackendStr);
 #endif
   return true;
 }
+
 
 bool App::mainLoop() {
 
@@ -169,12 +208,17 @@ bool App::mainLoop() {
     }
   }
 
-  bgfx::setViewRect(0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-  bgfx::touch(0);
-  bgfx::dbgTextClear();
-  bgfx::dbgTextPrintf(0, 1, 0x4f, "fps: %.2f", fps);
-  bgfx::dbgTextPrintf(0, 2, 0x2f, "Render Backend: %s", renderBackendStr);
-  bgfx::frame();
+	bgfx::setViewRect(0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	bgfx::touch(0);
+	bgfx::dbgTextClear();
+	bgfx::dbgTextPrintf(0, 1, 0x4f, "fps: %.2f", fps);
+	bgfx::dbgTextPrintf(0, 2, 0x2f, "Render Backend: %s", renderBackendStr);
+
+	bgfx::setVertexBuffer(0, vbh);
+	bgfx::setState(BGFX_STATE_DEFAULT);
+	bgfx::submit(0, program);
+
+	bgfx::frame();
 
   frames++;
   auto now = std::chrono::steady_clock::now();
@@ -195,6 +239,9 @@ bool App::mainLoop() {
 
 void App::shutdown() {
 	bgfx::frame();
+
+	bgfx::destroy(vbh);
+	bgfx::destroy(program);
 	bgfx::shutdown();
 
 	SDL_DestroyWindow(window);

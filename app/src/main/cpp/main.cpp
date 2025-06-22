@@ -16,9 +16,6 @@ App* app;
 
 int main(int argc, char *argv[])
 {
-#ifdef __ANDROID__
-	LOGI("Entered main");
-#endif
 	app = new App();
 	if (!app->initialize())
 	{
