@@ -70,6 +70,8 @@ if(DOWNLOAD_DEPENDENCIES)
         EXCLUDE_FROM_ALL
     )
     FetchContent_MakeAvailable(bgfx.cmake)
+
+    
 else()
     # find_package looks for already-installed system packages.
     # Configure with `-DCMAKE_PREFIX_PATH="/path/to/package1;/path/to/package2"`
@@ -87,7 +89,6 @@ endif()
 
 set(SHADER_PLATFORM "")
 set(SHADER_PROFILE "")
-
 
 if(WIN32)
     set(SHADER_PLATFORM windows)
@@ -119,14 +120,12 @@ else()
         set(SHADERC_EXECUTABLE_NAME "shaderc")
     endif()
 
-    find_program(SHADERC_EXECUTABLE ${SHADERC_EXECUTABLE_NAME})
-
-    if(NOT SHADERC_EXECUTABLE)
-        set(DEFAULT_SHADERC_PATH "${CMAKE_BINARY_DIR}/_deps/bgfx.cmake-build/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
-        if(EXISTS ${DEFAULT_SHADERC_PATH})
-            set(SHADERC_EXECUTABLE ${DEFAULT_SHADERC_PATH})
-        endif()
+    
+    set(DEFAULT_SHADERC_PATH "${bgfx_BINARY_DIR}/tools/shaderc/${SHADERC_EXECUTABLE_NAME}")
+    if(EXISTS ${DEFAULT_SHADERC_PATH})
+        set(SHADERC_EXECUTABLE ${DEFAULT_SHADERC_PATH})
     endif()
+    
 
     message(STATUS "Shaderc executable: ${SHADERC_EXECUTABLE}")
 
