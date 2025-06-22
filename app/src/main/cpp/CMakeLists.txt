@@ -119,9 +119,7 @@ else()
         set(SHADERC_EXECUTABLE_NAME "shaderc")
     endif()
 
-    if(NOT SHADERC_EXECUTABLE)
-        find_program(SHADERC_EXECUTABLE ${SHADERC_EXECUTABLE_NAME})
-    endif()
+    find_program(SHADERC_EXECUTABLE ${SHADERC_EXECUTABLE_NAME})
 
     if(NOT SHADERC_EXECUTABLE)
         set(DEFAULT_SHADERC_PATH "${CMAKE_BINARY_DIR}/_deps/bgfx.cmake-build/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
