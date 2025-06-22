@@ -7,6 +7,7 @@
 #include <vector>
 #include <chrono>
 #include <cassert>
+#include <stdio.h>
 
 #include <bx/math.h>
 
@@ -63,3 +64,9 @@ static PosColorVertex s_triangleVertices[] = {
   { -0.5f, -0.5f, 0.0f, 0xff00ff00 }, // Left (green)
   {  0.5f, -0.5f, 0.0f, 0xffff0000 }, // Right (blue)
 };
+
+extern unsigned char vs_shader[];
+extern unsigned int vs_shader_len;
+
+extern unsigned char fs_shader[];
+extern unsigned int fs_shader_len;

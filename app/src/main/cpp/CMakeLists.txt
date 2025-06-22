@@ -49,6 +49,7 @@ if(APPLE AND IOS)
 endif()
 
 set(BGFX_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(BGFX_BUILD_TOOLS ON CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
 
 if(DOWNLOAD_DEPENDENCIES)
@@ -79,25 +80,106 @@ else()
     endif()
 endif()
 
+
 if (ANDROID)
-    find_package(SDL3 CONFIG REQUIRED)
+find_package(SDL3 CONFIG REQUIRED)
 endif()
 
-# Add your main game/app
+set(SHADER_PLATFORM "")
+set(SHADER_PROFILE "")
+
+
+if(WIN32)
+set(SHADER_PLATFORM windows)
+set(SHADER_PROFILE s_5_0)
+elseif(ANDROID)
+set(SHADER_PLATFORM android)
+set(SHADER_PROFILE 100_es)
+elseif(APPLE)
+set(SHADER_PLATFORM osx)
+set(SHADER_PROFILE 120)
+elseif(EMSCRIPTEN)
+set(SHADER_PLATFORM asm.js)
+set(SHADER_PROFILE 100_es)
+elseif(UNIX)
+set(SHADER_PLATFORM linux)
+set(SHADER_PROFILE 120)
+else()
+message(FATAL_ERROR "Unknown platform. Cannot generate shaders.")
+endif()
+
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
+set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
+
+if(NOT SHADERC_EXECUTABLE)
+    message(FATAL_ERROR "shaderc executable not found!")
+endif()
+
+# Compile vertex shader .sc -> binary blob
+add_custom_command(
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
+    COMMAND ${SHADERC_EXECUTABLE}
+        -f ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc
+        --type vertex
+        --platform ${SHADER_PLATFORM}
+        --profile ${SHADER_PROFILE}
+        -o ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
+    DEPENDS ${CMAKE_SOURCE_DIR}/shaders/vs_shader.sc
+    VERBATIM
+)
+
+# Convert binary blob -> C array using xxd, then rename variables with sed
+add_custom_command(
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
+    COMMAND xxd -i -n vs_shader ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv > ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
+    DEPENDS ${CMAKE_BINARY_DIR}/shaders/vs_shader.spv
+    VERBATIM
+)
+
+# Compile fragment shader .sc -> binary blob
+add_custom_command(
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
+    COMMAND ${SHADERC_EXECUTABLE}
+        -f ${CMAKE_SOURCE_DIR}/shaders/fs_shader.sc
+        --type fragment
+        --platform ${SHADER_PLATFORM}
+        --profile ${SHADER_PROFILE}
+        -o ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
+    DEPENDS ${CMAKE_SOURCE_DIR}/shaders/fs_shader.sc
+    VERBATIM
+)
+
+# Convert fragment binary blob -> C array using xxd, then rename variables with sed
+add_custom_command(
+    OUTPUT ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
+    COMMAND xxd -i -n fs_shader ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv > ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
+    DEPENDS ${CMAKE_BINARY_DIR}/shaders/fs_shader.spv
+    VERBATIM
+)
+
+set(SHADER_CPP_FILES
+    ${CMAKE_BINARY_DIR}/shaders/vs_shader.cpp
+    ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
+)
+
+add_custom_target(shaders_generated ALL DEPENDS ${SHADER_CPP_FILES})
+message(STATUS "Shader cpp files: ${SHADER_CPP_FILES}")
+
 file(GLOB SOURCES "*.cpp")
 file(GLOB HEADERS "headers/*.h" "headers/*.hpp")
 
-
 if(ANDROID)
-    add_library(iLuma SHARED ${SOURCES} ${HEADERS})
+    add_library(iLuma SHARED ${SOURCES} ${HEADERS} ${SHADER_CPP_FILES})
 else()
-    add_executable(iLuma ${SOURCES} ${HEADERS})
-
+    add_executable(iLuma ${SOURCES} ${HEADERS} ${SHADER_CPP_FILES})
 endif()
+
+add_dependencies(iLuma shaders_generated)
 
 target_include_directories(iLuma
     PRIVATE
         "${CMAKE_CURRENT_SOURCE_DIR}/headers"
+        "${CMAKE_BINARY_DIR}/shaders"
 )
 
 if (ANDROID)
@@ -106,7 +188,6 @@ if (ANDROID)
         bimg
         bx
         SDL3::SDL3
-
         android
         log
         GLESv2
@@ -126,10 +207,10 @@ else()
     )
 endif()
 
-if (WIN32)
-    set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
+# if (WIN32)
+#     set_property(TARGET iLuma PROPERTY WIN32_EXECUTABLE TRUE)
 
-endif()
+# endif()
 
 if(EMSCRIPTEN)
     # Create a html webpage
@@ -143,8 +224,3 @@ if(EMSCRIPTEN)
     set_property(TARGET iLuma PROPERTY SUFFIX ".html")
 endif()
 
-add_custom_command(TARGET iLuma POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    "${CMAKE_SOURCE_DIR}/shaders"
-    $<TARGET_FILE_DIR:iLuma>/shaders
-)

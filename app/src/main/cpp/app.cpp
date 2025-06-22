@@ -8,22 +8,6 @@ App::App() {
   return;
 }
 
-void* loadShader(const char* filepath, uint32_t& size)
-{
-    std::ifstream file(filepath, std::ios::binary | std::ios::ate);
-    if (!file.is_open())
-        return nullptr;
-
-    size = (uint32_t)file.tellg();
-    file.seekg(0, std::ios::beg);
-
-    char* data = new char[size];
-    file.read(data, size);
-    file.close();
-
-    return data;
-}
-
 bool App::initialize() {
 if (SDL_Init(SDL_INIT_VIDEO) == false)
 	{
@@ -173,20 +157,11 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 		.end();
 
 	vbh = bgfx::createVertexBuffer(bgfx::makeRef(s_triangleVertices, sizeof(s_triangleVertices)), m_layout);
-
-	uint32_t vsSize = 0;
-	void* vsData = loadShader("shaders/vs_triangle.bin", vsSize);
-	assert(vsData != nullptr && "Failed to load vertex shader data");
-	bgfx::ShaderHandle vsh = bgfx::createShader(bgfx::makeRef(vsData, vsSize));
-
-	uint32_t fsSize = 0;
-	void* fsData = loadShader("shaders/fs_triangle.bin", fsSize);
-	assert(vsData != nullptr && "Failed to load vertex shader data");
-	bgfx::ShaderHandle fsh = bgfx::createShader(bgfx::makeRef(fsData, fsSize));
-	program = bgfx::createProgram(vsh, fsh, true);
-
-	delete[] static_cast<char*>(vsData);
-	delete[] static_cast<char*>(fsData);
+	SDL_Log("vertex shader blob at %p, length = %u bytes", vs_shader, vs_shader_len);
+	bgfx::ShaderHandle vertexShader = bgfx::createShader(bgfx::makeRef(vs_shader, vs_shader_len));
+	bgfx::ShaderHandle fragmentShader = bgfx::createShader(bgfx::makeRef(fs_shader, fs_shader_len));
+	SDL_Log("creating Shaders succeded");
+	program = bgfx::createProgram(vertexShader, fragmentShader, true);
 
 #ifdef __ANDROID__
   LOGI("Main loop incomig, render backend: %s", renderBackendStr);

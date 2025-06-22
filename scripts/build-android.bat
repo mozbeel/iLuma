@@ -2,7 +2,7 @@
 title iLuma Build Script for Android
 
 set debug_or_release=%~1
-set /p bundle_or_apk=Enter to build APK or App Bundle (apk/bundle; defaults to apk):
+set /p bundle_or_apk=Enter to build APK or App Bundle (apk/bundle; defaults to apk): 
 
 if not exist gradlew.bat (
     echo gradlew.bat not found in %cd%
