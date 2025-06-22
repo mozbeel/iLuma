@@ -124,12 +124,16 @@ else()
 
     message(STATUS "bgfx_BINARY_DIR: ${bgfx_BINARY_DIR}")
 
-    set(DEFAULT_SHADERC_PATH "${bgfx_BINARY_DIR}/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
-    if(EXISTS "${DEFAULT_SHADERC_PATH}")
-        set(SHADERC_EXECUTABLE "${DEFAULT_SHADERC_PATH}")
+    if(EMSCRIPTEN)
+        set(DEFAULT_SHADERC_PATH "node ${bgfx_BINARY_DIR}/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
     else()
-        message(WARNING "shaderc not found at expected path: ${DEFAULT_SHADERC_PATH}")
+        set(DEFAULT_SHADERC_PATH "${bgfx_BINARY_DIR}/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
     endif()
+    # if(EXISTS "${DEFAULT_SHADERC_PATH}")
+    set(SHADERC_EXECUTABLE "${DEFAULT_SHADERC_PATH}")
+    # else()
+        # message(WARNING "shaderc not found at expected path: ${DEFAULT_SHADERC_PATH}")
+    # endif()
 
 
     message(STATUS "Shaderc executable: ${SHADERC_EXECUTABLE}")
