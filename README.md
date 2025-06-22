@@ -70,4 +70,8 @@ Contributions are not wished right now. I want to get the base of the code done,
 
 This project is licensed under the MIT License. (not yet)
 
+## Special Thanks
+
+- @madebr: Thank you for actually making android work for my project, couldn't have done it without you. 
+
 ---
