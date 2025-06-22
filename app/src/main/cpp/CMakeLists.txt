@@ -70,8 +70,6 @@ if(DOWNLOAD_DEPENDENCIES)
         EXCLUDE_FROM_ALL
     )
     FetchContent_MakeAvailable(bgfx.cmake)
-
-    
 else()
     # find_package looks for already-installed system packages.
     # Configure with `-DCMAKE_PREFIX_PATH="/path/to/package1;/path/to/package2"`
@@ -89,6 +87,7 @@ endif()
 
 set(SHADER_PLATFORM "")
 set(SHADER_PROFILE "")
+
 
 if(WIN32)
     set(SHADER_PLATFORM windows)
@@ -114,40 +113,12 @@ file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
 if(ANDROID)
     set(SHADERC_EXECUTABLE shaderc)
 else()
-    if(WIN32)
-        set(SHADERC_EXECUTABLE_NAME "Release/shaderc.exe")
-    elseif(EMSCRIPTEN)
-        set(SHADERC_EXECUTABLE_NAME "shaderc.js")
-    else()
-        set(SHADERC_EXECUTABLE_NAME "shaderc")
-    endif()
-
-    message(STATUS "bgfx_BINARY_DIR: ${bgfx_BINARY_DIR}")
-
-    if(EMSCRIPTEN)
-        set(DEFAULT_SHADERC_PATH "node ${bgfx_BINARY_DIR}/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
-    else()
-        set(DEFAULT_SHADERC_PATH "${bgfx_BINARY_DIR}/cmake/bgfx/${SHADERC_EXECUTABLE_NAME}")
-    endif()
-    # if(EXISTS "${DEFAULT_SHADERC_PATH}")
-    set(SHADERC_EXECUTABLE "${DEFAULT_SHADERC_PATH}")
-    # else()
-        # message(WARNING "shaderc not found at expected path: ${DEFAULT_SHADERC_PATH}")
-    # endif()
-
-
-    message(STATUS "Shaderc executable: ${SHADERC_EXECUTABLE}")
-
-    if(NOT EXISTS ${SHADERC_EXECUTABLE})
-        message(FATAL_ERROR "shaderc executable not found at ${SHADERC_EXECUTABLE}. Please build bgfx.cmake or install shaderc.")
-    endif()
+    set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
 
     if(NOT SHADERC_EXECUTABLE)
-        message("Shaderc not found!")
+        message(FATAL_ERROR "shaderc executable not found!")
     endif()
-
 endif()
-
 # Compile vertex shader .sc -> binary blob
 add_custom_command(
     OUTPUT ${CMAKE_BINARY_DIR}/shaders/vs_shader.bin
