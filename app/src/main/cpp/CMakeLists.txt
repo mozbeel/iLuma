@@ -196,6 +196,7 @@ else()
     add_executable(iLuma ${SOURCES} ${HEADERS} ${SHADER_CPP_FILES})
 endif()
 
+add_dependencies(shaders_generated shaderc)
 add_dependencies(iLuma shaders_generated)
 
 target_include_directories(iLuma
