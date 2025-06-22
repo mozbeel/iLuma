@@ -187,7 +187,7 @@ set(SHADER_CPP_FILES
     ${CMAKE_BINARY_DIR}/shaders/fs_shader.cpp
 )
 
-add_custom_target(shaders_generated ALL DEPENDS ${SHADER_CPP_FILES})
+add_custom_target(shaders_generated ALL DEPENDS ${SHADER_CPP_FILES} shaderc)
 message(STATUS "Shader cpp files: ${SHADER_CPP_FILES}")
 
 file(GLOB SOURCES "*.cpp")
@@ -200,12 +200,6 @@ else()
 endif()
 
 
-add_dependencies(shaders_generated shaderc)
-add_custom_target(shaders_generated ALL
-  DEPENDS
-    ${SHADER_CPP_FILES}
-    shaderc            # <-- make sure bgfx’s shaderc target is built first
-)
 add_dependencies(iLuma shaders_generated)
 
 target_include_directories(iLuma
