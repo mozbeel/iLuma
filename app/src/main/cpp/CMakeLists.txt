@@ -114,13 +114,10 @@ if(ANDROID)
     set(SHADERC_EXECUTABLE shaderc)
 endif()
 
-set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
+# set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
 
 if(NOT SHADERC_EXECUTABLE)
-    find_program(SHADERC_EXECUTABLE shaderc PATHS
-    ${CMAKE_BINARY_DIR}/path/to/shaderc/binary
-    NO_DEFAULT_PATH
-)
+    find_program(SHADERC_EXECUTABLE shaderc)
 endif()
 
 if(NOT SHADERC_EXECUTABLE)
