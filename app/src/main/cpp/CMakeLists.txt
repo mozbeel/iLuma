@@ -128,7 +128,7 @@ if(ANDROID OR EMSCRIPTEN)
 elseif(IOS)
     find_program(SHADERC_EXECUTABLE shaderc HINTS 
     "${bgfx_BINARY_DIR}/cmake/bgfx/Debug-iphoneos/shaderc.app/shaderc"
-    "${bgfx_BINARY_DIR}/cmake/bgfx/Release-iphoneos/shaderc.app/shaderc)
+    "${bgfx_BINARY_DIR}/cmake/bgfx/Release-iphoneos/shaderc.app/shaderc")
 else()
     set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
     if(NOT SHADERC_EXECUTABLE)
