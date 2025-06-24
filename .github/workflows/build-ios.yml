@@ -25,6 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: brew install cmake ninja
+     
+      - name: Configure Shaderc
+        run: cmake -S app/src/main/cpp -B builds/shaderc -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
 
       - name: Set SDK Path
         id: set-sdk
