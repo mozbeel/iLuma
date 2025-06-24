@@ -120,6 +120,7 @@ message(STATUS "Shader platform: ${SHADER_PLATFORM}, profile: ${SHADER_PROFILE}"
 
 
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
+message("Bgfx dir Location: ${bgfx_BINARY_DIR}")
 
 if(ANDROID OR EMSCRIPTEN)
     set(SHADERC_EXECUTABLE shaderc)
