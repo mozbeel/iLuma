@@ -120,15 +120,16 @@ message(STATUS "Shader platform: ${SHADER_PLATFORM}, profile: ${SHADER_PROFILE}"
 
 
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/shaders)
-message("Bgfx dir Location: ${bgfx_BINARY_DIR}")
+message("Bgfx dir Location: ${bgfx_BINARY_DIR}/cmake/bgfx/shaderc.app")
 
 if(ANDROID OR EMSCRIPTEN)
     set(SHADERC_EXECUTABLE shaderc)
     set(SHELL_WRAPPER cmd /C)
 elseif(IOS)
-    find_program(SHADERC_EXECUTABLE shaderc HINTS 
-    "${bgfx_BINARY_DIR}/cmake/bgfx/Debug-iphoneos/shaderc.app"
-    "${bgfx_BINARY_DIR}/cmake/bgfx/Release-iphoneos/shaderc.app")
+    set(SHADERC_EXECUTABLE shaderc "${bgfx_BINARY_DIR}/cmake/bgfx/Debug-iphoneos/shaderc.app/shaderc"
+    if(NOT SHADERC_EXECUTABLE)
+       set(SHADERC_EXECUTABLE "${bgfx_BINARY_DIR}/cmake/bgfx/Release-iphoneos/shaderc.app/shaderc")
+     endif()
 else()
     set(SHADERC_EXECUTABLE $<TARGET_FILE:shaderc>)
     if(NOT SHADERC_EXECUTABLE)
