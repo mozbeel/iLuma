@@ -28,6 +28,7 @@ jobs:
      
       - name: Configure Shaderc
         run: cmake -S app/src/main/cpp -B builds/shaderc -DCMAKE_BUILD_TYPE=${{ inputs.build_type }}
+     
       - name: Build shaderc
         run: cmake --build builds/shaderc --target shaderc
 

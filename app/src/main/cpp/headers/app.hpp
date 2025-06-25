@@ -53,6 +53,7 @@ class App {
   const char* renderBackendStr = nullptr; // String representation of the rendering backend
   bgfx::VertexLayout m_layout;
   bgfx::VertexBufferHandle vbh;
+  bgfx::IndexBufferHandle ibh;
   bgfx::ProgramHandle program;
   public:
   // Constructor
@@ -70,10 +71,32 @@ struct PosColorVertex {
   uint32_t abgr;
 };
 
-static PosColorVertex s_triangleVertices[] = {
-  {  0.5f,  0.5f, 0.0f, 0xff0000ff }, // Top (red)
-  { -0.5f, -0.5f, 0.0f, 0xff00ff00 }, // Left (green)
-  {  0.5f, -0.5f, 0.0f, 0xffff0000 }, // Right (blue)
+static PosColorVertex s_cubeVertices[] =
+{
+	{-1.0f,  1.0f,  1.0f, 0xff000000 },
+	{ 1.0f,  1.0f,  1.0f, 0xff0000ff },
+	{-1.0f, -1.0f,  1.0f, 0xff00ff00 },
+	{ 1.0f, -1.0f,  1.0f, 0xff00ffff },
+	{-1.0f,  1.0f, -1.0f, 0xffff0000 },
+	{ 1.0f,  1.0f, -1.0f, 0xffff00ff },
+	{-1.0f, -1.0f, -1.0f, 0xffffff00 },
+	{ 1.0f, -1.0f, -1.0f, 0xffffffff },
+};
+
+static const uint16_t s_cubeTriangleList[] =
+{
+	0, 1, 2, // 0
+	1, 3, 2,
+	4, 6, 5, // 2
+	5, 6, 7,
+	0, 2, 4, // 4
+	4, 2, 6,
+	1, 5, 3, // 6
+	5, 7, 3,
+	0, 4, 1, // 8
+	4, 5, 1,
+	2, 3, 6, // 10
+	6, 3, 7,
 };
 
 extern unsigned char vs_shader[];

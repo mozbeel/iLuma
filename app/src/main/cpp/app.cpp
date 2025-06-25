@@ -162,17 +162,21 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 		.add(bgfx::Attrib::Color0, 4, bgfx::AttribType::Uint8, true)
 		.end();
 
-	vbh = bgfx::createVertexBuffer(bgfx::makeRef(s_triangleVertices, sizeof(s_triangleVertices)), m_layout);
-	SDL_Log("vertex shader blob at %p, length = %u bytes", vs_shader, vs_shader_len);
+	vbh = bgfx::createVertexBuffer(bgfx::makeRef(s_cubeVertices, sizeof(s_cubeVertices)), m_layout);
+	ibh = bgfx::createIndexBuffer(bgfx::makeRef(s_cubeTriangleList, sizeof(s_cubeTriangleList)));
+
 	bgfx::ShaderHandle vertexShader = bgfx::createShader(bgfx::makeRef(vs_shader, vs_shader_len));
 	bgfx::ShaderHandle fragmentShader = bgfx::createShader(bgfx::makeRef(fs_shader, fs_shader_len));
-	SDL_Log("creating Shaders succeded");
+
 	program = bgfx::createProgram(vertexShader, fragmentShader, true);
-	SDL_Log("after creating bgfx::program");
 
 	if (!bgfx::isValid(vbh)) {
     SDL_Log("VertexBufferHandle is invalid!");
-}
+	}
+
+	if (!bgfx::isValid(ibh)) {
+    SDL_Log("IndexBufferHandle is invalid!");
+	}
 
 	if (!bgfx::isValid(program)) {
 		SDL_Log("Program is invalid!");
@@ -197,6 +201,17 @@ bool App::mainLoop() {
       break;
     }
   }
+	const bx::Vec3 at  = { 0.0f, 0.0f,   0.0f };
+	const bx::Vec3 eye = { 0.0f, 0.0f, -10.0f };
+
+
+	float view_matrix[16];
+	bx::mtxLookAt(view_matrix, eye, at);
+
+	float projection_matrix[16];
+	bx::mtxProj(projection_matrix, 60.0f, float(SCREEN_WIDTH)/float(SCREEN_HEIGHT), 0.1f, 100.0f, bgfx::getCaps()->homogeneousDepth);
+	bgfx::setViewTransform(0, view_matrix, projection_matrix);
+
 
 	bgfx::setViewRect(0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	bgfx::touch(0);
@@ -204,8 +219,14 @@ bool App::mainLoop() {
 	bgfx::dbgTextPrintf(0, 1, 0x4f, "fps: %.2f", fps);
 	bgfx::dbgTextPrintf(0, 2, 0x2f, "Render Backend: %s", renderBackendStr);
 
+
+	float mtx[16];
+	bx::mtxRotateXY(mtx, 45.0f, 45.0f);
+	bgfx::setTransform(mtx);
+
 	bgfx::setVertexBuffer(0, vbh);
-	// bgfx::setState(BGFX_STATE_DEFAULT);
+	bgfx::setIndexBuffer(ibh);
+	bgfx::setState(BGFX_STATE_DEFAULT);
 	bgfx::submit(0, program);
 
 	bgfx::frame();
@@ -231,6 +252,7 @@ void App::shutdown() {
 	bgfx::frame();
 
 	bgfx::destroy(vbh);
+	bgfx::destroy(ibh);
 	bgfx::destroy(program);
 	bgfx::shutdown();
 
