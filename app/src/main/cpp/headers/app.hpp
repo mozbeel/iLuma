@@ -55,6 +55,9 @@ class App {
   bgfx::VertexBufferHandle vbh;
   bgfx::IndexBufferHandle ibh;
   bgfx::ProgramHandle program;
+
+  int w_width = 1280;
+  int w_height = 720;
   public:
   // Constructor
   App();
@@ -80,7 +83,7 @@ static PosColorVertex s_cubeVertices[] =
 	{-1.0f,  1.0f, -1.0f, 0xffff0000 },
 	{ 1.0f,  1.0f, -1.0f, 0xffff00ff },
 	{-1.0f, -1.0f, -1.0f, 0xffffff00 },
-	{ 1.0f, -1.0f, -1.0f, 0xffffffff },
+	{ 1.0f, -1.0f, -1.0f, 0xffffffff }
 };
 
 static const uint16_t s_cubeTriangleList[] =

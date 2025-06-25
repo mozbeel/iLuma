@@ -1,8 +1,5 @@
 #include <app.hpp>
 
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
-
 
 App::App() {
   return;
@@ -18,28 +15,30 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 		return false;
 	}
 	SDL_Log("SDL_Init succeded");
-#ifdef __ANDROID__
-	LOGI("SDL_Init succeded");
-#endif
+	#if defined(__ANDROID__) || defined(TARGET_OS_IPHONE)
+		const SDL_DisplayMode* displayMode = SDL_GetCurrentDisplayMode(SDL_GetPrimaryDisplay());
+		if (!displayMode) {
+			SDL_Log("Couldnt get screen size");
+		} else {
+			w_width = displayMode->w;
+			w_height = displayMode->h;
+			LOGI("Display Height: %d, Display Width: %d", w_height, w_width);
+		}
+	#endif
 
 	SDL_Window *window = SDL_CreateWindow("BGFX + SDL3 Window",
-																				SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+																				w_width, w_height, 0);
 	if (!window)
 	{
 		SDL_Log("SDL_CreateWindow failed: %s", SDL_GetError());
-#ifdef __ANDROID__
-		LOGI("SDL_CreateWindow failed: %s", SDL_GetError());
-#endif
 		SDL_Quit();
 		return false;
 	}
 	SDL_Log("SDL_CreateWindow succeded");
-#ifdef __ANDROID__
-	LOGI("SDL_CreateWindow succeded");
-#endif
+
+	
 
 	bgfx::PlatformData pd;
-
 #if defined(__ANDROID__)
 	pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_ANDROID_WINDOW_POINTER, NULL); // Use the native window from the Android app
 	pd.ndt = NULL;
@@ -60,10 +59,10 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 // I cannot test if it works on macOS, so I will comment it out for now. UPDATE: I can build, but not run it
 #elif defined(__APPLE__)
 
-	#if TARGET_OS_OSX
+	#if defined(TARGET_OS_OSX)
 		pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
 		pd.ndt = NULL;
-	#elif TARGET_OS_IPHONE
+	#elif defined(TARGET_OS_IPHONE)
 		// iOS does not use bgfx in the same way, so we don't set nwh or ndt here.
 		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER, NULL);
 		pd.ndt = NULL; // No native display type in iOS
@@ -103,7 +102,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 #endif
 
 	SDL_Log("Setting PlatformData for bgfx...");
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || TARGET_OS_IPHONE
 	LOGI("Setting PlatformData for bgfx...");
 #endif
 	bgfx::setPlatformData(pd);
@@ -116,8 +115,8 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	init.type = bgfx::RendererType::Count;
 	init.platformData.nwh = pd.nwh;
 	init.platformData.ndt = pd.ndt;
-	init.resolution.width = SCREEN_WIDTH;
-	init.resolution.height = SCREEN_HEIGHT;
+	init.resolution.width = w_width;
+	init.resolution.height = w_height;
 	init.resolution.reset = BGFX_RESET_VSYNC;
 	init.debug = true;  // Enable debug mode
 
@@ -209,19 +208,20 @@ bool App::mainLoop() {
 	bx::mtxLookAt(view_matrix, eye, at);
 
 	float projection_matrix[16];
-	bx::mtxProj(projection_matrix, 60.0f, float(SCREEN_WIDTH)/float(SCREEN_HEIGHT), 0.1f, 100.0f, bgfx::getCaps()->homogeneousDepth);
+	bx::mtxProj(projection_matrix, 60.0f, float(w_width)/float(w_height), 0.1f, 100.0f, bgfx::getCaps()->homogeneousDepth);
 	bgfx::setViewTransform(0, view_matrix, projection_matrix);
 
 
-	bgfx::setViewRect(0, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	bgfx::setViewRect(0, 0, 0, w_width, w_height);
 	bgfx::touch(0);
 	bgfx::dbgTextClear();
 	bgfx::dbgTextPrintf(0, 1, 0x4f, "fps: %.2f", fps);
 	bgfx::dbgTextPrintf(0, 2, 0x2f, "Render Backend: %s", renderBackendStr);
-
+	bgfx::dbgTextPrintf(0, 4, 0x3f, "View size: %dx%d", w_width, w_height);
 
 	float mtx[16];
-	bx::mtxRotateXY(mtx, 45.0f, 45.0f);
+	float time = SDL_GetTicks() / 1000.0f;
+	bx::mtxRotateXY(mtx, 45.0f-fmodf(time * 2.0f * bx::kPi * 0.1f, 2.0f * bx::kPi), -45.0f-fmodf(time * 1.5f * bx::kPi * 0.1f, 2.0f * bx::kPi));
 	bgfx::setTransform(mtx);
 
 	bgfx::setVertexBuffer(0, vbh);
