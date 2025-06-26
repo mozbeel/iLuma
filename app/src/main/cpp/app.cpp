@@ -22,7 +22,6 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 		} else {
 			w_width = displayMode->w;
 			w_height = displayMode->h;
-			LOGI("Display Height: %d, Display Width: %d", w_height, w_width);
 		}
 	#endif
 
