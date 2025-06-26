@@ -61,6 +61,9 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	#if defined(TARGET_OS_OSX)
 		pd.nwh = (void *)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_COCOA_WINDOW_POINTER, NULL);
 		pd.ndt = NULL;
+		if(!pd.nwh) {
+			SDL_Log("Couldn't get nwh");
+		}
 	#elif defined(TARGET_OS_IPHONE)
 		// iOS does not use bgfx in the same way, so we don't set nwh or ndt here.
 		pd.nwh = (void*)SDL_GetPointerProperty(SDL_GetWindowProperties(window),SDL_PROP_WINDOW_UIKIT_WINDOW_POINTER, NULL);
@@ -101,15 +104,13 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 #endif
 
 	SDL_Log("Setting PlatformData for bgfx...");
-#if defined(__ANDROID__) || TARGET_OS_IPHONE
-	LOGI("Setting PlatformData for bgfx...");
-#endif
+
 	bgfx::setPlatformData(pd);
 	SDL_Log("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
 #ifdef __ANDROID__
 	LOGI("Setting PlatformData for bgfx succeded..\nInitializing bgfx...");
 #endif
-  
+
 	bgfx::Init init;
 	init.type = bgfx::RendererType::Count;
 	init.platformData.nwh = pd.nwh;
@@ -118,12 +119,7 @@ if (SDL_Init(SDL_INIT_VIDEO) == false)
 	init.resolution.height = w_height;
 	init.resolution.reset = BGFX_RESET_VSYNC;
 	init.debug = true;  // Enable debug mode
-
-	SDL_Log("Initializing bgfx succeded...");
-#ifdef __ANDROID__
-	LOGI("Initializing bgfx succeded...");
-#endif
-
+	
 	if (!bgfx::init(init))
 	{
 		SDL_Log("bgfx::init unsuccessful");
