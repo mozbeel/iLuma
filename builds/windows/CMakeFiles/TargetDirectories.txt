@@ -1,3 +1,0 @@
-C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/windows/CMakeFiles/MyForgeApp.dir
-C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/windows/CMakeFiles/ALL_BUILD.dir
-C:/Users/moz04/Desktop/GameDevelopment/iLuma/builds/windows/CMakeFiles/ZERO_CHECK.dir
