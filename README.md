@@ -33,8 +33,11 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
   - iOS
   - Android
 - Web (Emscripten)
+- VR (no support yet, but soon):
+  - SteamVR
+  - Meta Headsets (Standalone)
+  - Pico Headsets (Standalone)
 - Console support is planned, but there's no support yet
-- VR support for Meta Quest 2/3 is planned, but there's no support yet 
 
 ## Samples
 

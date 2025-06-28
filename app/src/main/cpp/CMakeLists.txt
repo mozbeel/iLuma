@@ -5,21 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(DOWNLOAD_DEPENDENCIES "Download dependencies" TRUE)
-# option(IOS "Build for iOS" OFF)
-# option(PREBUILT_SHADERS "Use prebuilt shaders" ON)
-
-# if(ANDROID)
-
-#     set(BX_PLATFORM_ANDROID ON CACHE BOOL "Target is Android" FORCE)
-#     set(BX_ARCH "${ANDROID_ABI}" CACHE STRING "Target Arch for BX" FORCE)
-#     set(BGFX_CONFIG_RENDERER_GLES ON CACHE BOOL "Use GLES for Android" FORCE)
-#     set(BX_AMALGAMATED OFF CACHE BOOL "" FORCE)
-#     set(BGFX_CUSTOM_TARGETS ON CACHE BOOL "" FORCE)  # <--- this is critical!
-
-#     set(SDL3CPU ${ANDROID_ABI} CACHE STRING "Target CPU for SDL3" FORCE)
-#     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/../../../../builds/android)
-
-# endif()
+option(ILUMA_VR "Enable OpenXR-based VR support" OFF)
+# Turn off building the API layers (they live in src/api_layers)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
     message(STATUS "Configuring for Emscripten/WebAssembly")
@@ -71,11 +58,34 @@ if(DOWNLOAD_DEPENDENCIES)
     endif()
     FetchContent_Declare(
         bgfx.cmake
-        GIT_REPOSITORY "https://github.com/bkaradzic/bgfx.cmake.git"
+        GIT_REPOSITORY "https://github.com/mozbeel/bgfx.cmake.git"
         GIT_TAG "master"
+        GIT_SUBMODULES_RECURSE TRUE
         EXCLUDE_FROM_ALL
     )
     FetchContent_MakeAvailable(bgfx.cmake)
+
+    if (ILUMA_VR)
+       # Disable building API layers in the OpenXR SDK itself
+        set(BUILD_API_LAYERS OFF CACHE BOOL "" FORCE)
+        FetchContent_Declare(
+            openxr_sdk
+            GIT_REPOSITORY "https://github.com/KhronosGroup/OpenXR-SDK.git"
+            GIT_TAG "release-1.1.49"
+            GIT_SUBMODULES_RECURSE TRUE
+            EXCLUDE_FROM_ALL
+        )
+        FetchContent_MakeAvailable(openxr_sdk)
+
+        message("Using OpenXR, ${CMAKE_PROJECT_NAME}")
+        add_compile_definitions(ILUMA_VR)
+
+        find_package(Vulkan REQUIRED)
+        
+
+        set(VR_SPECIFIC_LIBRARIES openxr_loader Vulkan::Vulkan)
+    endif()
+
 else()
     # find_package looks for already-installed system packages.
     # Configure with `-DCMAKE_PREFIX_PATH="/path/to/package1;/path/to/package2"`
@@ -83,12 +93,22 @@ else()
     find_package(bgfx.cmake CONFIG REQUIRED)
     if (NOT ANDROID)
         find_package(SDL3 CONFIG REQUIRED)
+        endif()
+        
+    if (ILUMA_VR) 
+        find_package(OpenXR REQUIRED)
+        set(VR_SPECIFIC_LIBRARIES OpenXR::OpenXR Vulkan::Vulkan)
     endif()
 endif()
 
+if (ILUMA_VR)
+    add_compile_definitions(ILUMA_VR)
+
+    set(BUILD_API_LAYERS ON CACHE INTERNAL "Use OpenXR layers")
+endif()
 
 if (ANDROID)
-find_package(SDL3 CONFIG REQUIRED)
+    find_package(SDL3 CONFIG REQUIRED)
 endif()
 
 set(SHADER_PLATFORM "")
@@ -208,10 +228,12 @@ target_include_directories(iLuma
 )
 
 if (ANDROID)
+    target_compile_definitions(iLuma PRIVATE NOMINMAX)
     target_link_libraries(iLuma PRIVATE
         bgfx
         bimg
         bx
+        ${VR_SPECIFIC_LIBRARIES}
         SDL3::SDL3
         android
         log
@@ -222,9 +244,10 @@ if (ANDROID)
         atomic
     )
 else()
-    target_compile_definitions(iLuma PRIVATE SDL_STATIC)
+    target_compile_definitions(iLuma PRIVATE SDL_STATIC NOMINMAX)
     target_link_libraries(iLuma
         PRIVATE
+            ${VR_SPECIFIC_LIBRARIES}
             SDL3::SDL3
             bgfx
             bimg

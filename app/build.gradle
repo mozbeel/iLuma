@@ -8,15 +8,25 @@ android {
 
     defaultConfig {
         applicationId 'com.example.iluma'
-        minSdk 21
+        minSdk 24
         targetSdk 35
         versionCode 1
         versionName '1.0'
 
         externalNativeBuild {
             cmake {
-                arguments '-DANDROID_STL=c++_shared', '-DDOWNLOAD_DEPENDENCIES=ON'
-                abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+                def cliArgs = project.findProperty('cmakeEArgs')
+                                ?.split('\\s+')
+                                ?: []
+
+                // Combine CLI flags with your always-on defines
+                arguments = cliArgs + [
+                '-DANDROID_STL=c++_shared',
+                '-DDOWNLOAD_DEPENDENCIES=ON'
+                ]
+                abiFilters project.hasProperty('abiList')
+                ? project.abiList.split(',')      // e.g. "arm64-v8a,x86_64"
+                : ['arm64-v8a']                  // default for Quest
                 // abiFilters 'arm64-v8a'
             }
         }
@@ -25,6 +35,7 @@ android {
     externalNativeBuild {
         cmake {
             path 'src/main/cpp/CMakeLists.txt'
+            
         }
     }
 

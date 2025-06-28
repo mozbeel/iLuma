@@ -8,6 +8,8 @@
 #include <chrono>
 #include <cassert>
 #include <stdio.h>
+#include <cmath>
+#include <cstdlib>
 
 #include <bx/math.h>
 
@@ -42,10 +44,86 @@
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,   LOG_TAG, __VA_ARGS__)
 #endif
 
-class App {
-  SDL_Window *window = nullptr; // Pointer to the SDL window
-  SDL_Event event;
+#ifdef ILUMA_VR  
+  // #ifndef XR_KHR_D3D11_ENABLE_EXTENSION_NAME
+  //   #define XR_KHR_D3D11_ENABLE_EXTENSION_NAME "XR_KHR_D3D11_enable"
+  // #endif
+
+  #include <vulkan/vulkan.h>      // For Vulkan types (required if XR_USE_GRAPHICS_API_VULKAN is defined)
+  #ifdef _WIN32
+    #include <windows.h>             // For Win32 types (if XR_USE_PLATFORM_WIN32 is defined)
+    #define XR_USE_PLATFORM_WIN32
+  #elif __ANDROID__
+    #include <jni.h>
+    #define XR_USE_PLATFORM_ANDROID
+  #elif __linux__
+    #define XR_USE_PLATFORM_LINUX
+  #endif
+
+  #define XR_USE_GRAPHICS_API_VULKAN
+  #include <openxr/openxr.h>
+  #include <openxr/openxr_platform.h>
   
+  #define BGFX_CONFIG_RENDERER_VULKAN
+  #include <bgfx/vulkan_handles.h>
+
+  inline const char* getXrResultString(XrResult result) {
+    switch (result) {
+      case XR_SUCCESS: return "XR_SUCCESS";
+      case XR_TIMEOUT_EXPIRED: return "XR_TIMEOUT_EXPIRED";
+      case XR_SESSION_LOSS_PENDING: return "XR_SESSION_LOSS_PENDING";
+      case XR_EVENT_UNAVAILABLE: return "XR_EVENT_UNAVAILABLE";
+      case XR_SPACE_BOUNDS_UNAVAILABLE: return "XR_SPACE_BOUNDS_UNAVAILABLE";
+      case XR_FRAME_DISCARDED: return "XR_FRAME_DISCARDED";
+      // You can add many more — this is just a subset.
+      default: return "Unknown XrResult";
+    }
+  }
+
+  #ifdef __ANDROID__
+    #define CHECK_XR(expr)                                                      \
+      do {                                                                      \
+        XrResult result = (expr);                                               \
+        if (XR_FAILED(result)) {                                                \
+          /* stderr */                                                          \
+          fprintf(stderr,                                                       \
+                  "[OpenXR] %s failed with error: %d (%s)\n",                  \
+                  #expr, result, getXrResultString(result));                    \
+          /* logcat */                                                          \
+          LOGI("[OpenXR] %s failed with error: %d (%s)",                        \
+              #expr, result, getXrResultString(result));                      \
+          std::exit(EXIT_FAILURE);                                              \
+        }                                                                       \
+      } while (0)
+  #else
+    #define CHECK_XR(x) \
+        { \
+            XrResult res = (x); \
+            if (res != XR_SUCCESS) { \
+                SDL_Log("OpenXR call failed: %d at %s:%d", res, __FILE__, __LINE__); \
+                std::exit(EXIT_FAILURE);   \
+            } \
+        }
+  #endif
+
+  inline void poseToViewMatrix(const XrPosef& pose, float* out) {
+    bx::Vec3 position = { pose.position.x, pose.position.y, pose.position.z };
+    bx::Quaternion orientation = { pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w };
+
+    float rot[16];
+    bx::mtxFromQuaternion(rot, orientation);
+    rot[12] = -position.x;
+    rot[13] = -position.y;
+    rot[14] = -position.z;
+
+    // Output = inverse of pose = view matrix
+    bx::mtxInverse(out, rot);
+  }
+
+    
+#endif
+
+class App {
   std::chrono::time_point<std::chrono::steady_clock> lastTime; // Last time the frame was rendered
   int frames = 0; // Frame counter
   float fps = 0.0f; // Frames per second
@@ -55,16 +133,42 @@ class App {
   bgfx::VertexBufferHandle vbh;
   bgfx::IndexBufferHandle ibh;
   bgfx::ProgramHandle program;
-
+  bgfx::PlatformData pd;
+  
   int w_width = 1280;
   int w_height = 720;
+  
+  SDL_Window *window = nullptr;
+  SDL_Event event;
+  bool initializeFlatContext();
+  bool initializeBGFX();
+
+#ifdef ILUMA_VR
+  bool initializeVRContext();
+  XrInstance xrInstance = XR_NULL_HANDLE;
+  XrSystemId xrSystemId = 0;
+  XrSession xrSession = XR_NULL_HANDLE;
+  XrSpace xrAppSpace = XR_NULL_HANDLE;
+  std::vector<XrSwapchain> swapchains;
+  std::vector<std::vector<XrSwapchainImageVulkanKHR>> swapchainImages;
+  uint32_t swapchainWidth = 0;
+  uint32_t swapchainHeight = 0;
+
+#endif
+
   public:
-  // Constructor
-  App();
+    // Constructor
+    App();
   
     bool running = true; // Flag to control the main loop
     bool initialize();
     bool mainLoop();
+    #ifndef ILUMA_VR
+      void renderFlat();
+    #else
+      void renderVR();
+    #endif
+    void draw(bgfx::ViewId viewId, float *view_matrix, float *projection_matrix);
     void shutdown();
 
 };
