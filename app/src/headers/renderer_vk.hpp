@@ -63,6 +63,7 @@ static std::vector<char> readFile(const std::string & filename) {
 
     return buffer;
 }
+#define SHADER_ENTRY_POINT "main"
 
 struct QueueFamilyIndices {
   std::optional<uint32_t> graphicsFamily;
@@ -92,12 +93,12 @@ private:
   VkFormat m_vkSwapChainImageFormat;
   VkExtent2D m_vkSwapChainExtent;
   std::vector<VkImageView> m_vkSwapChainImageViews;
-
+  VkPipelineLayout m_vkPipelineLayout;
 
   const char** m_extraExtensions;
   int m_extraExtensionsCount;
 
-  SDL_Window* window;
+  SDL_Window* m_window;
   
   void createInstance();
   bool checkValidationSupport();
@@ -118,9 +119,10 @@ private:
   VkPresentModeKHR chooseSwapPresentMode(std::vector<VkPresentModeKHR>& availablePresentModes);
   VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
   void createSwapChain();
-
   void createImageViews();
+
   void createGraphicsPipeline();
+  VkShaderModule createShaderModule(const std::vector<char>& code);
 
 public:
   VulkanRenderer(const char** m_extraExtensions, int m_extraExtensionsCount, SDL_Window* window);

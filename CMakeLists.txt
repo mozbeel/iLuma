@@ -77,7 +77,7 @@ if (ILUMA_USE_VULKAN)
   add_dependencies(iLuma shaders)
 
   add_custom_command(TARGET iLuma POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -DSRC="${SPIRV_DIR}" -DDEST="$<TARGET_FILE_DIR:iLuma>/shaders"
+    COMMAND ${CMAKE_COMMAND} -DSRC="${SPIRV_DIR}" -DDEST="$<TARGET_FILE_DIR:iLuma>"
             -P "${CMAKE_SOURCE_DIR}/CopyShaders.cmake"
     COMMENT "Copying compiled SPIR-V shaders to binary directory"
   )
