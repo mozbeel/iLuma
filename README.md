@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/written%20in-C++-00599C?logo=c%2B%2B&logoColor=white">
 
   <h4>A lightweight game framework for Lua and C++</h4>
-
+  <h5>*Most of these meantioned features are not supported yet because of very early development of iLuma</h4>
 </div>
 
 
@@ -16,25 +16,26 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
 
 ## Features
 
-<!-- - ✨ Cross-platform support: Build games for desktop (Windows, Linux, macOS) and mobile (iOS, Android) from a single codebase. -->
-- 🚀 Powered by bgfx for advanced rendering and SDL3 for input, audio, and window management.
-- 📱 Touch and sensor input support for mobile devices (not yet).
-- 🛠️ Easy integration with popular game development tools and workflows.
+- ✨ Cross-platform support: Build games for desktop (Windows, Linux, macOS) and mobile (iOS, Android) from a single codebase.
+- 📱 Touch and sensor input support for mobile devices.
 - 📂 Open source and actively developed.
 - 🌙 Recommended use of Lua
 
-<!-- ## Supported Platforms
+## Supported Platforms
 
 - Desktop
-  - Windows
-  - Linux
-  - macOS
+  - Windows (using Vukan)
+  - Linux (using Vukan)
+  - macOS (using MoltenVK)
 - Mobile
-  - iOS
-  - Android
-- Web (Emscripten)
+  - iOS (using MoltenVK)
+  - Android (using Vukan)
+- Web (using OpenGL ES 3.0 -> WebGL 2.0)
+- VR
+  - Meta Quest 2/3 Standalone (using Vulkan)
+  - Pico Headsets Standalone (using Vulkan)
+  - PCVR (using desktop-specific graphics API)
 - Console support is planned, but there's no support yet
-- VR support for Meta Quest 2/3 is planned, but there's no support yet  -->
 
 ## Samples
 
