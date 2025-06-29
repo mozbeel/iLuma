@@ -8,8 +8,10 @@ set(SDL_STATIC ON CACHE BOOL "" FORCE)
 set(SDL_SHARED OFF CACHE BOOL "" FORCE)
 
 file(GLOB_RECURSE SOURCES "${ILUMA_ROOT}/src/*.cpp") 
+file(GLOB_RECURSE SHADERS "${ILUMA_ROOT}/src/*.*")
 # Add executable
 add_executable(iLuma ${SOURCES})
+source_group(TREE "${ILUMA_ROOT}/shaders" PREFIX "Shaders" FILES ${SHADERS})
 
 if (WIN32)
   find_package(Vulkan)
