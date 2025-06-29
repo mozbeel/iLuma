@@ -63,9 +63,14 @@ None (yet)
 
 (soon going to be implemented)
 
+## Development Status
+
+If you want to see the current development status and what features I'm currently adding you can visit my Trello Board to see exactly what I'm doing: <a href="https://trello.com/b/OXJbPyC0/iluma">My Trello</a>
+
 ## Contributing
 
 Contributions are not wished right now. I want to get the base of the code done, maybe then I'll accept contributions. Reports of issues in early development are needed!
+
 
 ## License
 
