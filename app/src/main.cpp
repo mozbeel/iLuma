@@ -1,10 +1,5 @@
-#ifndef ILUMA_VR
-#   include <SDL3/SDL.h>
-#endif
-
 #ifdef ILUMA_USE_VULKAN
 #   include <renderer_vk.hpp>
-#   include <SDL3/SDL_vulkan.h>
 #endif
 
 
@@ -50,7 +45,7 @@ int main() {
   extensions[0] = VK_EXT_DEBUG_REPORT_EXTENSION_NAME;
   SDL_memcpy(&extensions[1], instance_extensions, count_instance_extensions * sizeof(const char*)); 
 
-  VulkanRenderer* vkRenderer = new VulkanRenderer(extensions, count_extensions);
+  VulkanRenderer* vkRenderer = new VulkanRenderer(extensions, count_extensions, window);
 
   vkRenderer->initVulkan();
 
@@ -68,6 +63,7 @@ int main() {
     }
 
   }
+
   vkRenderer->cleanupVulkan();
   SDL_DestroyWindow(window);
   SDL_Quit();
