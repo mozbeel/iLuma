@@ -587,14 +587,16 @@ void VulkanRenderer::createCommandPool() {
     CHECK_VK(vkCreateCommandPool(m_vkDevice, &poolInfo, nullptr, &m_vkCommandPool));
 }
 
-void VulkanRenderer::createCommandBuffer() {
+void VulkanRenderer::createCommandBuffers() {
+    m_vkCommandBuffers.resize(MAX_FRAMES_IN_FLIGHT);
+
     VkCommandBufferAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
     allocInfo.commandPool = m_vkCommandPool;
     allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-    allocInfo.commandBufferCount = 1;
+    allocInfo.commandBufferCount = (uint32_t) m_vkCommandBuffers.size();
 
-    CHECK_VK(vkAllocateCommandBuffers(m_vkDevice, &allocInfo, &m_vkCommandBuffer));
+    CHECK_VK(vkAllocateCommandBuffers(m_vkDevice, &allocInfo, m_vkCommandBuffers.data()));
 }
 
 void VulkanRenderer::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex) {
@@ -616,7 +618,7 @@ void VulkanRenderer::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t
     renderPassInfo.clearValueCount = 1;
     renderPassInfo.pClearValues = &clearColor;
 
-    vkCmdBeginRenderPass(m_vkCommandBuffer, &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
+    vkCmdBeginRenderPass(m_vkCommandBuffers[currentFrame], &renderPassInfo, VK_SUBPASS_CONTENTS_INLINE);
 
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, m_vkGraphicsPipeline);
 
@@ -642,6 +644,10 @@ void VulkanRenderer::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t
 }
 
 void VulkanRenderer::createSyncObjects() {
+    m_vkImageAvailableSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    m_vkRenderFinishedSemaphores.resize(MAX_FRAMES_IN_FLIGHT);
+    m_vkInFlightFences.resize(MAX_FRAMES_IN_FLIGHT);
+
     VkSemaphoreCreateInfo semaphoreInfo{};
     semaphoreInfo.sType = VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO;
 
@@ -649,10 +655,12 @@ void VulkanRenderer::createSyncObjects() {
     fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
     fenceInfo.flags = VK_FENCE_CREATE_SIGNALED_BIT;
 
-    CHECK_VK(vkCreateSemaphore(m_vkDevice, &semaphoreInfo, nullptr, &m_vkImageAvailableSemaphore));
-    CHECK_VK(vkCreateSemaphore(m_vkDevice, &semaphoreInfo, nullptr, &m_vkRenderFinishedSemaphore));
+    for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        CHECK_VK(vkCreateSemaphore(m_vkDevice, &semaphoreInfo, nullptr, &m_vkImageAvailableSemaphores[i]));
+        CHECK_VK(vkCreateSemaphore(m_vkDevice, &semaphoreInfo, nullptr, &m_vkRenderFinishedSemaphores[i]));
+        CHECK_VK(vkCreateFence(m_vkDevice, &fenceInfo, nullptr, &m_vkInFlightFences[i]));
 
-    CHECK_VK(vkCreateFence(m_vkDevice, &fenceInfo, nullptr, &m_vkInFlightFence));
+    }
 }
 
 void VulkanRenderer::init() {
@@ -666,36 +674,37 @@ void VulkanRenderer::init() {
   createGraphicsPipeline();
   createFramebuffers();
   createCommandPool();
-  createCommandBuffer();
+  createCommandBuffers();
   createSyncObjects();
 }
 
 void VulkanRenderer::draw() {
-    CHECK_VK(vkWaitForFences(m_vkDevice, 1, &m_vkInFlightFence, VK_TRUE, UINT64_MAX));
-    CHECK_VK(vkResetFences(m_vkDevice, 1, &m_vkInFlightFence));
+ 
+    CHECK_VK(vkWaitForFences(m_vkDevice, 1, &m_vkInFlightFences[currentFrame], VK_TRUE, UINT64_MAX));
+    CHECK_VK(vkResetFences(m_vkDevice, 1, &m_vkInFlightFences[currentFrame]));
 
     uint32_t imageIndex;
-    CHECK_VK(vkAcquireNextImageKHR(m_vkDevice, m_vkSwapChain, UINT64_MAX, m_vkImageAvailableSemaphore, VK_NULL_HANDLE, &imageIndex));
+    CHECK_VK(vkAcquireNextImageKHR(m_vkDevice, m_vkSwapChain, UINT64_MAX, m_vkImageAvailableSemaphores[currentFrame], VK_NULL_HANDLE, &imageIndex));
 
-    CHECK_VK(vkResetCommandBuffer(m_vkCommandBuffer, 0));
-    recordCommandBuffer(m_vkCommandBuffer, imageIndex);
+    CHECK_VK(vkResetCommandBuffer(m_vkCommandBuffers[currentFrame], 0));
+    recordCommandBuffer(m_vkCommandBuffers[currentFrame], imageIndex);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
     
-    VkSemaphore waitSemaphores[] = { m_vkImageAvailableSemaphore };
+    VkSemaphore waitSemaphores[] = { m_vkImageAvailableSemaphores[currentFrame]};
     VkPipelineStageFlags waitStages[] = { VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT };
     submitInfo.waitSemaphoreCount = 1;
     submitInfo.pWaitSemaphores = waitSemaphores;
     submitInfo.pWaitDstStageMask = waitStages;
     submitInfo.commandBufferCount = 1;
-    submitInfo.pCommandBuffers = &m_vkCommandBuffer;
+    submitInfo.pCommandBuffers = &m_vkCommandBuffers[currentFrame];
     
-    VkSemaphore signalSemaphores[] = { m_vkRenderFinishedSemaphore };
+    VkSemaphore signalSemaphores[] = { m_vkRenderFinishedSemaphores[currentFrame]};
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphores;
 
-    CHECK_VK(vkQueueSubmit(m_vkGraphicsQueue, 1, &submitInfo, m_vkInFlightFence));
+    CHECK_VK(vkQueueSubmit(m_vkGraphicsQueue, 1, &submitInfo, m_vkInFlightFences[currentFrame]));
 
     VkPresentInfoKHR presentInfo{};
     presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
@@ -709,14 +718,18 @@ void VulkanRenderer::draw() {
     presentInfo.pResults = nullptr;
     
     CHECK_VK(vkQueuePresentKHR(m_vkPresentQueue, &presentInfo));
+
+    currentFrame = (currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 }
 
 void VulkanRenderer::cleanup() {
   vkDeviceWaitIdle(m_vkDevice);
 
-  vkDestroySemaphore(m_vkDevice, m_vkRenderFinishedSemaphore, nullptr);
-  vkDestroySemaphore(m_vkDevice, m_vkImageAvailableSemaphore, nullptr);
-  vkDestroyFence(m_vkDevice, m_vkInFlightFence, nullptr);
+  for (size_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+      vkDestroySemaphore(m_vkDevice, m_vkRenderFinishedSemaphores[i], nullptr);
+      vkDestroySemaphore(m_vkDevice, m_vkImageAvailableSemaphores[i], nullptr);
+      vkDestroyFence(m_vkDevice, m_vkInFlightFences[i], nullptr);
+  }
 
   vkDestroyCommandPool(m_vkDevice, m_vkCommandPool, nullptr);
   for (auto framebuffer : m_vkSwapChainFramebuffers) {

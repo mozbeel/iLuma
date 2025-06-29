@@ -63,7 +63,10 @@ static std::vector<char> readFile(const std::string & filename) {
 
     return buffer;
 }
+
 #define SHADER_ENTRY_POINT "main"
+
+const int MAX_FRAMES_IN_FLIGHT = 2;
 
 struct QueueFamilyIndices {
   std::optional<uint32_t> graphicsFamily;
@@ -101,11 +104,13 @@ private:
   VkPipeline m_vkGraphicsPipeline;
 
   VkCommandPool m_vkCommandPool;
-  VkCommandBuffer m_vkCommandBuffer;
+  std::vector<VkCommandBuffer> m_vkCommandBuffers;
 
-  VkSemaphore m_vkImageAvailableSemaphore;
-  VkSemaphore m_vkRenderFinishedSemaphore;
-  VkFence m_vkInFlightFence;
+  std::vector<VkSemaphore> m_vkImageAvailableSemaphores;
+  std::vector<VkSemaphore> m_vkRenderFinishedSemaphores;
+  std::vector<VkFence> m_vkInFlightFences;
+
+  uint32_t currentFrame = 0;
 
   const char** m_extraExtensions;
   int m_extraExtensionsCount;
@@ -140,7 +145,7 @@ private:
 
   void createFramebuffers();
   void createCommandPool();
-  void createCommandBuffer();
+  void createCommandBuffers();
 
   void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
   void createSyncObjects();
