@@ -1,0 +1,2 @@
+file(MAKE_DIRECTORY "${DEST}")
+file(COPY "${SRC}" DESTINATION "${DEST}")

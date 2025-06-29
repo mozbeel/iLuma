@@ -378,7 +378,10 @@ void VulkanRenderer::createImageViews() {
 }
 
 void VulkanRenderer::createGraphicsPipeline() {
+    auto vertShaderCode = readFile("shaders/basic.vert.spv");
+    auto fragShaderCode = readFile("shaders/basic.frag.spv");
 
+    // TODO: Draw the rest of the owl .)
 }
 
 void VulkanRenderer::initVulkan() {
