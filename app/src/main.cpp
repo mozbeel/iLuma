@@ -47,7 +47,7 @@ int main() {
 
   VulkanRenderer* vkRenderer = new VulkanRenderer(extensions, count_extensions, window);
 
-  vkRenderer->initVulkan();
+  vkRenderer->init();
 
   bool running = true;
   SDL_Event event;
@@ -61,10 +61,11 @@ int main() {
           break;
       }
     }
+    vkRenderer->draw();
 
   }
 
-  vkRenderer->cleanupVulkan();
+  vkRenderer->cleanup();
   SDL_DestroyWindow(window);
   SDL_Quit();
 

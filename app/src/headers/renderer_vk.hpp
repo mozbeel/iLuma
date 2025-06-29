@@ -88,15 +88,24 @@ private:
   VkQueue m_vkGraphicsQueue;
   VkSurfaceKHR m_vkSurface;
   VkQueue m_vkPresentQueue;
+
   VkSwapchainKHR m_vkSwapChain;
   std::vector<VkImage> m_vkSwapChainImages;
   VkFormat m_vkSwapChainImageFormat;
   VkExtent2D m_vkSwapChainExtent;
   std::vector<VkImageView> m_vkSwapChainImageViews;
+  std::vector<VkFramebuffer> m_vkSwapChainFramebuffers;
 
   VkRenderPass m_vkRenderPass;
   VkPipelineLayout m_vkPipelineLayout;
   VkPipeline m_vkGraphicsPipeline;
+
+  VkCommandPool m_vkCommandPool;
+  VkCommandBuffer m_vkCommandBuffer;
+
+  VkSemaphore m_vkImageAvailableSemaphore;
+  VkSemaphore m_vkRenderFinishedSemaphore;
+  VkFence m_vkInFlightFence;
 
   const char** m_extraExtensions;
   int m_extraExtensionsCount;
@@ -129,11 +138,18 @@ private:
   void createGraphicsPipeline();
   VkShaderModule createShaderModule(const std::vector<char>& code);
 
+  void createFramebuffers();
+  void createCommandPool();
+  void createCommandBuffer();
+
+  void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
+  void createSyncObjects();
+
 public:
   VulkanRenderer(const char** m_extraExtensions, int m_extraExtensionsCount, SDL_Window* window);
-  void initVulkan();
-
-  void cleanupVulkan();
+  void init();
+  void draw();
+  void cleanup();
 };
 
 
