@@ -16,6 +16,18 @@ add_executable(iLuma ${SOURCES} ${SHADERS} ${HEADERS})
 source_group(TREE "${ILUMA_ROOT}/src/shaders" PREFIX "Shaders" FILES ${SHADERS})
 source_group(TREE "${ILUMA_ROOT}/src/headers" PREFIX "Headers" FILES ${HEADERS})
 
+find_package(glm)
+
+if (NOT TARGET glm::glm)
+  include(FetchContent)
+  FetchContent_Declare(
+    glm
+    GIT_REPOSITORY https://github.com/g-truc/glm.git
+    GIT_TAG master  # or latest stable
+  )
+  FetchContent_MakeAvailable(glm)
+endif()
+
 if (WIN32)
   find_package(Vulkan)
 
@@ -53,7 +65,7 @@ if (NOT ILUMA_VR)
 endif()
 
 if (ILUMA_USE_VULKAN)
-  target_link_libraries(iLuma Vulkan::Vulkan ${MIDDLEWARE})
+  target_link_libraries(iLuma PRIVATE Vulkan::Vulkan glm::glm ${MIDDLEWARE})
   target_compile_definitions(iLuma PRIVATE ILUMA_USE_VULKAN)
 
   set(SPIRV_DIR "${CMAKE_CURRENT_BINARY_DIR}/shaders")  # This includes config (Debug/Release)

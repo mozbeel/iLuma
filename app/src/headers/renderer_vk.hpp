@@ -1,6 +1,8 @@
 #ifdef ILUMA_USE_VULKAN
 #include <vulkan/vulkan.h>
 
+#include <glm/glm.hpp>
+
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -11,6 +13,8 @@
 #include <limits>
 #include <fstream>
 #include <algorithm>
+#include <array>
+
 
 #ifndef ILUMA_VR
 #   include <SDL3/SDL.h>
@@ -83,6 +87,14 @@ struct SwapChainSupportDetails {
     std::vector<VkPresentModeKHR> presentModes;
 };
 
+struct Vertex {
+    glm::vec3 pos;
+    glm::vec3 color;
+    static VkVertexInputBindingDescription getBindingDescription();
+    static std::array<VkVertexInputAttributeDescription, 2> getAttributeDescriptions();
+};
+
+
 class VulkanRenderer {
 private:
   VkInstance m_vkInstance;
@@ -104,6 +116,10 @@ private:
   VkPipeline m_vkGraphicsPipeline;
 
   VkCommandPool m_vkCommandPool;
+
+  VkBuffer m_vkVertexBuffer;
+  VkDeviceMemory m_vkVertexBufferMemory;
+
   std::vector<VkCommandBuffer> m_vkCommandBuffers;
 
   std::vector<VkSemaphore> m_vkImageAvailableSemaphores;
@@ -116,6 +132,7 @@ private:
   int m_extraExtensionsCount;
 
   SDL_Window* m_window;
+  SDL_Event m_event;
   
   void createInstance();
   bool checkValidationSupport();
@@ -137,6 +154,9 @@ private:
   VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
   void createSwapChain();
   void createImageViews();
+  void recreateSwapChain();
+  void cleanupSwapChain();
+  void cleanupSyncObjects();
 
   void createRenderPass();
 
@@ -145,13 +165,26 @@ private:
 
   void createFramebuffers();
   void createCommandPool();
+
+  const std::vector<Vertex> vertices = {
+      {{0.0f, -0.5f, 1.0f}, {1.0f, 0.0f, 0.0f}},
+      {{0.5f, 0.5f, 1.0f}, {0.0f, 1.0f, 0.0f}},
+      {{-0.5f, 0.5f, 1.0f}, {0.0f, 0.0f, 1.0f}}
+
+  };
+  void createVertexBuffer();
+
+  uint32_t findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties);
+  
   void createCommandBuffers();
 
   void recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t imageIndex);
   void createSyncObjects();
 
 public:
-  VulkanRenderer(const char** m_extraExtensions, int m_extraExtensionsCount, SDL_Window* window);
+  bool framebufferResized = false;
+
+  VulkanRenderer(const char** m_extraExtensions, int m_extraExtensionsCount, SDL_Window* window, SDL_Event event);
   void init();
   void draw();
   void cleanup();

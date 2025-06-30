@@ -11,6 +11,7 @@ int main() {
     return EXIT_FAILURE;
   }
   SDL_Window* window = SDL_CreateWindow(SDL_WINDOW_NAME, 1280, 720, 
+      SDL_WINDOW_RESIZABLE |
     #ifdef ILUMA_USE_VULKAN
       SDL_WINDOW_VULKAN
     #else
@@ -38,19 +39,19 @@ int main() {
     return EXIT_FAILURE;
   }
 
-  int count_extensions = count_instance_extensions + 1;
-  SDL_malloc(count_extensions * sizeof(const char *));
+  int countExtensions = count_instance_extensions + 1;
+  SDL_malloc(countExtensions * sizeof(const char *));
   // Fix SDL_malloc cast to correct type
-  const char** extensions = static_cast<const char**>(SDL_malloc(count_extensions * sizeof(const char*)));  
+  const char** extensions = static_cast<const char**>(SDL_malloc(countExtensions * sizeof(const char*)));  
   extensions[0] = VK_EXT_DEBUG_REPORT_EXTENSION_NAME;
   SDL_memcpy(&extensions[1], instance_extensions, count_instance_extensions * sizeof(const char*)); 
 
-  VulkanRenderer* vkRenderer = new VulkanRenderer(extensions, count_extensions, window);
-
-  vkRenderer->init();
-
   bool running = true;
   SDL_Event event;
+  memset(&event, 0, sizeof(event));
+  VulkanRenderer* vkRenderer = new VulkanRenderer(extensions, countExtensions, window, event);
+
+  vkRenderer->init();
 
   while(running) {
     while (SDL_PollEvent(&event)) {
@@ -59,6 +60,8 @@ int main() {
         case SDL_EVENT_QUIT:
           running = false;
           break;
+        case SDL_EVENT_WINDOW_RESIZED:
+          vkRenderer->framebufferResized = true;
       }
     }
     vkRenderer->draw();
