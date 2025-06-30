@@ -117,8 +117,9 @@ private:
 
   VkCommandPool m_vkCommandPool;
 
-  VkBuffer m_vkVertexBuffer;
-  VkDeviceMemory m_vkVertexBufferMemory;
+  VkDeviceSize m_vkVertexBufferSize;
+  VkBuffer m_vkCombinedBuffer;
+  VkDeviceMemory m_vkCombinedBufferMemory;
 
   std::vector<VkCommandBuffer> m_vkCommandBuffers;
 
@@ -166,13 +167,23 @@ private:
   void createFramebuffers();
   void createCommandPool();
 
-  const std::vector<Vertex> vertices = {
-      {{0.0f, -0.5f, 1.0f}, {1.0f, 0.0f, 0.0f}},
-      {{0.5f, 0.5f, 1.0f}, {0.0f, 1.0f, 0.0f}},
-      {{-0.5f, 0.5f, 1.0f}, {0.0f, 0.0f, 1.0f}}
-
+  const std::vector<Vertex> m_vertices = {
+    {{-0.5f, -0.5f, 0.0f}, {1.0f, 0.0f, 0.0f}},
+    {{0.5f, -0.5f, 0.0f}, {0.0f, 1.0f, 0.0f}},
+    {{0.5f, 0.5f, 0.0f}, {0.0f, 0.0f, 1.0f}},
+    {{-0.5f, 0.5f, 0.0f}, {1.0f, 1.0f, 1.0f}}
   };
+
+  const std::vector<uint16_t> m_indices = {
+      0, 1, 2, 2, 3, 0
+  };
+
+  void createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties,
+      VkBuffer& buffer, VkDeviceMemory& bufferMemory);
+  void copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size);
   void createVertexBuffer();
+  void createIndexBuffer();
+  void createCombinedBuffer();
 
   uint32_t findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties);
   

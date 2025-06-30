@@ -580,32 +580,97 @@ void VulkanRenderer::createFramebuffers() {
     }
 }
 
-void VulkanRenderer::createVertexBuffer() {
+void VulkanRenderer::createBuffer(VkDeviceSize size, VkBufferUsageFlags usage, VkMemoryPropertyFlags properties,
+    VkBuffer& buffer, VkDeviceMemory& bufferMemory) {
     VkBufferCreateInfo bufferInfo{};
     bufferInfo.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
-    bufferInfo.size = sizeof(vertices[0]) * vertices.size();
-    bufferInfo.usage = VK_BUFFER_USAGE_VERTEX_BUFFER_BIT;
+    bufferInfo.size = size;
+    bufferInfo.usage = usage;
     bufferInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
 
-    CHECK_VK(vkCreateBuffer(m_vkDevice, &bufferInfo, nullptr, &m_vkVertexBuffer));
+    CHECK_VK(vkCreateBuffer(m_vkDevice, &bufferInfo, nullptr, &buffer));
 
     VkMemoryRequirements memRequirements;
-    vkGetBufferMemoryRequirements(m_vkDevice, m_vkVertexBuffer, &memRequirements);
+    vkGetBufferMemoryRequirements(m_vkDevice, buffer, &memRequirements);
 
     VkMemoryAllocateInfo allocInfo{};
     allocInfo.sType = VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_INFO;
     allocInfo.allocationSize = memRequirements.size;
-    allocInfo.memoryTypeIndex = findMemoryType(memRequirements.memoryTypeBits,
-        VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
 
-    CHECK_VK(vkAllocateMemory(m_vkDevice, &allocInfo, nullptr, &m_vkVertexBufferMemory));
+    allocInfo.memoryTypeIndex = findMemoryType(memRequirements.memoryTypeBits, properties);
 
-    CHECK_VK(vkBindBufferMemory(m_vkDevice, m_vkVertexBuffer, m_vkVertexBufferMemory, 0));
+    CHECK_VK(vkAllocateMemory(m_vkDevice, &allocInfo, nullptr, &bufferMemory));
+
+    vkBindBufferMemory(m_vkDevice, buffer, bufferMemory, 0);
+
+}
+
+void VulkanRenderer::createCombinedBuffer() {
+    m_vkVertexBufferSize = sizeof(m_vertices[0]) * m_vertices.size();
+    VkDeviceSize indexBufferSize = sizeof(m_indices[0]) * m_indices.size();
+    VkDeviceSize bufferSize = m_vkVertexBufferSize + indexBufferSize;
+
+    VkBuffer stagingBuffer;
+    VkDeviceMemory stagingBufferMemory;
+    createBuffer(bufferSize,
+        VK_BUFFER_USAGE_TRANSFER_SRC_BIT,
+        VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
+        stagingBuffer,
+        stagingBufferMemory);
 
     void* data;
-    vkMapMemory(m_vkDevice, m_vkVertexBufferMemory, 0, bufferInfo.size, 0, &data);
-    memcpy(data, vertices.data(), (size_t)bufferInfo.size);
-    vkUnmapMemory(m_vkDevice, m_vkVertexBufferMemory);
+    CHECK_VK(vkMapMemory(m_vkDevice, stagingBufferMemory, 0, bufferSize, 0, &data));
+    memcpy(data, m_vertices.data(), static_cast<size_t>(m_vkVertexBufferSize));
+    memcpy(static_cast<char*>(data) + m_vkVertexBufferSize, m_indices.data(), static_cast<size_t>(indexBufferSize));
+    vkUnmapMemory(m_vkDevice, stagingBufferMemory);
+
+    // Create device local combined buffer
+    createBuffer(bufferSize,
+        VK_BUFFER_USAGE_TRANSFER_DST_BIT | VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT,
+        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
+        m_vkCombinedBuffer,
+        m_vkCombinedBufferMemory);
+
+    // Copy staging buffer data to device local buffer
+    copyBuffer(stagingBuffer, m_vkCombinedBuffer, bufferSize);
+
+    // Clean up staging resources
+    vkDestroyBuffer(m_vkDevice, stagingBuffer, nullptr);
+    vkFreeMemory(m_vkDevice, stagingBufferMemory, nullptr);
+
+}
+
+void VulkanRenderer::copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size) {
+    VkCommandBufferAllocateInfo allocInfo{};
+    allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+    allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+    allocInfo.commandPool = m_vkCommandPool;
+    allocInfo.commandBufferCount = 1;
+
+    VkCommandBuffer commandBuffer;
+    CHECK_VK(vkAllocateCommandBuffers(m_vkDevice, &allocInfo, &commandBuffer));
+
+    VkCommandBufferBeginInfo beginInfo{};
+    beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+    beginInfo.flags = VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;
+
+    CHECK_VK(vkBeginCommandBuffer(commandBuffer, &beginInfo));
+
+        VkBufferCopy copyRegion{};
+        copyRegion.size = size;
+        vkCmdCopyBuffer(commandBuffer, srcBuffer, dstBuffer, 1, &copyRegion);
+
+    vkEndCommandBuffer(commandBuffer);
+
+    VkSubmitInfo submitInfo{};
+    submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+    submitInfo.commandBufferCount = 1;
+    submitInfo.pCommandBuffers = &commandBuffer;
+
+    vkQueueSubmit(m_vkGraphicsQueue, 1, &submitInfo, VK_NULL_HANDLE);
+    vkQueueWaitIdle(m_vkGraphicsQueue);
+
+    vkFreeCommandBuffers(m_vkDevice, m_vkCommandPool, 1, &commandBuffer);
 }
 
 
@@ -684,11 +749,15 @@ void VulkanRenderer::recordCommandBuffer(VkCommandBuffer commandBuffer, uint32_t
     scissor.extent = m_vkSwapChainExtent;
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
 
-    VkBuffer vertexBuffers[] = { m_vkVertexBuffer };
-    VkDeviceSize offsets[] = { 0 };
-    vkCmdBindVertexBuffers(commandBuffer, 0, 1, vertexBuffers, offsets);
+    VkDeviceSize vertexOffset = 0;
+    VkDeviceSize indexOffset = m_vkVertexBufferSize;
 
-    vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0);
+
+    vkCmdBindVertexBuffers(commandBuffer, 0, 1, &m_vkCombinedBuffer, &vertexOffset);
+
+    vkCmdBindIndexBuffer(commandBuffer, m_vkCombinedBuffer, indexOffset, VK_INDEX_TYPE_UINT16);
+
+    vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(m_indices.size()), 1, 0, 0, 0);
 
     vkCmdEndRenderPass(commandBuffer);
 
@@ -734,10 +803,14 @@ void VulkanRenderer::init() {
   createSwapChain();
   createImageViews();
   createRenderPass();
+
   createGraphicsPipeline();
+
   createFramebuffers();
   createCommandPool();
-  createVertexBuffer();
+
+  createCombinedBuffer();
+
   createCommandBuffers();
   createSyncObjects();
 }
@@ -866,10 +939,10 @@ void VulkanRenderer::cleanup() {
   vkDestroyCommandPool(m_vkDevice, m_vkCommandPool, nullptr);
   
   cleanupSwapChain();
-
-  vkDestroyBuffer(m_vkDevice, m_vkVertexBuffer, nullptr);
-  vkFreeMemory(m_vkDevice, m_vkVertexBufferMemory, nullptr);
-
+  
+  vkDestroyBuffer(m_vkDevice, m_vkCombinedBuffer, nullptr);
+  vkFreeMemory(m_vkDevice, m_vkCombinedBufferMemory, nullptr);
+  
   vkDestroyPipeline(m_vkDevice, m_vkGraphicsPipeline, nullptr);
   vkDestroyPipelineLayout(m_vkDevice, m_vkPipelineLayout, nullptr);
   vkDestroyRenderPass(m_vkDevice, m_vkRenderPass, nullptr);
