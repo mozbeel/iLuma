@@ -12,7 +12,7 @@
 
 ## About the Project
 
-iLuma is a modern, high-performance game framework (3D and 2D) built by passion and designed for fun development of games and interactive applications on all major desktop and mobile platforms. It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. iLuma is in the very early stages of development. 
+iLuma is a modern, high-performance game framework (3D and 2D) built by passion and designed for fun development of games and interactive applications on all major desktop and mobile platforms. This game framework is designed on top of the rendering library Nashi and code library SDL3. It's designed to be used very close to functionality of a full game engine like Unity, but also gives you the control to dive into the nitty-gritty low-level code. iLuma is in the very early stages of development. 
 
 ## Features
 
@@ -24,17 +24,17 @@ iLuma is a modern, high-performance game framework (3D and 2D) built by passion 
 ## Supported Platforms
 
 - Desktop
-  - Windows (using Vukan)
-  - Linux (using Vukan)
-  - macOS (using MoltenVK)
+  - Windows (using DirectX12/Vukan/OpenGL)
+  - Linux (using Vukan/OpenGL)
+  - macOS (using Metal/MoltenVK)
 - Mobile
-  - iOS (using MoltenVK)
-  - Android (using Vukan)
+  - iOS (using Metal/MoltenVK)
+  - Android (using Vukan/OpenGL ES 3.0)
 - Web (using OpenGL ES 3.0 -> WebGL 2.0)
 - VR
   - Meta Quest 2/3 Standalone (using Vulkan)
   - Pico Headsets Standalone (using Vulkan)
-  - PCVR (using desktop-specific graphics API)
+  - PCVR (using best desktop-specific graphics API)
 - Console support is planned, but there's no support yet
 
 ## Samples
